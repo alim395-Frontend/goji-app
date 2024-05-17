@@ -1,0 +1,104 @@
+
+NAME
+    C:\Users\alimo\Documents\PowerShell\Scripts\Show-Tree.ps1
+    
+SYNOPSIS
+    Show an ASCII text representation of a namespace tree
+    
+    
+SYNTAX
+    C:\Users\alimo\Documents\PowerShell\Scripts\Show-Tree.ps1 [[-Path] <Object>] [-MaxDepth <Int32>] [-ShowDirectory] [-NotLike <String[]>] [-Like <String[]>] [<CommonParameters>]
+    
+    
+DESCRIPTION
+    Script to show the layout of PowerShell namespaces (Trees) using ASCII
+    
+
+PARAMETERS
+    -Path <Object>
+        
+        Required?                    false
+        Position?                    1
+        Default value                (pwd)
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -MaxDepth <Int32>
+        
+        Required?                    false
+        Position?                    named
+        Default value                2147483647
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -ShowDirectory [<SwitchParameter>]
+        Show the full name of the directory at each sublevel
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -NotLike <String[]>
+        List of wildcard matches.  If a directoryname matches one of these, it will be skipped.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -Like <String[]>
+        List of wildcard matches.  If a directoryname matches one of these, it will be shown.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+INPUTS
+    
+OUTPUTS
+    System.String[]
+    
+    
+    -------------------------- EXAMPLE 1 --------------------------
+    
+    PS>show-tree C:\ -MaxDepth 2
+    
+    
+    
+    
+    
+    
+    -------------------------- EXAMPLE 2 --------------------------
+    
+    PS>show-tree C:\ -MaxDepth 2 -NotLike Wind*,P* -Verbose
+    
+    
+    
+    
+    
+    
+    -------------------------- EXAMPLE 3 --------------------------
+    
+    PS>New-PSDrive -PSProvider Registry -Root HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\ -Name WINDOWS
+    PS> Show-Tree Windows: -maxdepth 1 -ShowDirectory
+    
+    
+    
+    
+    
+    
+    
+RELATED LINKS
+
+

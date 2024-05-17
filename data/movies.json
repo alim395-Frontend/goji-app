@@ -1,0 +1,268 @@
+[
+  {
+      "title": "Godzilla",
+      "releaseDate": "1954-11-03",
+      "description": "A prehistoric monster, Godzilla, is awakened by nuclear tests in the Pacific.",
+      "era": "Showa",
+      "alternateNames": ["Gojira"]
+  },
+  {
+      "title": "Godzilla Raids Again",
+      "releaseDate": "1955-04-24",
+      "description": "Godzilla returns to menace Japan, and the Japanese military must put an end to his reign of terror.",
+      "era": "Showa",
+      "alternateNames": ["Gojira no Gyakushū"]
+  },
+  {
+      "title": "King Kong vs. Godzilla",
+      "releaseDate": "1962-08-11",
+      "description": "Godzilla emerges from an iceberg to do battle with the giant prehistoric monster Kong.",
+      "era": "Showa",
+      "alternateNames": ["Kingu Kongu tai Gojira"]
+  },
+  {
+      "title": "Mothra vs. Godzilla",
+      "releaseDate": "1964-04-29",
+      "description": "Godzilla battles Mothra, who hatches a pair of twins who continue the battle against the monster.",
+      "era": "Showa",
+      "alternateNames": ["Mosura tai Gojira"]
+  },
+  {
+      "title": "Ghidorah, the Three-Headed Monster",
+      "releaseDate": "1964-12-20",
+      "description": "Godzilla, Rodan and Mothra team up to battle King Ghidorah, a powerful space monster.",
+      "era": "Showa",
+      "alternateNames": ["San Daikaijū: Chikyū Saidai no Kessen"]
+  },
+  {
+      "title": "Invasion of Astro-Monster",
+      "releaseDate": "1965-12-19",
+      "description": "Aliens from Planet X invade Earth and use mind control to make Godzilla and Rodan fight King Ghidorah.",
+      "era": "Showa",
+      "alternateNames": ["Kaijū Daisensō"]
+  },
+  {
+      "title": "Ebirah, Horror of the Deep",
+      "releaseDate": "1966-12-17",
+      "description": "Godzilla battles a giant lobster and a terrorist organization in the South Seas.",
+      "era": "Showa",
+      "alternateNames": ["Gojira, Ebira, Mosura: Nankai no Daikettō"]
+  },
+  {
+      "title": "Son of Godzilla",
+      "releaseDate": "1967-12-16",
+      "description": "Scientists on a remote island discover Godzilla's offspring while attempting to perfect a weather-control experiment.",
+      "era": "Showa",
+      "alternateNames": ["Kaijū-tō no Kessen: Gojira no Musuko"]
+  },
+  {
+      "title": "Destroy All Monsters",
+      "releaseDate": "1968-08-01",
+      "description": "All of Earth's monsters are imprisoned on an island. When a race of aliens releases them, the monsters attack cities around the world.",
+      "era": "Showa",
+      "alternateNames": ["Kaijū Sōshingeki"]
+  },
+  {
+      "title": "All Monsters Attack",
+      "releaseDate": "1969-12-20",
+      "description": "A boy's dreams of traveling to Monster Island lead him into a real-life adventure involving criminals.",
+      "era": "Showa",
+      "alternateNames": ["Gojira-Minira-Gabara: Ōru Kaijū Daishingeki"]
+  },
+  {
+      "title": "Godzilla vs. Hedorah",
+      "releaseDate": "1971-07-24",
+      "description": "Godzilla battles pollution spawned Hedorah, a sludge-like monster with a toxic effect.",
+      "era": "Showa",
+      "alternateNames": ["Gojira tai Hedorā"]
+  },
+  {
+      "title": "Godzilla vs. Gigan",
+      "releaseDate": "1972-03-12",
+      "description": "Godzilla teams up with Anguirus to battle space monsters Gigan and King Ghidorah.",
+      "era": "Showa",
+      "alternateNames": ["Chikyū Kogeki Meirei: Gojira tai Gigan"]
+  },
+  {
+      "title": "Godzilla vs. Megalon",
+      "releaseDate": "1973-03-17",
+      "description": "Godzilla and a robot named Jet Jaguar fight against Megalon and Gigan, two monsters controlled by the undersea nation of Seatopia.",
+      "era": "Showa",
+      "alternateNames": ["Gojira tai Megaro"]
+  },
+  {
+      "title": "Godzilla vs. Mechagodzilla",
+      "releaseDate": "1974-03-21",
+      "description": "Godzilla battles a robot version of himself, Mechagodzilla, which was created by alien invaders.",
+      "era": "Showa",
+      "alternateNames": ["Gojira tai Mekagojira"]
+  },
+  {
+      "title": "Terror of Mechagodzilla",
+      "releaseDate": "1975-03-15",
+      "description": "Godzilla comes to the rescue when a mad scientist and aliens build a new Mechagodzilla to destroy Earth.",
+      "era": "Showa",
+      "alternateNames": ["Mekagojira no Gyakushū"]
+  },
+  {
+      "title": "The Return of Godzilla",
+      "releaseDate": "1984-12-15",
+      "description": "Thirty years after the original monster's rampage, a new Godzilla emerges and attacks Japan.",
+      "era": "Heisei",
+      "alternateNames": ["Gojira 1984", "Godzilla 1985"]
+  },
+  {
+      "title": "Godzilla vs. Biollante",
+      "releaseDate": "1989-12-16",
+      "description": "Godzilla fights a genetically engineered monster called Biollante, which was created from plant cells and Godzilla's own cells.",
+      "era": "Heisei",
+      "alternateNames": ["Gojira tai Biorante"]
+  },
+  {
+      "title": "Godzilla vs. King Ghidorah",
+      "releaseDate": "1991-12-14",
+      "description": "Time travelers use Godzilla in their scheme to destroy Japan to prevent its future economic reign.",
+      "era": "Heisei",
+      "alternateNames": ["Gojira tai Kingu Gidorâ"]
+  },
+  {
+      "title": "Godzilla vs. Mothra",
+      "releaseDate": "1992-12-12",
+      "description": "Mothra and Battra team up to stop Godzilla from destroying Japan.",
+      "era": "Heisei",
+      "alternateNames": ["Gojira tai Mosura"]
+  },
+  {
+      "title": "Godzilla vs. Mechagodzilla II",
+      "releaseDate": "1993-12-11",
+      "description": "Godzilla fights against Mechagodzilla, a robotic version of himself, built by humans to defend against Godzilla.",
+      "era": "Heisei",
+      "alternateNames": ["Gojira tai Mekagojira"]
+  },
+  {
+      "title": "Godzilla vs. SpaceGodzilla",
+      "releaseDate": "1994-12-10",
+      "description": "Godzilla battles an extraterrestrial clone, SpaceGodzilla, while humans attempt to weaken both creatures.",
+      "era": "Heisei",
+      "alternateNames": ["Gojira tai Supēsugojira"]
+  },
+  {
+      "title": "Godzilla vs. Destoroyah",
+      "releaseDate": "1995-12-09",
+      "description": "Godzilla's heart is melting down, threatening to destroy the Earth, while the mutant creature Destoroyah emerges from the oxygen destroyer weapon that killed the original Godzilla.",
+      "era": "Heisei",
+      "alternateNames": ["Gojira tai Desutoroia"]
+  },
+  {
+      "title": "Godzilla 2000: Millennium",
+      "releaseDate": "1999-12-11",
+      "description": "Godzilla faces Orga, a massive alien lifeform, in this reboot of the franchise.",
+      "era": "Millennium",
+      "alternateNames": ["Gojira Nisen: Mireniamu"]
+  },
+  {
+      "title": "Godzilla vs. Megaguirus",
+      "releaseDate": "2000-12-16",
+      "description": "Godzilla faces Megaguirus, a giant dragonfly-like monster, in this alternate continuity.",
+      "era": "Millennium",
+      "alternateNames": ["Gojira tai Megagirasu: Jī Shōmetsu Sakusen"]
+  },
+  {
+      "title": "Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack",
+      "releaseDate": "2001-12-15",
+      "description": "Godzilla battles Mothra, King Ghidorah, and Baragon in this standalone entry.",
+      "era": "Millennium",
+      "alternateNames": ["Gojira, Mosura, Kingu Gidora: Daikaijū Sōkōgeki"]
+  },
+  {
+      "title": "Godzilla Against Mechagodzilla",
+      "releaseDate": "2002-12-14",
+      "description": "Godzilla battles Kiryu, a mecha built around the bones of the original Godzilla.",
+      "era": "Millennium",
+      "alternateNames": ["Gojira tai Mekagojira"]
+  },
+  {
+      "title": "Godzilla: Tokyo SOS",
+      "releaseDate": "2003-12-13",
+      "description": "Godzilla battles Mechagodzilla and Mothra in this direct sequel to 'Godzilla Against Mechagodzilla'.",
+      "era": "Millennium",
+      "alternateNames": ["Gojira tai Mosura tai Mekagojira: Tōkyō S.O.S."]
+  },
+  {
+      "title": "Godzilla Final Wars",
+      "releaseDate": "2004-12-04",
+      "description": "Godzilla faces numerous foes in this action-packed finale to the Millennium series.",
+      "era": "Millennium",
+      "alternateNames": ["Gojira: Fainaru Wōzu"]
+  },
+  {
+      "title": "Godzilla",
+      "releaseDate": "2014-05-16",
+      "description": "Godzilla, awakened from his slumber, emerges to battle the malevolent MUTO creatures and restore balance.",
+      "era": "MonsterVerse",
+      "alternateNames": []
+  },
+  {
+      "title": "Kong: Skull Island",
+      "releaseDate": "2017-03-10",
+      "description": "A team of scientists and soldiers explore an uncharted island in the Pacific, encountering the mighty Kong and other monstrous creatures.",
+      "era": "MonsterVerse",
+      "alternateNames": []
+  },
+  {
+      "title": "Godzilla: King of the Monsters",
+      "releaseDate": "2019-05-31",
+      "description": "Godzilla battles against King Ghidorah, Mothra, and Rodan as humanity's existence hangs in the balance.",
+      "era": "MonsterVerse",
+      "alternateNames": []
+  },
+  {
+      "title": "Godzilla vs. Kong",
+      "releaseDate": "2021-03-31",
+      "description": "Legends collide as Godzilla and Kong, the two most powerful forces of nature, clash in a spectacular battle for the ages.",
+      "era": "MonsterVerse",
+      "alternateNames": []
+  },
+  {
+      "title": "Godzilla x Kong: The New Empire",
+      "releaseDate": "2024-03-15",
+      "description": "Godzilla and Kong join forces to face a new threat that threatens their world and existence.",
+      "era": "MonsterVerse",
+      "alternateNames": []
+  },
+  {
+      "title": "Shin Godzilla",
+      "releaseDate": "2016-07-29",
+      "description": "Japan is plunged into chaos upon the appearance of a giant monster.",
+      "era": "Reiwa",
+      "alternateNames": ["Shin Gojira"]
+  },
+  {
+      "title": "GODZILLA: Planet of the Monsters",
+      "releaseDate": "2017-11-17",
+      "description": "In the future, humans lose Earth to Godzilla. They plan to take it back.",
+      "era": "Reiwa",
+      "alternateNames": ["Gojira: Kaijū Wakusei"]
+  },
+  {
+      "title": "GODZILLA: City on the Edge of Battle",
+      "releaseDate": "2018-05-18",
+      "description": "The sequel to 'Planet of the Monsters'. Godzilla is faced by a mechanized version of itself.",
+      "era": "Reiwa",
+      "alternateNames": ["Gojira: Kessen Kidō Zōshoku Toshi"]
+  },
+  {
+      "title": "GODZILLA: The Planet Eater",
+      "releaseDate": "2018-11-09",
+      "description": "The final part of the anime trilogy, where Godzilla faces King Ghidorah.",
+      "era": "Reiwa",
+      "alternateNames": ["Gojira: Hoshi o Kū Mono"]
+  },
+  {
+      "title": "Godzilla Minus One",
+      "releaseDate": "2023-11-03",
+      "description": "Set in post-war Japan, the country faces a new threat with Godzilla's appearance.",
+      "era": "Reiwa",
+      "alternateNames": []
+  }
+]
