@@ -3,7 +3,7 @@ import path from "path";
 import fs from "fs/promises";
 import { Suspense } from "react";
 import Home from "../components/Home";
-import { Movie } from "../data/movies";
+import { Movie } from "@/data/movies";
 
 async function fetchMovies(): Promise<Movie[]> {
   const filePath = path.join(process.cwd(), "data", "movies.json");

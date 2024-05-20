@@ -1,87 +1,113 @@
 // components/Modal.tsx
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Movie } from "../data/movies";
+import { Movie } from "@/data/movies";
 
+// Overlay that covers the entire screen
 const Overlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   z-index: 1000;
 `;
 
+// ModalContent now uses display: flex to arrange children side by side
 const ModalContent = styled.div`
-  background: white;
+  position: relative;
+  background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  max-width: 800px;
-  width: 100%;
-  display: flex;
-  gap: 20px;
-  position: relative;
-  color: black; /* Ensure text is black */
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-  }
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex; // Set to flex to use flexbox layout
+  max-width: 900px; // Adjust the width as needed
+  width: 90%; // Adjust the width as needed
 `;
 
+// Close button for the modal
 const CloseButton = styled.button`
   position: absolute;
   top: 10px;
   right: 10px;
-  background: none;
   border: none;
-  font-size: 20px;
+  background: none;
+  font-size: 24px;
   cursor: pointer;
-  color: black; /* Ensure close button is visible */
 `;
 
+// PosterContainer will hold the poster image
+const PosterContainer = styled.div`
+  flex: 1; // Take up 1 portion of the flex container
+  max-width: 40%; // Adjust the width as needed
+`;
+
+// ContentContainer will hold the movie details
+const ContentContainer = styled.div`
+  flex: 2; // Take up 2 portions of the flex container
+  margin-left: 20px; // Add some space between the poster and the content
+`;
+
+// Adjust the Poster styled component if needed
 const Poster = styled.img`
-  width: 50%;
+  width: 100%;
   height: auto;
   border-radius: 4px;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
 `;
 
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 50%;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-`;
-
+// Title of the movie
 const Title = styled.h2`
-  margin-bottom: 10px;
+  margin: 0;
+  color: #333;
 `;
 
+// Container for alternate names
 const AlternateNames = styled.p`
-  margin-bottom: 10px;
   font-style: italic;
+  color: #666;
 `;
 
+// Release date of the movie
 const ReleaseDate = styled.p`
-  margin-bottom: 10px;
+  color: #333;
 `;
 
+// Description of the movie
 const Description = styled.p`
-  margin-bottom: 10px;
+  color: #333;
+`;
+
+// Button to play the Godzilla roar
+const RoarButton = styled.button`
+  background-color: #444;
+  color: #fff;
+  border: none;
+  width: 50px; // Set both width and height to the same value for a square
+  height: 50px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  background-image: url('/roar.svg'); // Path to your roar.svg in the public folder
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%; // Adjust the size of the SVG within the button
+  text-indent: -9999px; // Hide the text off-screen
+
+  &:hover {
+    background-color: #555;
+  }
+
+  // Adjust the button size on different screen sizes if necessary
+  @media (min-width: 768px) {
+    width: 70px;
+    height: 70px;
+  }
 `;
 
 const Modal: React.FC<{
@@ -89,40 +115,78 @@ const Modal: React.FC<{
   onClose: () => void;
   movie: Movie;
 }> = ({ isOpen, onClose, movie }) => {
-  if (!isOpen) return null;
+  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+  const [roarAvailable, setRoarAvailable] = useState(false);
 
-  const handleImageError = (
-    event: React.SyntheticEvent<HTMLImageElement, Event>
-  ) => {
-    event.currentTarget.src = "/images/placeholder.jpg"; // Path to your placeholder image
+  useEffect(() => {
+    // Reset states when the modal is closed or the movie changes
+    setAudio(null);
+    setRoarAvailable(false);
+
+    if (isOpen && movie) {
+      const sanitizedTitle = movie.title.replace(/[\\/:*?"<>|]/g, "").replace(/\s+/g, "_");
+      const audioFile = `/sounds/${movie.era}/${sanitizedTitle}.mp3`;
+
+      // Check if the audio file exists
+      fetch(audioFile, { method: 'HEAD' })
+          .then((response) => {
+            if (response.ok) {
+              const audioElement = new Audio(audioFile);
+              setAudio(audioElement);
+              setRoarAvailable(true);
+            }
+          })
+          .catch((error) => {
+            // If there's an error (e.g., network issue), log it and continue without the roar
+            console.error('Error checking for audio file:', error);
+          });
+    }
+  }, [isOpen, movie]);
+
+  const playRoar = () => {
+    if (audio) {
+      audio.play().catch((error) => {
+        console.error('Error playing the audio:', error);
+      });
+    }
+  };
+
+  if (!isOpen) {
+    return null;
+  }
+
+  const handleImageError = (event: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    event.currentTarget.src = "/images/placeholder.jpg";
   };
 
   return (
-    <Overlay onClick={onClose}>
-      <ModalContent onClick={(e) => e.stopPropagation()}>
-        <CloseButton onClick={onClose}>&times;</CloseButton>
-        <Poster
-          src={`/images/${movie.era}/${movie.title
-            .replace(/[\\/:*?"<>|]/g, "")
-            .replace(/\s+/g, "_")}.jpg`}
-          alt={movie.title}
-          onError={handleImageError}
-        />
-        <Content>
-          <Title>{movie.title}</Title>
-          {movie.alternateNames.length > 0 && (
-            <AlternateNames>
-              <strong>Alt. Names:</strong> {movie.alternateNames.join(", ")}
-            </AlternateNames>
-          )}
-          <ReleaseDate>
-            <strong>Release Date:</strong>{" "}
-            {new Date(movie.releaseDate).toLocaleDateString()}
-          </ReleaseDate>
-          <Description>{movie.description}</Description>
-        </Content>
-      </ModalContent>
-    </Overlay>
+      <Overlay onClick={onClose}>
+        <ModalContent onClick={(e) => e.stopPropagation()}>
+          <CloseButton onClick={onClose}>&times;</CloseButton>
+          <PosterContainer>
+            <Poster
+                src={`/images/${movie.era}/${movie.title.replace(/[\\/:*?"<>|]/g, "").replace(/\s+/g, "_")}.jpg`}
+                alt={movie.title}
+                onError={handleImageError}
+            />
+          </PosterContainer>
+          <ContentContainer>
+            <Title>{movie.title}</Title>
+            {movie.alternateNames && movie.alternateNames.length > 0 && (
+                <AlternateNames>
+                  <strong>Alt. Names:</strong> {movie.alternateNames.join(", ")}
+                </AlternateNames>
+            )}
+            <ReleaseDate>
+              <strong>Release Date:</strong> {new Date(movie.releaseDate).toLocaleDateString()}
+            </ReleaseDate>
+            <Description>{movie.description}</Description>
+            {roarAvailable && (
+                <RoarButton onClick={playRoar} aria-label="Play Godzilla roar" />
+            )}
+          </ContentContainer>
+        </ModalContent>
+      </Overlay>
   );
 };
 
