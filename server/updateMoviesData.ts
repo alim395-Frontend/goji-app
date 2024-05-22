@@ -71,7 +71,7 @@ function mapMovieData(movie: any): Movie | null {
     const era = determineEra(movie.release_date, movie.original_language);
     if (!era) return null;
 
-    let alternateNames = movie.original_language === 'ja' && movie.original_title !== movie.title
+    const alternateNames = movie.original_language === 'ja' && movie.original_title !== movie.title
         ? [movie.original_title]
         : undefined;
 
@@ -81,6 +81,7 @@ function mapMovieData(movie: any): Movie | null {
         posterUrl: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
         description: movie.overview,
         era,
+        rating: movie.vote_average, // Add this line to map the rating
         ...(alternateNames && { alternateNames }),
     };
 }

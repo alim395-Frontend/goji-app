@@ -7,4 +7,5 @@ export interface Movie {
   description: string;
   era: string;
   alternateNames?: string[];
+  rating?: number;
 }

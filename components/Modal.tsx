@@ -4,6 +4,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Movie } from "@/data/movies";
+import StarRating from './StarRating';
 
 // Overlay that covers the entire screen
 const Overlay = styled.div`
@@ -64,6 +65,11 @@ const Poster = styled.img`
 // Title of the movie
 const Title = styled.h2`
   margin: 0;
+  color: #333;
+`;
+
+// Rating of the movie
+const Rating = styled.p`
   color: #333;
 `;
 
@@ -180,6 +186,14 @@ const Modal: React.FC<{
           </PosterContainer>
           <ContentContainer>
             <Title>{movie.title}</Title>
+            <Rating>
+              <strong>Rating:</strong>
+              {movie.rating ? (
+                  <StarRating rating={movie.rating} />
+              ) : (
+                  'N/A'
+              )}
+            </Rating>
             {movie.alternateNames && movie.alternateNames.length > 0 && (
                 <AlternateNames>
                   <strong>Alt. Names:</strong> {movie.alternateNames.join(", ")}
@@ -190,7 +204,7 @@ const Modal: React.FC<{
             </ReleaseDate>
             <Description>{movie.description}</Description>
             {roarAvailable && (
-                <RoarButton onClick={playRoar} aria-label="Play Godzilla roar" />
+                <RoarButton onClick={playRoar} aria-label="Play Godzilla roar"/>
             )}
           </ContentContainer>
         </ModalContent>

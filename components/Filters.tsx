@@ -35,14 +35,15 @@ const Filters: React.FC<{
     <FiltersContainer>
       <Input
         type="text"
-        placeholder="Search by title or alternate name"
+        placeholder="Search by Name"
         onChange={(e) => onFilterChange(e.target.value)}
       />
-      <Select onChange={(e) => onSortChange(e.target.value)}>
-        <option value="releaseDate">Sort by Release Date</option>
-        <option value="title">Sort by Title</option>
-      </Select>
-      <Select onChange={(e) => onEraChange(e.target.value)}>
+        <Select onChange={(e) => onSortChange(e.target.value)}>
+            <option value="releaseDate">Sort by Release Date</option>
+            <option value="title">Sort by Title</option>
+            <option value="rating">Sort by Rating</option>
+        </Select>
+        <Select onChange={(e) => onEraChange(e.target.value)}>
         <option value="">All Eras</option>
         <option value="Showa">Showa</option>
         <option value="Heisei">Heisei</option>
