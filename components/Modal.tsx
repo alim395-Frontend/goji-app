@@ -155,8 +155,16 @@ const Modal: React.FC<{
     return null;
   }
 
-  const handleImageError = (event: React.SyntheticEvent<HTMLImageElement, Event>) => {
-    event.currentTarget.src = "/images/placeholder.jpg";
+  const handleImageError = (
+      event: React.SyntheticEvent<HTMLImageElement, Event>
+  ) => {
+    // Fallback to the poster URL from the API if the local image fails to load
+    if (movie.posterUrl && event.currentTarget.src !== movie.posterUrl) {
+      event.currentTarget.src = movie.posterUrl;
+    } else {
+      // If the API's poster URL also fails, use a placeholder image
+      event.currentTarget.src = "/images/placeholder.jpg";
+    }
   };
 
   return (
