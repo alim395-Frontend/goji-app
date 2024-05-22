@@ -65,7 +65,7 @@ export async function fetchAllGodzillaMovies() {
     }
 }
 
-fetchAllGodzillaMovies();
+//fetchAllGodzillaMovies();
 
 function mapMovieData(movie: any): Movie | null {
     const era = determineEra(movie.release_date, movie.original_language);
