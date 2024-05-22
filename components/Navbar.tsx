@@ -4,7 +4,6 @@
 import React from "react";
 import styled from "styled-components";
 import Filters from "./Filters";
-import Music from "./Music";
 
 const Nav = styled.nav`
   width: 100%;
@@ -28,13 +27,12 @@ const Navbar: React.FC<{
 }> = ({ onFilterChange, onSortChange, onEraChange }) => {
   return (
     <Nav>
-      <Logo>Godzilla Movie Timeline</Logo>
+      <Logo>Godzilla Movie Catalogue</Logo>
       <Filters
         onFilterChange={onFilterChange}
         onSortChange={onSortChange}
         onEraChange={onEraChange}
       />
-      <Music />
     </Nav>
   );
 };

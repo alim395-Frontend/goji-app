@@ -3,7 +3,7 @@
 
 import React from "react";
 import styled from "styled-components";
-import { Movie } from "../data/movies";
+import { Movie } from "@/data/movies";
 import MovieItem from "./MovieItem";
 
 const Container = styled.div`
@@ -29,12 +29,12 @@ const Timeline: React.FC<TimelineProps> = ({
 }) => {
   const filteredMovies = movies
     .filter((movie) => {
-      const searchString = filter.toLowerCase();
-      const matchTitle = movie.title.toLowerCase().includes(searchString);
-      const matchAlternateNames = movie.alternateNames.some((name) =>
-        name.toLowerCase().includes(searchString)
-      );
-      const matchEra = era === "" || movie.era === era;
+        const searchString = filter.toLowerCase();
+        const matchTitle = movie.title.toLowerCase().includes(searchString);
+        const matchAlternateNames = movie.alternateNames?.some((name) =>
+            name.toLowerCase().includes(searchString)
+        );
+        const matchEra = era === "" || movie.era === era;
       return (matchTitle || matchAlternateNames) && matchEra;
     })
     .sort((a, b) => {
