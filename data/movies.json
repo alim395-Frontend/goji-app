@@ -90,10 +90,10 @@
   {
     "title": "Destroy All Monsters",
     "releaseDate": "1968-08-01",
-    "posterUrl": "https://image.tmdb.org/t/p/original/24r1hsRisfUidwLF67J0iMuWh7p.jpg",
+    "posterUrl": "https://image.tmdb.org/t/p/original/aF1a8CxkEnhpNt1GBUd19YMWXFE.jpg",
     "description": "At the turn of the century, all of the Earth's monsters have been rounded up and kept safely on Monsterland. Chaos erupts when a race of she-aliens known as the Kilaaks unleash the monsters across the world.",
     "era": "Showa",
-    "rating": 6.834,
+    "rating": 6.8,
     "alternateNames": [
       "怪獣総進撃"
     ]
@@ -373,7 +373,7 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
     "description": "In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages.",
     "era": "MonsterVerse",
-    "rating": 7.618
+    "rating": 7.619
   },
   {
     "title": "Godzilla Minus One",
@@ -381,7 +381,7 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/hkxxMIGaiCTmrEArK7J56JTKUlB.jpg",
     "description": "Postwar Japan is at its lowest point when a new crisis emerges in the form of a giant monster, baptized in the horrific power of the atomic bomb.",
     "era": "Reiwa",
-    "rating": 7.67,
+    "rating": 7.669,
     "alternateNames": [
       "ゴジラ-1.0"
     ]
@@ -392,6 +392,6 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/z1p34vh7dEOnLDmyCrlUVLuoDzd.jpg",
     "description": "Following their explosive showdown, Godzilla and Kong must reunite against a colossal undiscovered threat hidden within our world, challenging their very existence – and our own.",
     "era": "MonsterVerse",
-    "rating": 7.245
+    "rating": 7.241
   }
 ]

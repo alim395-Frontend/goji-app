@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Movie } from "@/data/movies";
 import StarRating from './StarRating';
+import Music from './Music'
 
 // Overlay that covers the entire screen
 const Overlay = styled.div`
@@ -218,6 +219,7 @@ const Modal: React.FC<{
             {roarAvailable && (
                 <RoarButton onClick={playRoar} aria-label="Play Godzilla roar"/>
             )}
+            <Music movie={movie.title} era={movie.era} />
           </ContentContainer>
         </ModalContent>
       </Overlay>
