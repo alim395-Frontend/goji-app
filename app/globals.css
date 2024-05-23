@@ -32,3 +32,12 @@ body {
     text-wrap: balance;
   }
 }
+
+@font-face {
+  font-family: 'Godzilla';
+  src: url('/fonts/godzilla-webfont.woff2') format('woff2'),
+  url('/fonts/godzilla-webfont.woff') format('woff'),
+  url('/fonts/Godzilla.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -37,18 +37,16 @@ const CloseButton = styled.button`
   top: 10px;
   right: 10px;
   border: none;
-  background: none;
   font-size: 24px;
   cursor: pointer;
-  color: #333; /* Change the color to a darker shade for contrast */
-  /* You can also add a background if needed for better visibility */
-  background-color: rgba(0, 0, 0, 0.1); /* Light background for the button */
-  border-radius: 50%; /* Optional: Makes the button circular */
-  padding: 0.5rem; /* Optional: Adds some padding inside the button */
+  color: #333;
+  background: rgba(0, 0, 0, 0.1) none;
+  border-radius: 50%;
+  padding: 0.5rem;
   display: flex; /* Center the '×' symbol */
   align-items: center;
   justify-content: center;
-  width: 30px; /* Set a specific size for the button */
+  width: 30px;
   height: 30px;
 
   &:hover {
