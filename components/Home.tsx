@@ -14,10 +14,17 @@ const Banner = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000; // Adjust as needed
+    background-color: #000;
     color: white;
-    font-size: 24px;
+    font-size: 24px; // Adjust for mobile
     font-weight: bold;
+    padding: 10px; // Adjust for mobile
+
+    @media (max-width: 640px) { // Tailwind's 'sm' breakpoint
+        width: auto;
+        font-size: 18px;
+        padding: 5px;
+    }
 `;
 
 const Home: React.FC<{ movies: Movie[] }> = ({ movies }) => {

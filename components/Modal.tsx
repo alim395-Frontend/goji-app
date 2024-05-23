@@ -32,7 +32,6 @@ const ModalContent = styled.div`
   width: 90%; // Adjust the width as needed
 `;
 
-// Close button for the modal
 const CloseButton = styled.button`
   position: absolute;
   top: 10px;
@@ -41,6 +40,21 @@ const CloseButton = styled.button`
   background: none;
   font-size: 24px;
   cursor: pointer;
+  color: #333; /* Change the color to a darker shade for contrast */
+  /* You can also add a background if needed for better visibility */
+  background-color: rgba(0, 0, 0, 0.1); /* Light background for the button */
+  border-radius: 50%; /* Optional: Makes the button circular */
+  padding: 0.5rem; /* Optional: Adds some padding inside the button */
+  display: flex; /* Center the '×' symbol */
+  align-items: center;
+  justify-content: center;
+  width: 30px; /* Set a specific size for the button */
+  height: 30px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Darker background on hover */
+    color: #000; /* Optional: Change color on hover for better visibility */
+  }
 `;
 
 // PosterContainer will hold the poster image
