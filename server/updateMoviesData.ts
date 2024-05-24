@@ -10,7 +10,7 @@ dotenv.config();
 
 const API_KEY = process.env.TMDB_API_KEY;
 const BASE_URL = 'https://api.themoviedb.org/3';
-const SEARCH_TERMS = ['ゴジラ']; // Add additional search terms as needed
+const SEARCH_TERMS = ['ゴジラ', 'Godzilla 1998']; // Add additional search terms as needed
 const COLLECTION_IDS = ['374509', '374511', '374512', '535313', '535790']; // Replace with actual collection IDs
 
 async function fetchMoviesBySearchTerm(searchTerm: string): Promise<Movie[]> {
@@ -90,6 +90,7 @@ function determineEra(releaseDate: string, originalLanguage: string): string {
     const year = parseInt(releaseDate.split('-')[0], 10);
     if (year <= 1979 && originalLanguage === 'ja') return 'Showa';
     if (year >= 1984 && year <= 1995 && originalLanguage === 'ja') return 'Heisei';
+    if (year === 1998 && originalLanguage === 'en') return 'Tristar';
     if (year >= 1999 && year <= 2005 && originalLanguage === 'ja') return 'Millennium';
     if (year >= 2014 && originalLanguage === 'en') return 'MonsterVerse';
     if (year >= 2016 && originalLanguage === 'ja') return 'Reiwa';

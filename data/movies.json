@@ -242,6 +242,14 @@
     ]
   },
   {
+    "title": "Godzilla",
+    "releaseDate": "1998-05-20",
+    "posterUrl": "https://image.tmdb.org/t/p/original/xJVl1I95StraYAwaNbBkVoWE2qA.jpg",
+    "description": "French nuclear tests irradiate an iguana into a giant monster that viciously attacks freighter ships in the Pacific Ocean. A team of experts, including Niko Tatopoulos, conclude that the oversized reptile is the culprit. Before long, the giant lizard is loose in Manhattan as the US military races to destroy the monster before it reproduces and it's spawn takes over the world.",
+    "era": "Tristar",
+    "rating": 5.616
+  },
+  {
     "title": "Godzilla 2000: Millennium",
     "releaseDate": "1999-12-11",
     "posterUrl": "https://image.tmdb.org/t/p/original/aER55kapaLqHbrdfqebuVCORnpi.jpg",
@@ -354,7 +362,7 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/fOA44BITFth0u4hMSOUgpK0kM6t.jpg",
     "description": "With no means for defeating Godzilla Earth, mankind watches as King Ghidorah, clad in a golden light, descends on the planet. The heavens and earth shake once again as the war moves to a higher dimension.",
     "era": "Reiwa",
-    "rating": 6.434,
+    "rating": 6.431,
     "alternateNames": [
       "GODZILLA 星を喰う者"
     ]

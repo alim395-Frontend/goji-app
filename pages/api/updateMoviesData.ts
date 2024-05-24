@@ -1,7 +1,7 @@
 // pages/api/updateMoviesData.ts
 
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { fetchAllGodzillaMovies } from '../../server/updateMoviesData';
+import { fetchAllGodzillaMovies } from '@/server/updateMoviesData';
 
 export default async function handler(
     req: NextApiRequest,
