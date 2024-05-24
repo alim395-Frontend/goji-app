@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import { Movie } from "@/data/movies";
 import StarRating from './StarRating';
 import Music from './Music'
@@ -106,8 +106,15 @@ const Description = styled.p`
   color: #333;
 `;
 
+// Animation for the roar button when playing
+const roarAnimation = keyframes`
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+`;
+
 // Button to play the Godzilla roar
-const RoarButton = styled.button`
+const RoarButton = styled.button<{ isPlaying: boolean }>`
   background-color: #444;
   color: #fff;
   border: none;
@@ -126,11 +133,21 @@ const RoarButton = styled.button`
     background-color: #555;
   }
 
-  // Adjust the button size on different screen sizes if necessary
-  @media (min-width: 768px) {
-    width: 70px;
-    height: 70px;
+  &:active {
+    background-color: #666;
   }
+
+  ${({ isPlaying }) =>
+      isPlaying &&
+      css`
+      animation: ${roarAnimation} 0.5s infinite;
+    `}
+
+      // Adjust the button size on different screen sizes if necessary
+  @media (min-width: 768px) {
+  width: 70px;
+  height: 70px;
+}
 `;
 
 const Modal: React.FC<{
@@ -140,11 +157,13 @@ const Modal: React.FC<{
 }> = ({ isOpen, onClose, movie }) => {
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
   const [roarAvailable, setRoarAvailable] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     // Reset states when the modal is closed or the movie changes
     setAudio(null);
     setRoarAvailable(false);
+    setIsPlaying(false);
 
     if (isOpen && movie) {
       const sanitizedTitle = movie.title.replace(/[\\/:*?"<>|]/g, "").replace(/\s+/g, "_");
@@ -168,9 +187,17 @@ const Modal: React.FC<{
 
   const playRoar = () => {
     if (audio) {
-      audio.play().catch((error) => {
-        console.error('Error playing the audio:', error);
-      });
+      setIsPlaying(true);
+      audio.play()
+          .then(() => {
+            audio.onended = () => {
+              setIsPlaying(false);
+            };
+          })
+          .catch((error) => {
+            console.error('Error playing the audio:', error);
+            setIsPlaying(false);
+          });
     }
   };
 
@@ -221,7 +248,7 @@ const Modal: React.FC<{
             </ReleaseDate>
             <Description>{movie.description}</Description>
             {roarAvailable && (
-                <RoarButton onClick={playRoar} aria-label="Play Godzilla roar"/>
+                <RoarButton onClick={playRoar} aria-label="Play Godzilla roar" isPlaying={isPlaying} />
             )}
             <Music movie={movie.title} era={movie.era} />
           </ContentContainer>

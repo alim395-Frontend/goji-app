@@ -1,4 +1,4 @@
-// components/Music.tsx
+ // components/Music.tsx
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
@@ -37,6 +37,10 @@ const Music: React.FC<{ movie: string; era: string }> = ({ movie, era }) => {
         fetchAudioFiles();
     }, [movie, era]);
 
+    const getFileNameWithoutExtension = (fileName: string) => {
+        return fileName.replace(/\.[^/.]+$/, "");
+    };
+
     return (
         <AudioContainer>
             {audioFiles.length === 0 ? (
@@ -44,7 +48,7 @@ const Music: React.FC<{ movie: string; era: string }> = ({ movie, era }) => {
             ) : (
                 audioFiles.map((file, index) => (
                     <div key={index}>
-                        <AudioLabel>{file}</AudioLabel>
+                        <AudioLabel>{getFileNameWithoutExtension(file)}</AudioLabel>
                         <audio controls>
                             <source src={`/music/${era}/${movie.replace(/[\\/:*?"<>|]/g, "").replace(/\s+/g, "_")}/${file}`} type="audio/mpeg" />
                             Your browser does not support the audio element.
