@@ -31,6 +31,8 @@ const ModalContent = styled.div`
   display: flex; // Set to flex to use flexbox layout
   max-width: 900px; // Adjust the width as needed
   width: 90%; // Adjust the width as needed
+  max-height: 90vh; // Ensure the modal doesn't exceed the viewport height
+  overflow: hidden; // Hide overflow to manage scrolling within the content container
 `;
 
 const CloseButton = styled.button`
@@ -66,6 +68,8 @@ const PosterContainer = styled.div`
 const ContentContainer = styled.div`
   flex: 2; // Take up 2 portions of the flex container
   margin-left: 20px; // Add some space between the poster and the content
+  max-height: 80vh; // Set a maximum height for the content container
+  overflow-y: auto; // Enable vertical scrolling
 `;
 
 // Adjust the Poster styled component if needed
