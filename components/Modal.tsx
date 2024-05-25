@@ -140,14 +140,30 @@ const RoarButton = styled.button<{ isPlaying: boolean }>`
   ${({ isPlaying }) =>
       isPlaying &&
       css`
-      animation: ${roarAnimation} 0.5s infinite;
-    `}
+        animation: ${roarAnimation} 0.5s infinite;
+      `}
 
       // Adjust the button size on different screen sizes if necessary
   @media (min-width: 768px) {
   width: 70px;
   height: 70px;
 }
+`;
+
+// Divider to separate sections
+const Divider = styled.hr`
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin: 20px 0;
+`;
+
+// Section header for audio samples
+const SectionHeader = styled.h3`
+  margin: 20px 0 10px;
+  color: #444;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
 `;
 
 const Modal: React.FC<{
@@ -250,6 +266,8 @@ const Modal: React.FC<{
             {roarAvailable && (
                 <RoarButton onClick={playRoar} aria-label="Play Godzilla roar" isPlaying={isPlaying} />
             )}
+            <Divider />
+            <SectionHeader>Audio Samples</SectionHeader>
             <Music movie={movie.title} era={movie.era} />
           </ContentContainer>
         </ModalContent>
