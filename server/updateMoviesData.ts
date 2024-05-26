@@ -1,4 +1,4 @@
-// pages/updateMoviesData.ts
+// server/updateMoviesData.ts
 
 import dotenv from 'dotenv';
 import axios from 'axios';
@@ -18,9 +18,14 @@ async function fetchMoviesBySearchTerm(searchTerm: string): Promise<Movie[]> {
         params: { api_key: API_KEY, query: searchTerm, language: 'en-US' },
     });
 
-    return response.data.results
-        .map(mapMovieData)
-        .filter((movie: Movie | null): movie is Movie => movie !== null);
+    const movies = await Promise.all(
+        response.data.results.map(async (movie: any) => {
+            const details = await fetchMovieDetails(movie.id);
+            return mapMovieData(movie, details);
+        })
+    );
+
+    return movies.filter((movie: Movie | null): movie is Movie => movie !== null);
 }
 
 async function fetchMoviesFromCollection(collectionId: string): Promise<Movie[]> {
@@ -28,9 +33,21 @@ async function fetchMoviesFromCollection(collectionId: string): Promise<Movie[]>
         params: { api_key: API_KEY, language: 'en-US' },
     });
 
-    return response.data.parts
-        .map(mapMovieData)
-        .filter((movie: Movie | null): movie is Movie => movie !== null);
+    const movies = await Promise.all(
+        response.data.parts.map(async (movie: any) => {
+            const details = await fetchMovieDetails(movie.id);
+            return mapMovieData(movie, details);
+        })
+    );
+
+    return movies.filter((movie: Movie | null): movie is Movie => movie !== null);
+}
+
+async function fetchMovieDetails(tmdbId: number) {
+    const response = await axios.get(`${BASE_URL}/movie/${tmdbId}`, {
+        params: { api_key: API_KEY, language: 'en-US' },
+    });
+    return response.data;
 }
 
 export async function fetchAllGodzillaMovies() {
@@ -65,9 +82,9 @@ export async function fetchAllGodzillaMovies() {
     }
 }
 
-//fetchAllGodzillaMovies();
+// fetchAllGodzillaMovies();
 
-function mapMovieData(movie: any): Movie | null {
+function mapMovieData(movie: any, details: any): Movie | null {
     const era = determineEra(movie.release_date, movie.original_language);
     if (!era) return null;
 
@@ -81,7 +98,9 @@ function mapMovieData(movie: any): Movie | null {
         posterUrl: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
         description: movie.overview,
         era,
-        rating: movie.vote_average, // Add this line to map the rating
+        rating: movie.vote_average,
+        genres: details.genres.map((genre: { name: string }) => genre.name), // Map genres
+        runtime: details.runtime, // Add runtime
         ...(alternateNames && { alternateNames }),
     };
 }

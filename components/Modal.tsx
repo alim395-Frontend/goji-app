@@ -1,8 +1,11 @@
+// components/Modal.tsx
+"use client";
+
 import React, { useEffect, useState } from "react";
 import styled, { keyframes, css } from "styled-components";
 import { Movie } from "@/data/movies";
 import StarRating from './StarRating';
-import Music from './Music'
+import Music from './Music';
 
 // Overlay that covers the entire screen
 const Overlay = styled.div`
@@ -100,17 +103,24 @@ const ContentContainer = styled.div`
 const Title = styled.h2`
   margin: 0;
   color: #333;
-`;
-
-// Rating of the movie
-const Rating = styled.p`
-  color: #333;
+  font-size: 2rem; // Increase font size
+  font-weight: bold; // Make the font bold
+  margin-bottom: 10px; // Add some margin at the bottom
+  text-align: center; // Center the title
 `;
 
 // Container for alternate names
 const AlternateNames = styled.p`
   font-style: italic;
-  color: #666;
+  color: #999; // Faded grey color
+  text-align: center; // Center the alternate names
+  margin-top: -10px; // Adjust margin to bring it closer to the title
+  margin-bottom: 10px; // Add some margin at the bottom
+`;
+
+// Rating of the movie
+const Rating = styled.p`
+  color: #333;
 `;
 
 // Release date of the movie
@@ -120,6 +130,16 @@ const ReleaseDate = styled.p`
 
 // Description of the movie
 const Description = styled.p`
+  color: #333;
+`;
+
+// Genres of the movie
+const Genres = styled.p`
+  color: #333;
+`;
+
+// Runtime of the movie
+const Runtime = styled.p`
   color: #333;
 `;
 
@@ -277,6 +297,11 @@ const Modal: React.FC<{
           </PosterContainer>
           <ContentContainer>
             <Title>{movie.title}</Title>
+            {movie.alternateNames && movie.alternateNames.length > 0 && (
+                <AlternateNames>
+                  {movie.alternateNames.join(", ")}
+                </AlternateNames>
+            )}
             <Rating>
               <strong>Rating:</strong>
               {movie.rating ? (
@@ -285,14 +310,19 @@ const Modal: React.FC<{
                   'N/A'
               )}
             </Rating>
-            {movie.alternateNames && movie.alternateNames.length > 0 && (
-                <AlternateNames>
-                  <strong>Alt. Names:</strong> {movie.alternateNames.join(", ")}
-                </AlternateNames>
-            )}
             <ReleaseDate>
               <strong>Release Date:</strong> {new Date(movie.releaseDate).toLocaleDateString()}
             </ReleaseDate>
+            {movie.genres && movie.genres.length > 0 && (
+                <Genres>
+                  <strong>Genres:</strong> {movie.genres.join(", ")}
+                </Genres>
+            )}
+            {movie.runtime !== undefined && (
+                <Runtime>
+                  <strong>Runtime:</strong> {movie.runtime} minutes
+                </Runtime>
+            )}
             <Description>{movie.description}</Description>
             {roarAvailable && (
                 <RoarButton onClick={playRoar} aria-label="Play Godzilla roar" isPlaying={isPlaying} />

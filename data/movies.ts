@@ -8,4 +8,6 @@ export interface Movie {
   era: string;
   alternateNames?: string[];
   rating?: number;
+  genres?: string[]; // Add genres
+  runtime?: number; // Add runtime
 }
