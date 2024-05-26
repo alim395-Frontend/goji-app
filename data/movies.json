@@ -90,7 +90,7 @@
   {
     "title": "Destroy All Monsters",
     "releaseDate": "1968-08-01",
-    "posterUrl": "https://image.tmdb.org/t/p/original/aF1a8CxkEnhpNt1GBUd19YMWXFE.jpg",
+    "posterUrl": "https://image.tmdb.org/t/p/original/24r1hsRisfUidwLF67J0iMuWh7p.jpg",
     "description": "At the turn of the century, all of the Earth's monsters have been rounded up and kept safely on Monsterland. Chaos erupts when a race of she-aliens known as the Kilaaks unleash the monsters across the world.",
     "era": "Showa",
     "rating": 6.8,
@@ -247,7 +247,7 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/xJVl1I95StraYAwaNbBkVoWE2qA.jpg",
     "description": "French nuclear tests irradiate an iguana into a giant monster that viciously attacks freighter ships in the Pacific Ocean. A team of experts, including Niko Tatopoulos, conclude that the oversized reptile is the culprit. Before long, the giant lizard is loose in Manhattan as the US military races to destroy the monster before it reproduces and it's spawn takes over the world.",
     "era": "Tristar",
-    "rating": 5.616
+    "rating": 5.617
   },
   {
     "title": "Godzilla 2000: Millennium",
@@ -329,7 +329,7 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/jPNShaWZMpVF0iQ7j1dvTuZLD20.jpg",
     "description": "When a massive, gilled monster emerges from the deep and tears through the city, the government scrambles to save its citizens.  A rag-tag team of volunteers cuts through a web of red tape to uncover the monster's weakness and its mysterious ties to a foreign superpower.  But time is not on their side - the greatest catastrophe to ever befall the world is about to evolve right before their very eyes.",
     "era": "Reiwa",
-    "rating": 7.178,
+    "rating": 7.2,
     "alternateNames": [
       "シン・ゴジラ"
     ]
@@ -340,7 +340,7 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/hAuZ7g6TqDLv5fOqXIPgYRguOkm.jpg",
     "description": "A desperate group of refugees attempts to recolonize Earth 20,000 years after Godzilla took over. But one young man wants revenge above all else.",
     "era": "Reiwa",
-    "rating": 6.3,
+    "rating": 6.307,
     "alternateNames": [
       "GODZILLA 怪獣惑星"
     ]
@@ -373,7 +373,7 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/fQ40gmFM4p03tXwMxQQKh2cCBW4.jpg",
     "description": "Follows the heroic efforts of the crypto-zoological agency Monarch as its members face off against a battery of god-sized monsters, including the mighty Godzilla, who collides with Mothra, Rodan, and his ultimate nemesis, the three-headed King Ghidorah. When these ancient super-species, thought to be mere myths, rise again, they all vie for supremacy, leaving humanity's very existence hanging in the balance.",
     "era": "MonsterVerse",
-    "rating": 6.699
+    "rating": 6.7
   },
   {
     "title": "Godzilla vs. Kong",
@@ -389,7 +389,7 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/hkxxMIGaiCTmrEArK7J56JTKUlB.jpg",
     "description": "Postwar Japan is at its lowest point when a new crisis emerges in the form of a giant monster, baptized in the horrific power of the atomic bomb.",
     "era": "Reiwa",
-    "rating": 7.672,
+    "rating": 7.667,
     "alternateNames": [
       "ゴジラ-1.0"
     ]
@@ -400,6 +400,6 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/z1p34vh7dEOnLDmyCrlUVLuoDzd.jpg",
     "description": "Following their explosive showdown, Godzilla and Kong must reunite against a colossal undiscovered threat hidden within our world, challenging their very existence – and our own.",
     "era": "MonsterVerse",
-    "rating": 7.259
+    "rating": 7.281
   }
 ]

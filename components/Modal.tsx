@@ -1,6 +1,3 @@
-// components/Modal.tsx
-"use client";
-
 import React, { useEffect, useState } from "react";
 import styled, { keyframes, css } from "styled-components";
 import { Movie } from "@/data/movies";
@@ -28,11 +25,16 @@ const ModalContent = styled.div`
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex; // Set to flex to use flexbox layout
-  max-width: 900px; // Adjust the width as needed
-  width: 90%; // Adjust the width as needed
-  max-height: 90vh; // Ensure the modal doesn't exceed the viewport height
-  overflow: hidden; // Hide overflow to manage scrolling within the content container
+  display: flex;
+  flex-direction: column; // Default to column layout for smaller screens
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto; // Make the content scrollable
+
+  @media (min-width: 768px) {
+    flex-direction: row; // Change to row layout for larger screens
+  }
 `;
 
 const CloseButton = styled.button`
@@ -60,16 +62,14 @@ const CloseButton = styled.button`
 
 // PosterContainer will hold the poster image
 const PosterContainer = styled.div`
-  flex: 1; // Take up 1 portion of the flex container
-  max-width: 40%; // Adjust the width as needed
-`;
+  flex: 1;
+  max-width: 100%; // Full width on smaller screens
+  margin-bottom: 20px; // Add margin at the bottom for spacing
 
-// ContentContainer will hold the movie details
-const ContentContainer = styled.div`
-  flex: 2; // Take up 2 portions of the flex container
-  margin-left: 20px; // Add some space between the poster and the content
-  max-height: 80vh; // Set a maximum height for the content container
-  overflow-y: auto; // Enable vertical scrolling
+  @media (min-width: 768px) {
+    max-width: 40%; // Adjust the width for larger screens
+    margin-bottom: 0; // Remove bottom margin for larger screens
+  }
 `;
 
 // Adjust the Poster styled component if needed
@@ -77,6 +77,23 @@ const Poster = styled.img`
   width: 100%;
   height: auto;
   border-radius: 4px;
+
+  @media (max-width: 767px) {
+    max-height: 200px; // Limit the height on smaller screens
+    object-fit: cover; // Ensure the image covers the area without distortion
+  }
+`;
+
+// ContentContainer will hold the movie details
+const ContentContainer = styled.div`
+  flex: 2;
+  margin-left: 0; // No left margin on smaller screens
+  max-height: 80vh;
+  overflow-y: auto;
+
+  @media (min-width: 768px) {
+    margin-left: 20px; // Add left margin for larger screens
+  }
 `;
 
 // Title of the movie
@@ -174,6 +191,20 @@ const Modal: React.FC<{
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
   const [roarAvailable, setRoarAvailable] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    // Add or remove the class to disable scrolling on the body element
+    if (isOpen) {
+      document.body.classList.add('modal-open');
+    } else {
+      document.body.classList.remove('modal-open');
+    }
+
+    // Cleanup function to remove the class when the component unmounts
+    return () => {
+      document.body.classList.remove('modal-open');
+    };
+  }, [isOpen]);
 
   useEffect(() => {
     // Reset states when the modal is closed or the movie changes
