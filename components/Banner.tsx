@@ -1,8 +1,8 @@
-// components/Banner.tsx
 'use client';
 
 import React from 'react';
 import styled from 'styled-components';
+import Image from 'next/image';
 
 const BannerWrapper = styled.div`
     width: 100%;
@@ -29,7 +29,13 @@ interface BannerProps {
 
 const Banner: React.FC<BannerProps> = ({ bannerFile = 'defaultbanner.svg' }) => (
     <BannerWrapper>
-        <img src={`/${bannerFile}`} alt="Banner" />
+        <Image
+            src={`/${bannerFile}`}
+            alt="Banner"
+            width={500}
+            height={200}
+            layout="responsive"
+        />
     </BannerWrapper>
 );
 

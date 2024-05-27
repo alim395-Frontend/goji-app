@@ -6,7 +6,7 @@ import fs from 'fs/promises';
 
 export async function GET(req: NextRequest) {
     try {
-        const filePath = path.join(process.cwd(), 'data', 'mothra_movies.json');
+        const filePath = path.join(process.cwd(), 'public', 'data', 'mothra_movies.json');
         const fileContents = await fs.readFile(filePath, 'utf-8');
         const mothraMovies = JSON.parse(fileContents);
         return NextResponse.json(mothraMovies, { status: 200 });

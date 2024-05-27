@@ -50,6 +50,11 @@ async function fetchMovieDetails(tmdbId: number) {
     return response.data;
 }
 
+async function fetchMovieById(tmdbId: number): Promise<Movie | null> {
+    const details = await fetchMovieDetails(tmdbId);
+    return mapMovieData(details, details);
+}
+
 export async function fetchAllGodzillaMovies() {
     try {
         let allMovies: Movie[] = [];
@@ -96,7 +101,14 @@ export async function fetchAllMothraMovies() {
         const moviesFromCollection = await fetchMoviesFromCollection(mothraCollectionId);
         allMovies = allMovies.concat(moviesFromCollection);
 
-        // Remove duplicates based on a unique property, such as 'title'
+        // Fetch "Godzilla: King of the Monsters (2019)" explicitly
+        const godzillaKingOfMonstersId = 373571;
+        const godzillaKingOfMonsters = await fetchMovieById(godzillaKingOfMonstersId);
+        if (godzillaKingOfMonsters) {
+            allMovies.push(godzillaKingOfMonsters);
+        }
+
+        // Remove duplicates based on a unique property, such as 'releaseDate'
         const uniqueMovies = Array.from(new Map(allMovies.map(movie => [movie.releaseDate, movie])).values());
 
         // Sort the unique movies by release date
