@@ -108,6 +108,13 @@ export async function fetchAllMothraMovies() {
             allMovies.push(godzillaKingOfMonsters);
         }
 
+        // Fetch "Destroy All Monsters (1968)" explicitly
+        const anotherMovieId = 3107;
+        const anotherMovie = await fetchMovieById(anotherMovieId);
+        if (anotherMovie) {
+            allMovies.push(anotherMovie);
+        }
+
         // Remove duplicates based on a unique property, such as 'releaseDate'
         const uniqueMovies = Array.from(new Map(allMovies.map(movie => [movie.releaseDate, movie])).values());
 

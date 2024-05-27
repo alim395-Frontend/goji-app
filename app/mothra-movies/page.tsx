@@ -48,6 +48,11 @@ const MothraMoviesPage: React.FC = () => {
 
     useEffect(() => {
         setRoarIcon('roar_mothra.svg');
+
+        // Cleanup function to reset the roarIcon when the component unmounts
+        return () => {
+            setRoarIcon('roar.svg');
+        };
     }, [setRoarIcon]);
 
     return (
