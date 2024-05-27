@@ -30,7 +30,7 @@ const Filters: React.FC<{
             >
                 <option value="">All Eras</option>
                 <option value="Showa">Showa</option>
-                <option value="Heisei">Heisei</option>
+                <option value="Heisei">Heist</option>
                 <option value="Millennium">Millennium</option>
                 <option value="MonsterVerse">MonsterVerse</option>
                 <option value="Reiwa">Reiwa</option>

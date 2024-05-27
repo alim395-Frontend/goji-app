@@ -2,7 +2,7 @@
 "use client";
 
 import React from "react";
-import { Movie } from "@/data/movies";
+import { Movie } from "@/public/data/movies";
 import MovieItem from "./MovieItem";
 
 interface TimelineProps {

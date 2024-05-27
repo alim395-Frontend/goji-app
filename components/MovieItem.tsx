@@ -3,7 +3,7 @@
 
 import React from "react";
 import styled from "styled-components";
-import { Movie } from "@/data/movies";
+import { Movie } from "@/public/data/movies";
 
 const Item = styled.div`
     text-align: center;

@@ -1,3 +1,4 @@
+// components/MoviesDataUpdater.tsx
 import React, { useEffect } from 'react';
 
 const MoviesDataUpdater = () => {

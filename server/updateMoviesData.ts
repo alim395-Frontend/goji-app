@@ -1,10 +1,10 @@
-// server/updateMoviesData.ts
+//app/api/updateMoviesData/route.ts
 
 import dotenv from 'dotenv';
 import axios from 'axios';
 import path from 'path';
 import fs from 'fs';
-import { Movie } from '@/data/movies';
+import { Movie } from '@/public/data/movies';
 
 dotenv.config();
 
@@ -73,7 +73,7 @@ export async function fetchAllGodzillaMovies() {
         const sortedMovies = sortMoviesByReleaseDate(uniqueMovies);
 
         // Save the sorted movies to a file
-        const filePath = path.join(process.cwd(), 'data', 'movies.json');
+        const filePath = path.join(process.cwd(), 'public', 'data', 'movies.json');
         fs.writeFileSync(filePath, JSON.stringify(sortedMovies, null, 2), 'utf-8');
 
         console.log('Movies data has been updated.');
@@ -82,10 +82,40 @@ export async function fetchAllGodzillaMovies() {
     }
 }
 
+export async function fetchAllMothraMovies() {
+    try {
+        let allMovies: Movie[] = [];
+
+        // Fetch movies from the search term "Mothra"
+        const mothraSearchTerm = 'モスラ';
+        const moviesByTerm = await fetchMoviesBySearchTerm(mothraSearchTerm);
+        allMovies = allMovies.concat(moviesByTerm);
+
+        // Fetch movies from the collection ID 171732
+        const mothraCollectionId = '171732';
+        const moviesFromCollection = await fetchMoviesFromCollection(mothraCollectionId);
+        allMovies = allMovies.concat(moviesFromCollection);
+
+        // Remove duplicates based on a unique property, such as 'title'
+        const uniqueMovies = Array.from(new Map(allMovies.map(movie => [movie.releaseDate, movie])).values());
+
+        // Sort the unique movies by release date
+        const sortedMovies = sortMoviesByReleaseDate(uniqueMovies);
+
+        // Save the sorted movies to a file in the public directory
+        const filePath = path.join(process.cwd(), 'public', 'data', 'mothra_movies.json');
+        fs.writeFileSync(filePath, JSON.stringify(sortedMovies, null, 2), 'utf-8');
+
+        console.log('Mothra movies data has been updated.');
+    } catch (error) {
+        console.error('Error fetching Mothra movies:', error);
+    }
+}
+
 // fetchAllGodzillaMovies();
 
 function mapMovieData(movie: any, details: any): Movie | null {
-    const era = determineEra(movie.release_date, movie.original_language);
+    const era = determineEra(movie.release_date, movie.original_language, movie.title);
     if (!era) return null;
 
     const alternateNames = movie.original_language === 'ja' && movie.original_title !== movie.title
@@ -105,8 +135,13 @@ function mapMovieData(movie: any, details: any): Movie | null {
     };
 }
 
-function determineEra(releaseDate: string, originalLanguage: string): string {
+function determineEra(releaseDate: string, originalLanguage: string, title: string): string {
     const year = parseInt(releaseDate.split('-')[0], 10);
+
+    // Check for Rebirth of Mothra trilogy
+    const isMothraMovie = title.toLowerCase().includes('mothra');
+    if (isMothraMovie && year >= 1996 && year <= 1998) return 'Heisei';
+
     if (year <= 1979 && originalLanguage === 'ja') return 'Showa';
     if (year >= 1984 && year <= 1995 && originalLanguage === 'ja') return 'Heisei';
     if (year === 1998 && originalLanguage === 'en') return 'Tristar';
