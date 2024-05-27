@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
+import { useMediaQuery } from 'react-responsive';
 import { Movie } from "@/public/data/movies";
 import StarRating from './StarRating';
 import Music from './Music';
@@ -73,6 +74,7 @@ const Modal: React.FC<{
   const { roarIcon } = useRoarIcon();
   const { basePath } = useAudioPath();
   const router = useRouter();
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   useEffect(() => {
     if (isOpen) {
@@ -167,13 +169,15 @@ const Modal: React.FC<{
       <Overlay onClick={onClose}>
         <ModalContent onClick={(e) => e.stopPropagation()}>
           <CloseButton onClick={onClose}>&times;</CloseButton>
-          <PosterContainer>
-            <Poster
-                src={`/images/${movie.era}/${movie.title.replace(/[\\/:*?"<>|]/g, "").replace(/\s+/g, "_")}.jpg`}
-                alt={movie.title}
-                onError={handleImageError}
-            />
-          </PosterContainer>
+          {!isMobile && (
+              <PosterContainer>
+                <Poster
+                    src={`/images/${movie.era}/${movie.title.replace(/[\\/:*?"<>|]/g, "").replace(/\s+/g, "_")}.jpg`}
+                    alt={movie.title}
+                    onError={handleImageError}
+                />
+              </PosterContainer>
+          )}
           <ContentContainer>
             <Title onClick={handleTitleClick}>{movie.title}</Title>
             {movie.alternateNames && movie.alternateNames.length > 0 && (
