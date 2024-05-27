@@ -73,6 +73,10 @@ const PosterContainer = styled.div`
     max-width: 40%; // Adjust the width for larger screens
     margin-bottom: 0; // Remove bottom margin for larger screens
   }
+
+  @media (max-width: 767px) {
+    display: none; // Hide the poster on smaller screens
+  }
 `;
 
 // Adjust the Poster styled component if needed
