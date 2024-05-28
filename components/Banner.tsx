@@ -35,6 +35,7 @@ const Banner: React.FC<BannerProps> = ({ bannerFile = 'defaultbanner.svg' }) => 
             width={500}
             height={200}
             layout="responsive"
+            loading="eager"
         />
     </BannerWrapper>
 );
