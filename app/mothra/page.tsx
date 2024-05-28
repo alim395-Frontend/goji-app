@@ -1,4 +1,4 @@
-// app/mothra-movies/page.tsx
+// app/mothra/page.tsx
 'use client';
 
 import React, { useEffect } from 'react';

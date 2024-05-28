@@ -25,6 +25,18 @@ const Title = styled.h2`
   margin-bottom: 10px;
   text-align: center;
   cursor: pointer; /* Add cursor pointer to indicate clickability */
+  padding: 10px; /* Increase padding to make the clickable area larger */
+  touch-action: manipulation; /* Improve touch responsiveness */
+  user-select: none; /* Prevent text selection on double-tap */
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem; /* Adjust font size for mobile devices */
+    padding: 15px; /* Increase padding for mobile devices */
+  }
+
+  //&:hover {
+  //  color: #555; /* Add a hover effect for better visual feedback */
+  //}
 `;
 
 const AlternateNames = styled.p`
@@ -153,7 +165,7 @@ const Modal: React.FC<{
         new Audio('/sounds/mothra_leo.mp3').play();
         setTimeout(() => {
           router.push('/mothra');
-        }, 2000); // Delay to allow the sound to play before navigation
+        }, 1000); // Delay to allow the sound to play before navigation
       }
     }
   };

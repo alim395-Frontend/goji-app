@@ -1,5 +1,3 @@
-//app/api/updateMoviesData/route.ts
-
 import dotenv from 'dotenv';
 import axios from 'axios';
 import path from 'path';
@@ -10,13 +8,13 @@ dotenv.config();
 
 const API_KEY = process.env.TMDB_API_KEY;
 const BASE_URL = 'https://api.themoviedb.org/3';
-const SEARCH_TERMS = ['ゴジラ', 'Godzilla 1998']; // Add additional search terms as needed
-const COLLECTION_IDS = ['374509', '374511', '374512', '535313', '535790']; // Replace with actual collection IDs
 
 async function fetchMoviesBySearchTerm(searchTerm: string): Promise<Movie[]> {
     const response = await axios.get(`${BASE_URL}/search/movie`, {
         params: { api_key: API_KEY, query: searchTerm, language: 'en-US' },
     });
+
+    console.log(`Movies fetched by search term "${searchTerm}":`, response.data.results);
 
     const movies = await Promise.all(
         response.data.results.map(async (movie: any) => {
@@ -32,6 +30,8 @@ async function fetchMoviesFromCollection(collectionId: string): Promise<Movie[]>
     const response = await axios.get(`${BASE_URL}/collection/${collectionId}`, {
         params: { api_key: API_KEY, language: 'en-US' },
     });
+
+    console.log(`Movies fetched from collection ID "${collectionId}":`, response.data.parts);
 
     const movies = await Promise.all(
         response.data.parts.map(async (movie: any) => {
@@ -55,71 +55,26 @@ async function fetchMovieById(tmdbId: number): Promise<Movie | null> {
     return mapMovieData(details, details);
 }
 
-export async function fetchAllGodzillaMovies() {
+async function fetchAndSaveMovies(searchTerm: string, collectionIds: string[], explicitMovieIds: number[], filePath: string) {
     try {
         let allMovies: Movie[] = [];
 
-        // Fetch movies from all search terms
-        for (const searchTerm of SEARCH_TERMS) {
-            const moviesByTerm = await fetchMoviesBySearchTerm(searchTerm);
-            allMovies = allMovies.concat(moviesByTerm);
-        }
+        // Fetch movies from the search term
+        const moviesByTerm = await fetchMoviesBySearchTerm(searchTerm);
+        allMovies = allMovies.concat(moviesByTerm);
 
         // Fetch movies from all collections
-        for (const collectionId of COLLECTION_IDS) {
+        for (const collectionId of collectionIds) {
             const moviesFromCollection = await fetchMoviesFromCollection(collectionId);
             allMovies = allMovies.concat(moviesFromCollection);
         }
 
-        // Remove duplicates based on a unique property, such as 'title'
-        const uniqueMovies = Array.from(new Map(allMovies.map(movie => [movie.releaseDate, movie])).values());
-
-        // Sort the unique movies by release date
-        const sortedMovies = sortMoviesByReleaseDate(uniqueMovies);
-
-        // Save the sorted movies to a file
-        const filePath = path.join(process.cwd(), 'public', 'data', 'movies.json');
-        fs.writeFileSync(filePath, JSON.stringify(sortedMovies, null, 2), 'utf-8');
-
-        console.log('Movies data has been updated.');
-    } catch (error) {
-        console.error('Error fetching Godzilla movies:', error);
-    }
-}
-
-export async function fetchAllMothraMovies() {
-    try {
-        let allMovies: Movie[] = [];
-
-        // Fetch movies from the search term "Mothra"
-        const mothraSearchTerm = 'モスラ';
-        const moviesByTerm = await fetchMoviesBySearchTerm(mothraSearchTerm);
-        allMovies = allMovies.concat(moviesByTerm);
-
-        // Fetch movies from the collection ID 171732
-        const mothraCollectionId = '171732';
-        const moviesFromCollection = await fetchMoviesFromCollection(mothraCollectionId);
-        allMovies = allMovies.concat(moviesFromCollection);
-
-        // Fetch "Destroy All Monsters (1968)" explicitly
-        const anotherMovieId = 3107;
-        const anotherMovie = await fetchMovieById(anotherMovieId);
-        if (anotherMovie) {
-            allMovies.push(anotherMovie);
-        }
-
-        // Fetch "Godzilla: Final Wars (2005)" explicitly
-        const godzillaFinalWarsId = 15767;
-        const godzillaFinalWars = await fetchMovieById(godzillaFinalWarsId);
-        if (godzillaFinalWars) {
-            allMovies.push(godzillaFinalWars);
-        }
-
-        // Fetch "Godzilla: King of the Monsters (2019)" explicitly
-        const godzillaKingOfMonstersId = 373571;
-        const godzillaKingOfMonsters = await fetchMovieById(godzillaKingOfMonstersId);
-        if (godzillaKingOfMonsters) {
-            allMovies.push(godzillaKingOfMonsters);
+        // Fetch explicit movies
+        for (const movieId of explicitMovieIds) {
+            const movie = await fetchMovieById(movieId);
+            if (movie) {
+                allMovies.push(movie);
+            }
         }
 
         // Remove duplicates based on a unique property, such as 'releaseDate'
@@ -128,17 +83,44 @@ export async function fetchAllMothraMovies() {
         // Sort the unique movies by release date
         const sortedMovies = sortMoviesByReleaseDate(uniqueMovies);
 
-        // Save the sorted movies to a file in the public directory
-        const filePath = path.join(process.cwd(), 'public', 'data', 'mothra_movies.json');
+        // Save the sorted movies to a file
+        console.log(`Writing to file: ${filePath}`);
         fs.writeFileSync(filePath, JSON.stringify(sortedMovies, null, 2), 'utf-8');
 
-        console.log('Mothra movies data has been updated.');
+        console.log(`${filePath} data has been updated.`);
     } catch (error) {
-        console.error('Error fetching Mothra movies:', error);
+        console.error(`Error fetching movies for ${filePath}:`, error);
     }
 }
 
-// fetchAllGodzillaMovies();
+export async function fetchAllGodzillaMovies() {
+    const godzillaSearchTerms = ['ゴジラ', 'Godzilla 1998'];
+    const godzillaCollectionIds = ['374509', '374511', '374512', '535313', '535790'];
+    const godzillaExplicitMovieIds: number[] = [];
+    const godzillaFilePath = path.join(process.cwd(), 'public', 'data', 'movies.json');
+
+    for (const searchTerm of godzillaSearchTerms) {
+        await fetchAndSaveMovies(searchTerm, godzillaCollectionIds, godzillaExplicitMovieIds, godzillaFilePath);
+    }
+}
+
+export async function fetchAllMothraMovies() {
+    const mothraSearchTerm = 'モスラ';
+    const mothraCollectionIds = ['171732'];
+    const mothraExplicitMovieIds = [3107, 15767, 373571];
+    const mothraFilePath = path.join(process.cwd(), 'public', 'data', 'mothra_movies.json');
+
+    await fetchAndSaveMovies(mothraSearchTerm, mothraCollectionIds, mothraExplicitMovieIds, mothraFilePath);
+}
+
+export async function fetchAllGameraMovies() {
+    const gameraSearchTerm = '';
+    const gameraCollectionIds = ['161766', '657313'];
+    const gameraExplicitMovieIds = [60160];
+    const gameraFilePath = path.join(process.cwd(), 'public', 'data', 'gamera_movies.json');
+
+    await fetchAndSaveMovies(gameraSearchTerm, gameraCollectionIds, gameraExplicitMovieIds, gameraFilePath);
+}
 
 function mapMovieData(movie: any, details: any): Movie | null {
     const era = determineEra(movie.release_date, movie.original_language, movie.title);
@@ -168,10 +150,14 @@ function determineEra(releaseDate: string, originalLanguage: string, title: stri
     const isMothraMovie = title.toLowerCase().includes('mothra');
     if (isMothraMovie && year >= 1996 && year <= 1998) return 'Heisei';
 
-    if (year <= 1979 && originalLanguage === 'ja') return 'Showa';
+    // Check for Gamera trilogy
+    const isGameraMovie = title.toLowerCase().includes('gamera');
+    if (isGameraMovie && year >= 1995 && year <= 1999) return 'Heisei';
+
+    if (year < 1984 && originalLanguage === 'ja') return 'Showa';
     if (year >= 1984 && year <= 1995 && originalLanguage === 'ja') return 'Heisei';
     if (year === 1998 && originalLanguage === 'en') return 'Tristar';
-    if (year >= 1999 && year <= 2005 && originalLanguage === 'ja') return 'Millennium';
+    if (year >= 1999 && year <= 2006 && originalLanguage === 'ja') return 'Millennium';
     if (year >= 2014 && originalLanguage === 'en') return 'MonsterVerse';
     if (year >= 2016 && originalLanguage === 'ja') return 'Reiwa';
     return '';

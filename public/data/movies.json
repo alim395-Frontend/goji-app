@@ -122,7 +122,7 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/ueVb71Om2KaDcbeSLA8IHQtJ7oJ.jpg",
     "description": "Reporter Goro Maki stumbles upon scientists conducting weather experiments on Sollgel Island in the South Seas. He discovers the island is inhabited by giant mantis and a woman named Saeko who's been cast away since the death of her father. The pair soon find a helpless infant monster that Godzilla must adopt and learn to raise as one of his own.",
     "era": "Showa",
-    "rating": 6.409,
+    "rating": 6.4,
     "genres": [
       "Adventure",
       "Family",
@@ -382,7 +382,7 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/xJVl1I95StraYAwaNbBkVoWE2qA.jpg",
     "description": "French nuclear tests irradiate an iguana into a giant monster that viciously attacks freighter ships in the Pacific Ocean. A team of experts, including Niko Tatopoulos, conclude that the oversized reptile is the culprit. Before long, the giant lizard is loose in Manhattan as the US military races to destroy the monster before it reproduces and it's spawn takes over the world.",
     "era": "Tristar",
-    "rating": 5.617,
+    "rating": 5.616,
     "genres": [
       "Science Fiction",
       "Action",
@@ -508,23 +508,6 @@
     "runtime": 123
   },
   {
-    "title": "Shin Godzilla",
-    "releaseDate": "2016-07-29",
-    "posterUrl": "https://image.tmdb.org/t/p/original/jPNShaWZMpVF0iQ7j1dvTuZLD20.jpg",
-    "description": "When a massive, gilled monster emerges from the deep and tears through the city, the government scrambles to save its citizens.  A rag-tag team of volunteers cuts through a web of red tape to uncover the monster's weakness and its mysterious ties to a foreign superpower.  But time is not on their side - the greatest catastrophe to ever befall the world is about to evolve right before their very eyes.",
-    "era": "Reiwa",
-    "rating": 7.174,
-    "genres": [
-      "Action",
-      "Science Fiction",
-      "Horror"
-    ],
-    "runtime": 120,
-    "alternateNames": [
-      "シン・ゴジラ"
-    ]
-  },
-  {
     "title": "Godzilla: Planet of the Monsters",
     "releaseDate": "2017-11-17",
     "posterUrl": "https://image.tmdb.org/t/p/original/hAuZ7g6TqDLv5fOqXIPgYRguOkm.jpg",
@@ -581,7 +564,7 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/fQ40gmFM4p03tXwMxQQKh2cCBW4.jpg",
     "description": "Follows the heroic efforts of the crypto-zoological agency Monarch as its members face off against a battery of god-sized monsters, including the mighty Godzilla, who collides with Mothra, Rodan, and his ultimate nemesis, the three-headed King Ghidorah. When these ancient super-species, thought to be mere myths, rise again, they all vie for supremacy, leaving humanity's very existence hanging in the balance.",
     "era": "MonsterVerse",
-    "rating": 6.7,
+    "rating": 6.701,
     "genres": [
       "Science Fiction",
       "Action"
@@ -594,43 +577,12 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
     "description": "In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages.",
     "era": "MonsterVerse",
-    "rating": 7.619,
+    "rating": 7.618,
     "genres": [
       "Action",
       "Science Fiction",
       "Adventure"
     ],
     "runtime": 114
-  },
-  {
-    "title": "Godzilla Minus One",
-    "releaseDate": "2023-11-03",
-    "posterUrl": "https://image.tmdb.org/t/p/original/hkxxMIGaiCTmrEArK7J56JTKUlB.jpg",
-    "description": "Postwar Japan is at its lowest point when a new crisis emerges in the form of a giant monster, baptized in the horrific power of the atomic bomb.",
-    "era": "Reiwa",
-    "rating": 7.67,
-    "genres": [
-      "Science Fiction",
-      "Horror",
-      "Action"
-    ],
-    "runtime": 125,
-    "alternateNames": [
-      "ゴジラ-1.0"
-    ]
-  },
-  {
-    "title": "Godzilla x Kong: The New Empire",
-    "releaseDate": "2024-03-27",
-    "posterUrl": "https://image.tmdb.org/t/p/original/z1p34vh7dEOnLDmyCrlUVLuoDzd.jpg",
-    "description": "Following their explosive showdown, Godzilla and Kong must reunite against a colossal undiscovered threat hidden within our world, challenging their very existence – and our own.",
-    "era": "MonsterVerse",
-    "rating": 7.283,
-    "genres": [
-      "Science Fiction",
-      "Action",
-      "Adventure"
-    ],
-    "runtime": 115
   }
 ]

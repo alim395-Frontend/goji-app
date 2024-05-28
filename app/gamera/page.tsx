@@ -1,4 +1,4 @@
-// app/page.tsx
+// app/gamera/page.tsx
 'use client';
 
 import React, { useEffect } from 'react';
@@ -7,11 +7,11 @@ import { useRoarIcon } from '@/context/RoarIconContext';
 import { AudioPathProvider } from '@/context/AudioPathContext';
 import Home from "@/components/Home";
 
-const GodzillaMoviesPage: React.FC = () => {
+const GameraMoviesPage: React.FC = () => {
     const { setRoarIcon } = useRoarIcon();
 
     useEffect(() => {
-        setRoarIcon('roar.svg');
+        setRoarIcon('roar_mothra.svg');
 
         // Cleanup function to reset the roarIcon when the component unmounts
         return () => {
@@ -27,13 +27,13 @@ const GodzillaMoviesPage: React.FC = () => {
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ type: 'godzilla' }),
+                    body: JSON.stringify({ type: 'gamera' }),
                 });
 
                 const data = await response.json();
                 console.log(data.message);
             } catch (error) {
-                console.error('Error updating Godzilla movies data:', error);
+                console.error('Error updating Gamera movies data:', error);
             }
         };
 
@@ -42,11 +42,11 @@ const GodzillaMoviesPage: React.FC = () => {
 
     return (
         <Suspense fallback={<div>Loading...</div>}>
-            <AudioPathProvider basePath="/sounds/godzilla">
-                <Home bannerFile="defaultbanner.svg" apiEndpoint="api/getGodzillaMovies" />
+            <AudioPathProvider basePath="/sounds/gamera">
+                <Home bannerFile="gamerabanner.svg" apiEndpoint="api/getGameraMovies" />
             </AudioPathProvider>
         </Suspense>
     );
 };
 
-export default GodzillaMoviesPage;
+export default GameraMoviesPage;
