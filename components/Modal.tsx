@@ -157,16 +157,18 @@ const Modal: React.FC<{
 
   const handleTitleClick = () => {
     if (movie.title === "Godzilla vs. Mothra" && movie.releaseDate === "1992-12-12") {
-      setClickCount(prevCount => prevCount + 1);
-
-      if (clickCount === 0) {
-        new Audio('/sounds/mothra.mp3').play();
-      } else if (clickCount === 1) {
-        new Audio('/sounds/mothra_leo.mp3').play();
-        setTimeout(() => {
-          router.push('/mothra');
-        }, 1000); // Delay to allow the sound to play before navigation
-      }
+      const audio = new Audio('/sounds/mothra_song.mp3');
+      audio.play()
+          .then(() => {
+            audio.onended = () => {
+              router.push('/mothra');
+            };
+          })
+          .catch((error) => {
+            console.error('Error playing the audio:', error);
+            // Navigate to Mothra page even if there's an error playing the audio
+            router.push('/mothra');
+          });
     }
   };
 
