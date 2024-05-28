@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname} from 'next/navigation';
 import { useMediaQuery } from 'react-responsive';
 import { Movie } from "@/public/data/movies";
 import StarRating from './StarRating';
@@ -94,6 +94,7 @@ const Modal: React.FC<{
   const { basePath } = useAudioPath();
   const router = useRouter();
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const pathname = usePathname();
 
   useEffect(() => {
     if (isOpen) {
@@ -158,7 +159,7 @@ const Modal: React.FC<{
   const handleTitleClick = () => {
     if (isTitleAudioPlaying) return;
 
-    if (movie.title === "Godzilla vs. Mothra" && movie.releaseDate === "1992-12-12") {
+    if (movie.title === "Godzilla vs. Mothra" && movie.releaseDate === "1992-12-12" && pathname == '/') {
       setIsTitleAudioPlaying(true);
       const audio = new Audio('/sounds/mothra.mp3');
       audio.play()
