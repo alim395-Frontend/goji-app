@@ -74,6 +74,7 @@ const Modal: React.FC<{
   movie: Movie;
 }> = ({ isOpen, onClose, movie }) => {
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+  const [hasAudioFiles, setHasAudioFiles] = useState<boolean>(false);
   const [roarAvailable, setRoarAvailable] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [clickCount, setClickCount] = useState(0);
@@ -216,9 +217,13 @@ const Modal: React.FC<{
             {roarAvailable && (
                 <RoarButton onClick={playRoar} aria-label="Play Godzilla roar" isPlaying={isPlaying} icon={roarIcon} />
             )}
-            <Divider />
-            <SectionHeader>Audio Samples</SectionHeader>
-            <Music movie={movie.title} era={movie.era} />
+            {hasAudioFiles && (
+                <>
+                  <Divider />
+                  <SectionHeader>Audio Samples</SectionHeader>
+                </>
+            )}
+            <Music movie={movie.title} era={movie.era} onAudioFilesFetched={setHasAudioFiles} />
           </ContentContainer>
         </ModalContent>
       </Overlay>

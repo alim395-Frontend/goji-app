@@ -1,4 +1,4 @@
- // components/Music.tsx
+// components/Music.tsx
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
@@ -11,7 +11,13 @@ const AudioLabel = styled.p`
     color: #333;
 `;
 
-const Music: React.FC<{ movie: string; era: string }> = ({ movie, era }) => {
+interface MusicProps {
+    movie: string;
+    era: string;
+    onAudioFilesFetched?: (hasAudioFiles: boolean) => void;
+}
+
+const Music: React.FC<MusicProps> = ({ movie, era, onAudioFilesFetched }) => {
     const [audioFiles, setAudioFiles] = useState<string[]>([]);
 
     useEffect(() => {
@@ -29,13 +35,19 @@ const Music: React.FC<{ movie: string; era: string }> = ({ movie, era }) => {
                 const data = await response.json();
                 console.log('Fetched audio files:', data.files);
                 setAudioFiles(data.files);
+                if (onAudioFilesFetched) {
+                    onAudioFilesFetched(data.files.length > 0);
+                }
             } catch (error) {
                 console.error('Error fetching audio files:', error);
+                if (onAudioFilesFetched) {
+                    onAudioFilesFetched(false);
+                }
             }
         };
 
         fetchAudioFiles();
-    }, [movie, era]);
+    }, [movie, era, onAudioFilesFetched]);
 
     const getFileNameWithoutExtension = (fileName: string) => {
         return fileName.replace(/\.[^/.]+$/, "");
