@@ -3,12 +3,10 @@
 
 import React, { useEffect, useState } from 'react';
 import { Suspense } from "react";
-import Navbar from '@/components/Navbar';
-import Banner from '@/components/Banner';
-import MovieList from '@/components/MovieList';
 import { Movie } from '@/public/data/movies';
 import { useRoarIcon } from '@/context/RoarIconContext';
 import { AudioPathProvider } from '@/context/AudioPathContext';
+import Home from "@/components/Home";
 
 const MothraMoviesPage: React.FC = () => {
     const [movies, setMovies] = useState<Movie[]>([]);
@@ -58,23 +56,7 @@ const MothraMoviesPage: React.FC = () => {
     return (
         <Suspense fallback={<div>Loading...</div>}>
             <AudioPathProvider basePath="/sounds/mothra">
-                <div>
-                    <Banner bannerFile="mothrabanner.png" />
-                    <Navbar
-                        onFilterChange={setFilter}
-                        onSortChange={setSort}
-                        onEraChange={setEra}
-                    />
-                    <MovieList
-                        movies={movies}
-                        selectedMovie={selectedMovie}
-                        onMovieClick={setSelectedMovie}
-                        onCloseModal={() => setSelectedMovie(null)}
-                        filter={filter}
-                        sort={sort}
-                        era={era}
-                    />
-                </div>
+                <Home bannerFile={"mothrabanner.png"} />
             </AudioPathProvider>
         </Suspense>
     );

@@ -101,18 +101,25 @@ export async function fetchAllMothraMovies() {
         const moviesFromCollection = await fetchMoviesFromCollection(mothraCollectionId);
         allMovies = allMovies.concat(moviesFromCollection);
 
-        // Fetch "Godzilla: King of the Monsters (2019)" explicitly
-        const godzillaKingOfMonstersId = 373571;
-        const godzillaKingOfMonsters = await fetchMovieById(godzillaKingOfMonstersId);
-        if (godzillaKingOfMonsters) {
-            allMovies.push(godzillaKingOfMonsters);
-        }
-
         // Fetch "Destroy All Monsters (1968)" explicitly
         const anotherMovieId = 3107;
         const anotherMovie = await fetchMovieById(anotherMovieId);
         if (anotherMovie) {
             allMovies.push(anotherMovie);
+        }
+
+        // Fetch "Godzilla: Final Wars (2005)" explicitly
+        const godzillaFinalWarsId = 15767;
+        const godzillaFinalWars = await fetchMovieById(godzillaFinalWarsId);
+        if (godzillaFinalWars) {
+            allMovies.push(godzillaFinalWars);
+        }
+
+        // Fetch "Godzilla: King of the Monsters (2019)" explicitly
+        const godzillaKingOfMonstersId = 373571;
+        const godzillaKingOfMonsters = await fetchMovieById(godzillaKingOfMonstersId);
+        if (godzillaKingOfMonsters) {
+            allMovies.push(godzillaKingOfMonsters);
         }
 
         // Remove duplicates based on a unique property, such as 'releaseDate'

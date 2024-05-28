@@ -188,6 +188,25 @@
     ]
   },
   {
+    "title": "Godzilla: Final Wars",
+    "releaseDate": "2004-12-04",
+    "posterUrl": "https://image.tmdb.org/t/p/original/zpw7tJnN7yQfL4DO9HvuvnrAGRZ.jpg",
+    "description": "Humanity finally rids themselves of Godzilla, imprisoning him in an icy tomb in the South Pole. All is peaceful until various monsters emerge to lay waste to Earth's cities. Overwhelmed, humanity is seemingly saved by a race of benevolent aliens known as Xiliens. But not all is what it seems with these bizarre visitors. If humanity wishes to survive, they must reluctantly resurrect their most hated enemy, Godzilla.",
+    "era": "Millennium",
+    "rating": 7,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Science Fiction",
+      "Fantasy",
+      "Thriller"
+    ],
+    "runtime": 125,
+    "alternateNames": [
+      "ゴジラ ファイナルウォーズ"
+    ]
+  },
+  {
     "title": "Godzilla: King of the Monsters",
     "releaseDate": "2019-05-29",
     "posterUrl": "https://image.tmdb.org/t/p/original/fQ40gmFM4p03tXwMxQQKh2cCBW4.jpg",

@@ -10,9 +10,10 @@ import {Movie} from "@/public/data/movies";
 
 interface HomeProps {
     movies?: Movie[];
+    bannerFile?: string;
 }
 
-const Home: React.FC = () => {
+const Home: React.FC<HomeProps> = ({ bannerFile }) => {
     const {
         movies,
         selectedMovie,
@@ -32,7 +33,7 @@ const Home: React.FC = () => {
 
     return (
         <div>
-            <Banner />
+            <Banner bannerFile={bannerFile} />
             <Navbar
                 onFilterChange={setFilter}
                 onSortChange={setSort}

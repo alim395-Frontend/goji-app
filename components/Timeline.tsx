@@ -42,6 +42,11 @@ const Timeline: React.FC<TimelineProps> = ({
                 const ratingA = a.rating || 0;
                 const ratingB = b.rating || 0;
                 return ratingB - ratingA; // Assuming you want to sort from highest to lowest rating
+            } else if (sort === "runtime") {
+                // Handle the case where runtime might be undefined
+                const runtimeA = a.runtime || 0;
+                const runtimeB = b.runtime || 0;
+                return runtimeA - runtimeB; // Sort from shortest to longest runtime
             }
             return 0;
         });

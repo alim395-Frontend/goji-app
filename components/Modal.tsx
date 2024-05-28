@@ -62,6 +62,12 @@ const Divider = styled.hr`
   margin: 20px 0;
 `;
 
+const formatRuntime = (minutes: number): string => {
+  const hours = Math.floor(minutes / 60);
+  const remainingMinutes = minutes % 60;
+  return `${hours} hr ${remainingMinutes} min`;
+};
+
 const Modal: React.FC<{
   isOpen: boolean;
   onClose: () => void;
@@ -203,7 +209,7 @@ const Modal: React.FC<{
             )}
             {movie.runtime !== undefined && (
                 <Runtime>
-                  <strong>Runtime:</strong> {movie.runtime} minutes
+                  <strong>Runtime:</strong> {formatRuntime(movie.runtime)}
                 </Runtime>
             )}
             <Description>{movie.description}</Description>

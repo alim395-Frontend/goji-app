@@ -23,6 +23,7 @@ const Filters: React.FC<{
                 <option value="releaseDate">Sort by Release Date</option>
                 <option value="title">Sort by Title</option>
                 <option value="rating">Sort by Rating</option>
+                <option value="runtime">Sort by Runtime</option> {/* New option added */}
             </select>
             <select
                 onChange={(e) => onEraChange(e.target.value)}
