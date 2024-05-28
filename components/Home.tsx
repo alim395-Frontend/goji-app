@@ -6,14 +6,14 @@ import Navbar from './Navbar';
 import Banner from './Banner';
 import MovieList from './MovieList';
 import useMovies from '@/hooks/useMovies';
-import {Movie} from "@/public/data/movies";
+import { Movie } from "@/public/data/movies";
 
 interface HomeProps {
-    movies?: Movie[];
+    apiEndpoint: string;
     bannerFile?: string;
 }
 
-const Home: React.FC<HomeProps> = ({ bannerFile }) => {
+const Home: React.FC<HomeProps> = ({ apiEndpoint, bannerFile }) => {
     const {
         movies,
         selectedMovie,
@@ -26,7 +26,7 @@ const Home: React.FC<HomeProps> = ({ bannerFile }) => {
         setEra,
         loading,
         error,
-    } = useMovies('/api/updateMoviesData');
+    } = useMovies(apiEndpoint);
 
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;

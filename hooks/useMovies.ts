@@ -1,29 +1,35 @@
-'use client';
-
+// hooks/useMovies.ts
 import { useState, useEffect } from 'react';
 import { Movie } from '@/public/data/movies';
 
 const useMovies = (apiEndpoint: string) => {
     const [movies, setMovies] = useState<Movie[]>([]);
     const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
-    const [filter, setFilter] = useState('');
-    const [sort, setSort] = useState('releaseDate');
-    const [era, setEra] = useState('');
-    const [loading, setLoading] = useState(true);
+    const [filter, setFilter] = useState<string>('');
+    const [sort, setSort] = useState<string>('releaseDate');
+    const [era, setEra] = useState<string>('');
+    const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchMovies = async () => {
             try {
-                const response = await fetch(apiEndpoint);
-                if (!response.ok) {
-                    throw new Error('Failed to fetch movies');
+                const response = await fetch(apiEndpoint, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                if (response.ok) {
+                    const moviesData = await response.json();
+                    setMovies(moviesData);
+                } else {
+                    setError('Failed to fetch movies data');
                 }
-                const data: Movie[] = await response.json();
-                setMovies(data);
             } catch (err) {
                 if (err instanceof Error) {
-                    setError(err.message);
+                    setError('Error fetching movies: ' + err.message);
                 } else {
                     setError('An unknown error occurred');
                 }
