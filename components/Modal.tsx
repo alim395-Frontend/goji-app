@@ -160,7 +160,7 @@ const Modal: React.FC<{
 
     if (movie.title === "Godzilla vs. Mothra" && movie.releaseDate === "1992-12-12") {
       setIsTitleAudioPlaying(true);
-      const audio = new Audio('/sounds/mothra_song.mp3');
+      const audio = new Audio('/sounds/mothra.mp3');
       audio.play()
           .then(() => {
             audio.onended = () => {
