@@ -151,8 +151,8 @@ const Modal: React.FC<{
       } else if (clickCount === 1) {
         new Audio('/sounds/mothra_leo.mp3').play();
         setTimeout(() => {
-          router.push('/mothra-movies');
-        }, 1000); // Delay to allow the sound to play before navigation
+          router.push('/mothra');
+        }, 2000); // Delay to allow the sound to play before navigation
       }
     }
   };
