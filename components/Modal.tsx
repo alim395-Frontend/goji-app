@@ -118,7 +118,7 @@ const Modal: React.FC<{
 
     if (isOpen && movie) {
       const sanitizedTitle = movie.title.replace(/[\\/:*?"<>|]/g, "").replace(/\s+/g, "_");
-      const audioFile = `${basePath}/${sanitizedTitle}.mp3`;
+      const audioFile = `${basePath}/${movie.era}/${sanitizedTitle}.mp3`;
 
       console.log('Audio file path:', audioFile);
 
