@@ -3,7 +3,7 @@
 
 import React from "react";
 import styled from "styled-components";
-import Filters from "./Filters";
+import Filters from "@/components/Filters";
 
 const Nav = styled.nav`
     width: 100%;
@@ -37,7 +37,7 @@ const Navbar: React.FC<{
 }> = ({ onFilterChange, onSortChange, onEraChange }) => {
   return (
     <Nav>
-      <Logo>Godzilla Movie Catalogue</Logo>
+      <Logo>Movie Catalogue</Logo>
       <Filters
         onFilterChange={onFilterChange}
         onSortChange={onSortChange}
