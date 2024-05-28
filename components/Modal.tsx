@@ -34,9 +34,9 @@ const Title = styled.h2`
     padding: 15px; /* Increase padding for mobile devices */
   }
 
-  //&:hover {
-  //  color: #555; /* Add a hover effect for better visual feedback */
-  //}
+  &:hover {
+    color: #555; /* Add a hover effect for better visual feedback */
+  }
 `;
 
 const AlternateNames = styled.p`
@@ -89,7 +89,7 @@ const Modal: React.FC<{
   const [hasAudioFiles, setHasAudioFiles] = useState<boolean>(false);
   const [roarAvailable, setRoarAvailable] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [clickCount, setClickCount] = useState(0);
+  const [isTitleAudioPlaying, setIsTitleAudioPlaying] = useState(false);
   const { roarIcon } = useRoarIcon();
   const { basePath } = useAudioPath();
   const router = useRouter();
@@ -118,7 +118,7 @@ const Modal: React.FC<{
 
     if (isOpen && movie) {
       const sanitizedTitle = movie.title.replace(/[\\/:*?"<>|]/g, "").replace(/\s+/g, "_");
-      const audioFile = `${basePath}/${movie.era}/${sanitizedTitle}.mp3`;
+      const audioFile = `${basePath}/${sanitizedTitle}.mp3`;
 
       console.log('Audio file path:', audioFile);
 
@@ -156,16 +156,21 @@ const Modal: React.FC<{
   };
 
   const handleTitleClick = () => {
+    if (isTitleAudioPlaying) return;
+
     if (movie.title === "Godzilla vs. Mothra" && movie.releaseDate === "1992-12-12") {
+      setIsTitleAudioPlaying(true);
       const audio = new Audio('/sounds/mothra_song.mp3');
       audio.play()
           .then(() => {
             audio.onended = () => {
+              setIsTitleAudioPlaying(false);
               router.push('/mothra');
             };
           })
           .catch((error) => {
             console.error('Error playing the audio:', error);
+            setIsTitleAudioPlaying(false);
             // Navigate to Mothra page even if there's an error playing the audio
             router.push('/mothra');
           });
