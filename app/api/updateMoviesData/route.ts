@@ -17,17 +17,17 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
     try {
-        const { type } = await req.json();
-        console.log('Received type:', type);
+        const { type, force } = await req.json();
+        //console.log('Received type:', type);
 
         if (type === 'godzilla') {
-            await fetchAllGodzillaMovies();
+            await fetchAllGodzillaMovies(force);
             return NextResponse.json({ message: 'Godzilla movies data has been updated.' }, { status: 200 });
         } else if (type === 'mothra') {
-            await fetchAllMothraMovies();
+            await fetchAllMothraMovies(force);
             return NextResponse.json({ message: 'Mothra movies data has been updated.' }, { status: 200 });
         } else if (type === 'gamera') {
-            await fetchAllGameraMovies();
+            await fetchAllGameraMovies(force);
             return NextResponse.json({ message: 'Gamera movies data has been updated.' }, { status: 200 });
         } else {
             return NextResponse.json({ message: 'Invalid type specified.' }, { status: 400 });

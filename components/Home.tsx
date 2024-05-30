@@ -6,7 +6,6 @@ import Navbar from './Navbar';
 import Banner from './Banner';
 import MovieList from './MovieList';
 import useMovies from '@/hooks/useMovies';
-import { Movie } from "@/public/data/movies";
 
 interface HomeProps {
     apiEndpoint: string;

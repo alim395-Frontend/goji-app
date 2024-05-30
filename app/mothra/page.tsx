@@ -19,6 +19,27 @@ const MothraMoviesPage: React.FC = () => {
         };
     }, [setRoarIcon]);
 
+    useEffect(() => {
+        const updateMoviesData = async () => {
+            try {
+                const response = await fetch('/api/updateMoviesData', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ type: 'mothra' }),
+                });
+
+                const data = await response.json();
+                //console.log(data.message);
+            } catch (error) {
+                console.error('Error updating Mothra movies data:', error);
+            }
+        };
+
+        updateMoviesData();
+    }, []);
+
     return (
         <Suspense fallback={<div>Loading...</div>}>
             <AudioPathProvider basePath="/sounds/mothra">

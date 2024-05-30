@@ -8,13 +8,13 @@ dotenv.config();
 
 const API_KEY = process.env.TMDB_API_KEY;
 const BASE_URL = 'https://api.themoviedb.org/3';
+const LAST_UPDATE_FILE = path.join(process.cwd(), 'public', 'data', 'lastUpdate.json');
+const UPDATE_INTERVAL = 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
 
 async function fetchMoviesBySearchTerm(searchTerm: string): Promise<Movie[]> {
     const response = await axios.get(`${BASE_URL}/search/movie`, {
         params: { api_key: API_KEY, query: searchTerm, language: 'en-US' },
     });
-
-    console.log(`Movies fetched by search term "${searchTerm}":`, response.data.results);
 
     const movies = await Promise.all(
         response.data.results.map(async (movie: any) => {
@@ -30,8 +30,6 @@ async function fetchMoviesFromCollection(collectionId: string): Promise<Movie[]>
     const response = await axios.get(`${BASE_URL}/collection/${collectionId}`, {
         params: { api_key: API_KEY, language: 'en-US' },
     });
-
-    console.log(`Movies fetched from collection ID "${collectionId}":`, response.data.parts);
 
     const movies = await Promise.all(
         response.data.parts.map(async (movie: any) => {
@@ -55,8 +53,14 @@ async function fetchMovieById(tmdbId: number): Promise<Movie | null> {
     return mapMovieData(details, details);
 }
 
-async function fetchAndSaveMovies(searchTerm: string, collectionIds: string[], explicitMovieIds: number[], filePath: string) {
+async function fetchAndSaveMovies(searchTerm: string, collectionIds: string[], explicitMovieIds: number[], filePath: string, force: boolean = false) {
     try {
+        // Check if the data needs to be updated
+        if (!force && !shouldUpdateData()) {
+            console.log('Data is up-to-date. No need to fetch new data.');
+            return;
+        }
+
         let allMovies: Movie[] = [];
 
         // Fetch movies from the search term
@@ -84,8 +88,10 @@ async function fetchAndSaveMovies(searchTerm: string, collectionIds: string[], e
         const sortedMovies = sortMoviesByReleaseDate(uniqueMovies);
 
         // Save the sorted movies to a file
-        console.log(`Writing to file: ${filePath}`);
         fs.writeFileSync(filePath, JSON.stringify(sortedMovies, null, 2), 'utf-8');
+
+        // Update the last update timestamp
+        updateLastUpdateTimestamp();
 
         console.log(`${filePath} data has been updated.`);
     } catch (error) {
@@ -93,33 +99,50 @@ async function fetchAndSaveMovies(searchTerm: string, collectionIds: string[], e
     }
 }
 
-export async function fetchAllGodzillaMovies() {
+function shouldUpdateData(): boolean {
+    if (!fs.existsSync(LAST_UPDATE_FILE)) {
+        return true;
+    }
+
+    const lastUpdateData = JSON.parse(fs.readFileSync(LAST_UPDATE_FILE, 'utf-8'));
+    const lastUpdateTime = new Date(lastUpdateData.timestamp).getTime();
+    const currentTime = Date.now();
+
+    return (currentTime - lastUpdateTime) > UPDATE_INTERVAL;
+}
+
+function updateLastUpdateTimestamp() {
+    const timestamp = new Date().toISOString();
+    fs.writeFileSync(LAST_UPDATE_FILE, JSON.stringify({ timestamp }), 'utf-8');
+}
+
+export async function fetchAllGodzillaMovies(force: boolean = false) {
     const godzillaSearchTerms = ['ゴジラ', 'Godzilla 1998'];
     const godzillaCollectionIds = ['374509', '374511', '374512', '535313', '535790'];
     const godzillaExplicitMovieIds: number[] = [];
     const godzillaFilePath = path.join(process.cwd(), 'public', 'data', 'movies.json');
 
     for (const searchTerm of godzillaSearchTerms) {
-        await fetchAndSaveMovies(searchTerm, godzillaCollectionIds, godzillaExplicitMovieIds, godzillaFilePath);
+        await fetchAndSaveMovies(searchTerm, godzillaCollectionIds, godzillaExplicitMovieIds, godzillaFilePath, force);
     }
 }
 
-export async function fetchAllMothraMovies() {
+export async function fetchAllMothraMovies(force: boolean = false) {
     const mothraSearchTerm = 'モスラ';
     const mothraCollectionIds = ['171732'];
     const mothraExplicitMovieIds = [3107, 15767, 373571];
     const mothraFilePath = path.join(process.cwd(), 'public', 'data', 'mothra_movies.json');
 
-    await fetchAndSaveMovies(mothraSearchTerm, mothraCollectionIds, mothraExplicitMovieIds, mothraFilePath);
+    await fetchAndSaveMovies(mothraSearchTerm, mothraCollectionIds, mothraExplicitMovieIds, mothraFilePath, force);
 }
 
-export async function fetchAllGameraMovies() {
+export async function fetchAllGameraMovies(force: boolean = false) {
     const gameraSearchTerm = '';
     const gameraCollectionIds = ['161766', '657313'];
     const gameraExplicitMovieIds = [60160];
     const gameraFilePath = path.join(process.cwd(), 'public', 'data', 'gamera_movies.json');
 
-    await fetchAndSaveMovies(gameraSearchTerm, gameraCollectionIds, gameraExplicitMovieIds, gameraFilePath);
+    await fetchAndSaveMovies(gameraSearchTerm, gameraCollectionIds, gameraExplicitMovieIds, gameraFilePath, force);
 }
 
 function mapMovieData(movie: any, details: any): Movie | null {
@@ -137,8 +160,8 @@ function mapMovieData(movie: any, details: any): Movie | null {
         description: movie.overview,
         era,
         rating: movie.vote_average,
-        genres: details.genres.map((genre: { name: string }) => genre.name), // Map genres
-        runtime: details.runtime, // Add runtime
+        genres: details.genres.map((genre: { name: string }) => genre.name),
+        runtime: details.runtime,
         ...(alternateNames && { alternateNames }),
     };
 }
