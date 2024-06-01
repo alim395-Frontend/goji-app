@@ -234,6 +234,11 @@
     height: auto;
 }
 
+.hint-wrapper audio {
+    width: 100%; /* Ensure the audio element takes the full width of its container */
+    height: 40px; /* Set a fixed height for the audio element */
+}
+
 .hint-description {
     margin-top: 10px;
     font-size: 1em;
