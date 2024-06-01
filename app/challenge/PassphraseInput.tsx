@@ -36,7 +36,7 @@ const PassphraseInput: React.FC = () => {
             />
             <button onClick={handlePassphraseSubmit} className="submit-button">Submit</button>
             {passphraseFeedback && <p>{passphraseFeedback}</p>}
-            <audio ref={audioRef} src="/challenge/secret.mp3" />
+            <audio ref={audioRef} src="/challenge_data/secret.mp3" />
         </div>
     );
 };
