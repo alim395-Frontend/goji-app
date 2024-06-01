@@ -38,7 +38,7 @@ const Result: React.FC<ResultProps> = ({
         let hintDescription = '';
 
         if (currentSetIndex === 0) {
-            hintElement = <audio controls src="/challenge/hint1.mp3" />;
+            hintElement = <audio controls src="/challenge/hint1.mp3"/>;
             hintDescription = 'HINT #1: Listen carefully to what you are hearing, and NOTE who is present. It may help if you write it down.';
         } else if (currentSetIndex === 1) {
             hintElement = <img src="/challenge/hint2.gif" alt="Hint 2" />;
