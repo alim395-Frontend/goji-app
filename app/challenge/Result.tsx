@@ -41,10 +41,10 @@ const Result: React.FC<ResultProps> = ({
             hintElement = <audio controls src="/challenge_data/hint1.mp3"/>;
             hintDescription = 'HINT #1: Listen carefully to what you are hearing, and NOTE who is present. It may help if you write it down.';
         } else if (currentSetIndex === 1) {
-            hintElement = <img src="/challenge_data/hint2.gif" alt="Hint 2" />;
+            hintElement = <img src="/challenge_data/hint2.gif" alt="Hint 2"/>;
             hintDescription = 'HINT #2: Kame Sen\'nin Master Roshi  preforming the Kamehameha. But what is a Kame hameha?';
         } else if (currentSetIndex === 2) {
-            hintElement = <img src="/challenge_data/hint3.png" alt="Hint 3" />;
+            hintElement = <img src="/challenge_data/hint3.png" alt="Hint 3"/>;
             hintDescription = 'HINT #3: An excerpt from a Japanese dictionary. Note the subject highlighted and the format, as it may help you with Hint #1.';
         }
 
