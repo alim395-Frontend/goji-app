@@ -1,0 +1,85 @@
+[
+  {
+    "title": "Godzilla",
+    "releaseDate": "1954-11-03",
+    "posterUrl": "https://image.tmdb.org/t/p/original/ixfHV61iRM4Jkgw0uI5ICtNwfmX.jpg",
+    "description": "Japan is thrown into a panic after several ships are sunk near Odo Island. An expedition to the island led by Dr. Yemani soon discover something far more devastating than imagined in the form of a 50 meter tall monster whom the natives call Gojira. Now the monster begins a rampage that threatens to destroy not only Japan, but the rest of the world as well.",
+    "era": "Showa",
+    "rating": 7.601,
+    "genres": [
+      "Thriller",
+      "Horror",
+      "Science Fiction"
+    ],
+    "runtime": 96,
+    "alternateNames": [
+      "ゴジラ"
+    ]
+  },
+  {
+    "title": "Godzilla Raids Again",
+    "releaseDate": "1955-04-24",
+    "posterUrl": "https://image.tmdb.org/t/p/original/bBYdh9tDCyLaArBOzE38QCA7C3y.jpg",
+    "description": "Two fishing scout pilots make a horrifying discovery when they encounter a second Godzilla alongside a new monster named Anguirus. Without the weapon that killed the original, authorities attempt to lure Godzilla away from the mainland. But Anguirus soon arrives and the two monsters make their way towards Osaka as Japan braces for tragedy.",
+    "era": "Showa",
+    "rating": 6,
+    "genres": [
+      "Science Fiction",
+      "Horror"
+    ],
+    "runtime": 82,
+    "alternateNames": [
+      "ゴジラの逆襲"
+    ]
+  },
+  {
+    "title": "Rodan",
+    "releaseDate": "1956-12-26",
+    "posterUrl": "https://image.tmdb.org/t/p/original/tcSSYYFsRrQCvy2HskkwpY29NnB.jpg",
+    "description": "Mining engineer Shigeru investigates the disappearance and death of his fellow coworkers when prehistoric nymphs are discovered emerging from the mines. After an attack on the local village, Shigeru heads deeper into the mines only to make a more horrifying discovery in the form a prehistoric flying creature. Soon a second monster appears as the two converge in Fukuoka.",
+    "era": "Showa",
+    "rating": 6.5,
+    "genres": [
+      "Horror",
+      "Science Fiction"
+    ],
+    "runtime": 72,
+    "alternateNames": [
+      "空の大怪獸 ラドン"
+    ]
+  },
+  {
+    "title": "Mothra",
+    "releaseDate": "1961-07-30",
+    "posterUrl": "https://image.tmdb.org/t/p/original/byaVDbtXlM8djW9XokJfb0z9bEC.jpg",
+    "description": "Shipwreck survivors found on the presumably uninhabited Infant Island leads to a scientific expedition that discovers a surviving native population along with the Shobijin, tiny twin fairy priestesses of the island's mythical deity called Mothra. After the fairies are kidnapped by an exploitative businessman named Clark Nelson, Mothra sets out to rescue them.",
+    "era": "Showa",
+    "rating": 7.1,
+    "genres": [
+      "Adventure",
+      "Science Fiction",
+      "Fantasy"
+    ],
+    "runtime": 101,
+    "alternateNames": [
+      "モスラ"
+    ]
+  },
+  {
+    "title": "Ebirah, Horror of the Deep",
+    "releaseDate": "1966-12-17",
+    "posterUrl": "https://image.tmdb.org/t/p/original/rYGsvMKjIBU5CAQrfHOv9xIfYhn.jpg",
+    "description": "Searching for his brother, Ryota stows away on a boat belonging to a criminal alongside two other teenagers. The group shipwrecks on Letchi island and discover the Infant Island natives have been enslaved by a terrorist organization controlling a crustacean monster. Finding a sleeping Godzilla, they decide to awaken him to defeat the terrorists and liberate the natives.",
+    "era": "Showa",
+    "rating": 6.325,
+    "genres": [
+      "Science Fiction",
+      "Action",
+      "Fantasy"
+    ],
+    "runtime": 87,
+    "alternateNames": [
+      "ゴジラ・エビラ・モスラ　南海の大決闘"
+    ]
+  }
+]

@@ -26,7 +26,7 @@ const Button = styled.button<{ isPlaying: boolean; icon: string }>`
     border-radius: 4px;
     cursor: pointer;
     margin-top: 20px;
-    background-image: url(${({ icon }) => icon}); // Use the icon prop for the background image
+    background-image: url(${({ icon }) => `/roarIcons/${icon}`}); // Use the icon prop for the background image
     background-repeat: no-repeat;
     background-position: center;
     background-size: 80%; // Adjust the size of the SVG within the button

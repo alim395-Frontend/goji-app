@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import path from 'path';
 import fs from 'fs/promises';
-import { fetchAllGameraMovies, fetchAllGodzillaMovies, fetchAllMothraMovies } from '@/server/updateMoviesData';
+import { fetchAllGameraMovies, fetchAllGodzillaMovies, fetchAllMothraMovies, fetchChallengeMovies } from '@/server/updateMoviesData';
 
 export async function GET(req: NextRequest) {
     try {
@@ -29,7 +29,11 @@ export async function POST(req: NextRequest) {
         } else if (type === 'gamera') {
             await fetchAllGameraMovies(force);
             return NextResponse.json({ message: 'Gamera movies data has been updated.' }, { status: 200 });
-        } else {
+        } else if (type === 'challenge') {
+            await fetchChallengeMovies(force);
+            return NextResponse.json({ message: 'Challenge movies data has been updated.' }, { status: 200 });
+        }
+        else {
             return NextResponse.json({ message: 'Invalid type specified.' }, { status: 400 });
         }
     } catch (error) {

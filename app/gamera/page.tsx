@@ -11,7 +11,7 @@ const GameraMoviesPage: React.FC = () => {
     const { setRoarIcon } = useRoarIcon();
 
     useEffect(() => {
-        setRoarIcon('roar_mothra.svg');
+        setRoarIcon('roar_gamera.svg');
 
         // Cleanup function to reset the roarIcon when the component unmounts
         return () => {

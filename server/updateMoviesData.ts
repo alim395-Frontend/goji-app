@@ -53,7 +53,13 @@ async function fetchMovieById(tmdbId: number): Promise<Movie | null> {
     return mapMovieData(details, details);
 }
 
-async function fetchAndSaveMovies(searchTerm: string, collectionIds: string[], explicitMovieIds: number[], filePath: string, force: boolean = false) {
+async function fetchAndSaveMovies(
+    searchTerm: string | null,
+    collectionIds: string[] | null,
+    explicitMovieIds: number[] | null,
+    filePath: string,
+    force: boolean = false
+) {
     try {
         // Check if the data needs to be updated
         if (!force && !shouldUpdateData()) {
@@ -63,21 +69,27 @@ async function fetchAndSaveMovies(searchTerm: string, collectionIds: string[], e
 
         let allMovies: Movie[] = [];
 
-        // Fetch movies from the search term
-        const moviesByTerm = await fetchMoviesBySearchTerm(searchTerm);
-        allMovies = allMovies.concat(moviesByTerm);
-
-        // Fetch movies from all collections
-        for (const collectionId of collectionIds) {
-            const moviesFromCollection = await fetchMoviesFromCollection(collectionId);
-            allMovies = allMovies.concat(moviesFromCollection);
+        // Fetch movies from the search term if provided
+        if (searchTerm) {
+            const moviesByTerm = await fetchMoviesBySearchTerm(searchTerm);
+            allMovies = allMovies.concat(moviesByTerm);
         }
 
-        // Fetch explicit movies
-        for (const movieId of explicitMovieIds) {
-            const movie = await fetchMovieById(movieId);
-            if (movie) {
-                allMovies.push(movie);
+        // Fetch movies from all collections if provided
+        if (collectionIds && collectionIds.length > 0) {
+            for (const collectionId of collectionIds) {
+                const moviesFromCollection = await fetchMoviesFromCollection(collectionId);
+                allMovies = allMovies.concat(moviesFromCollection);
+            }
+        }
+
+        // Fetch explicit movies if provided
+        if (explicitMovieIds && explicitMovieIds.length > 0) {
+            for (const movieId of explicitMovieIds) {
+                const movie = await fetchMovieById(movieId);
+                if (movie) {
+                    allMovies.push(movie);
+                }
             }
         }
 
@@ -137,12 +149,21 @@ export async function fetchAllMothraMovies(force: boolean = false) {
 }
 
 export async function fetchAllGameraMovies(force: boolean = false) {
-    const gameraSearchTerm = '';
+    const gameraSearchTerm = null;
     const gameraCollectionIds = ['161766', '657313'];
     const gameraExplicitMovieIds = [60160];
     const gameraFilePath = path.join(process.cwd(), 'public', 'data', 'gamera_movies.json');
 
     await fetchAndSaveMovies(gameraSearchTerm, gameraCollectionIds, gameraExplicitMovieIds, gameraFilePath, force);
+}
+
+export async function fetchChallengeMovies(force: boolean = false) {
+    const challengeSearchTerm = null;
+    const challengeCollectionIds = null;
+    const challengeExplicitMovieIds = [1678, 1679, 19742, 39410, 3115];
+    const challengeFilePath = path.join(process.cwd(), 'public', 'data', 'challenge.json');
+
+    await fetchAndSaveMovies(challengeSearchTerm, challengeCollectionIds, challengeExplicitMovieIds, challengeFilePath, force);
 }
 
 function mapMovieData(movie: any, details: any): Movie | null {

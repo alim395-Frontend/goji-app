@@ -30,7 +30,7 @@ interface BannerProps {
 const Banner: React.FC<BannerProps> = ({ bannerFile = 'defaultbanner.svg' }) => (
     <BannerWrapper>
         <Image
-            src={`/${bannerFile}`}
+            src={`/banners/${bannerFile}`}
             alt="Banner"
             width={500}
             height={200}

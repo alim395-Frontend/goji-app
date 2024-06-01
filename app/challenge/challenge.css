@@ -1,0 +1,274 @@
+/* app/challenge/challenge.css */
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it is behind all other content */
+    background-size: cover; /* Cover the entire screen */
+    transition: opacity 0.5s ease; /* Add transition for opacity */
+    opacity: 1; /* Initial opacity */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+    .background-container {
+        background-size: cover; /* Cover the entire screen */
+    }
+}
+
+.background-container.fade-out {
+    opacity: 0; /* Fade out effect */
+}
+
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.quiz-header {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.question-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Increased gap for better spacing */
+    justify-items: center;
+}
+
+.option-button {
+    padding: 15px 30px; /* Increased padding for larger buttons */
+    font-size: 1.2em; /* Increased font size */
+    cursor: pointer;
+    border: 2px solid #ccc; /* Added border for better visibility */
+    border-radius: 10px; /* Increased border radius for a more rounded look */
+    transition: background-color 0.3s, transform 0.2s; /* Added transform transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box-shadow for a 3D effect */
+    background-color: #007bff; /* Darker background color */
+    color: white; /* Light text color */
+}
+
+.option-button:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.option-button.correct {
+    background-color: green;
+    color: white;
+}
+
+.option-button.incorrect {
+    background-color: red;
+    color: white;
+}
+
+.feedback-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.next-button {
+    padding: 15px 30px; /* Increased padding for larger button */
+    font-size: 1.2em; /* Increased font size */
+    cursor: pointer;
+    border: 2px solid #ccc; /* Added border for better visibility */
+    border-radius: 10px; /* Increased border radius for a more rounded look */
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s; /* Added transform transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box-shadow for a 3D effect */
+}
+
+.next-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.result-container {
+    text-align: center;
+}
+
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    position: relative; /* For overlay positioning */
+    padding: 20px;
+    transition: opacity 0.5s ease;
+}
+
+.start-screen.fade-out {
+    opacity: 0;
+}
+
+.start-screen .text-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.start-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure it is above the background but below the text */
+}
+
+.start-screen h1,
+.start-screen p,
+.start-button {
+    position: relative;
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+.start-screen h1 {
+    font-size: 3em; /* Large font size */
+    margin-bottom: 20px;
+    color: #fff; /* White text color for better contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+}
+
+.start-screen p {
+    font-size: 1.5em; /* Large font size */
+    margin-bottom: 40px;
+    color: #fff; /* White text color for better contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+}
+
+.start-button {
+    padding: 20px 40px; /* Increased padding for larger button */
+    font-size: 1.5em; /* Large font size */
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.question-container {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.question-container.fade-out {
+    opacity: 0;
+}
+
+.question-container.fade-in {
+    opacity: 1;
+}
+
+.restart-button {
+    padding: 15px 30px; /* Similar padding to other buttons */
+    font-size: 1.2em; /* Similar font size to other buttons */
+    cursor: pointer;
+    border: 2px solid #ccc; /* Similar border to other buttons */
+    border-radius: 10px; /* Similar border radius to other buttons */
+    background-color: #007bff; /* Same background color as other buttons */
+    color: white; /* White text color */
+    transition: background-color 0.3s, transform 0.2s; /* Same transition as other buttons */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Same box-shadow as other buttons */
+}
+
+.restart-button:hover {
+    background-color: #0056b3; /* Same hover effect as other buttons */
+    transform: scale(1.05); /* Same hover effect as other buttons */
+}
+
+.quiz-content-container {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hint-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.hint-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.hint-wrapper audio,
+.hint-wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hint-description {
+    margin-top: 10px;
+    font-size: 1em;
+    text-align: center;
+    color: #ffffff;
+}
+
+.passphrase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.passphrase-input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: black; /* Ensure the text color is black */
+    background-color: white; /* Ensure the background color is white */
+}
+
+.submit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}

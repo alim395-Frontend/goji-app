@@ -1,0 +1,791 @@
+{
+  "sets": [
+    {
+      "questions": [
+        {
+          "question": "Who directed and co-wrote the 1954 film 'Godzilla'?",
+          "options": ["Eiji Tsuburaya", "Ishiro Honda", "Takeo Murata", "Akira Takarada"],
+          "correctAnswer": "Ishiro Honda"
+        },
+        {
+          "question": "What is the name of the first installment in the Godzilla series?",
+          "options": ["Godzilla, King of the Monsters!", "Godzilla Raids Again", "Godzilla", "King Kong vs. Godzilla"],
+          "correctAnswer": "Godzilla"
+        },
+        {
+          "question": "Which special effects artist worked on the original 1954 Godzilla film?",
+          "options": ["Ray Harryhausen", "Eiji Tsuburaya", "Haruo Nakajima", "Willis O'Brien"],
+          "correctAnswer": "Eiji Tsuburaya"
+        },
+        {
+          "question": "When was the original 'Godzilla' film released in Japanese theaters?",
+          "options": ["April 27, 1956", "May 29, 1962", "December 20, 1974", "November 3, 1954"],
+          "correctAnswer": "November 3, 1954"
+        },
+        {
+          "question": "What is the English-language version of 'Godzilla' directed by Terry Morse called?",
+          "options": ["Godzilla Raids Again", "Godzilla vs. King Ghidorah", "Godzilla, King of the Monsters!", "Godzilla vs. Megalon"],
+          "correctAnswer": "Godzilla, King of the Monsters!"
+        },
+        {
+          "question": "Who stars as the new character Steve Martin in the English-language version of 'Godzilla'?",
+          "options": ["Akira Takarada", "Momoko Kochi", "Raymond Burr", "Akihiko Hirata"],
+          "correctAnswer": "Raymond Burr"
+        },
+        {
+          "question": "What genre did the original 'Godzilla' film help launch?",
+          "options": ["Science fiction", "Kaiju eiga and tokusatsu", "Fantasy", "Horror"],
+          "correctAnswer": "Kaiju eiga and tokusatsu"
+        },
+        {
+          "question": "What is the name of the scientist who holds the key to defeating Godzilla in the 1954 film?",
+          "options": ["Takashi Shimura", "Akihiko Hirata", "Daisuke Serizawa", "Fuyuki Murakami"],
+          "correctAnswer": "Daisuke Serizawa"
+        },
+        {
+          "question": "What is the name of the weapon that could defeat Godzilla?",
+          "options": ["Atomic Bomb", "Hydrogen Bomb", "Oxygen Destroyer", "Plasma Cannon"],
+          "correctAnswer": "Oxygen Destroyer"
+        },
+        {
+          "question": "What year was the sequel 'Godzilla Raids Again' released?",
+          "options": ["1954", "1955", "1956", "1957"],
+          "correctAnswer": "1955"
+        },
+        {
+          "question": "What was the first Godzilla film to feature multiple monsters?",
+          "options": ["Godzilla", "Godzilla Raids Again", "King Kong vs. Godzilla", "Mothra vs. Godzilla"],
+          "correctAnswer": "Godzilla Raids Again"
+        },
+        {
+          "question": "What was the name of the slimmer and lighter Godzilla suit used in Godzilla Raids Again?",
+          "options": ["ShodaiGoji", "GyakushuGoji", "MosuGoji", "HeiseiGoji"],
+          "correctAnswer": "GyakushuGoji"
+        },
+        {
+          "question": "What tactic did the JSDF use in Osaka to protect it from Godzilla in Godzilla Raids Again?",
+          "options": ["Building a large wall", "Using fictional superweapons", "Enforcing a blackout", "Evacuating the city"],
+          "correctAnswer": "Enforcing a blackout"
+        },
+        {
+          "question": "Which film marks the last Godzilla movie to be filmed entirely in black-and-white and in the Academy aspect ratio?",
+          "options": ["Godzilla", "King Kong vs. Godzilla", "Godzilla Raids Again", "Mothra vs. Godzilla"],
+          "correctAnswer": "Godzilla Raids Again"
+        },
+        {
+          "question": "What was the alternate title for Godzilla Raids Again when distributed in the United States?",
+          "options": ["Gigantis, the Fire Monster", "Godzilla, King of the Monsters!", "Godzilla vs. the Sea Monster", "Godzilla: Final Wars"],
+          "correctAnswer": "Gigantis, the Fire Monster"
+        },
+        {
+          "question": "Which film marked both Godzilla and King Kong's first appearance in color and stereophonic sound?",
+          "options": ["Godzilla", "King Kong vs. Godzilla", "Godzilla Raids Again", "Mothra vs. Godzilla"],
+          "correctAnswer": "King Kong vs. Godzilla"
+        },
+        {
+          "question": "What type of ratio was used for the first time in the film King Kong vs. Godzilla?",
+          "options": ["Anamorphic 'Scope' ratio (2.35:1)", "Academy ratio (1.37:1)", "IMAX ratio (1.43:1)", "Panavision ratio (2.76:1)"],
+          "correctAnswer": "Anamorphic 'Scope' ratio (2.35:1)"
+        },
+        {
+          "question": "Who scored the famous Godzilla theme that debuted in King Kong vs. Godzilla?",
+          "options": ["Masaru Sato", "Akira Ifukube", "Eiji Tsuburaya", "Haruo Nakajima"],
+          "correctAnswer": "Akira Ifukube"
+        },
+        {
+          "question": "What did the animators of Davy Jones' tentacles in Pirates of the Caribbean: Dead Man's Chest use as a reference for octopuses on land?",
+          "options": ["Documentary footage", "Real-life studies", "Giant Octopus scene from King Kong vs. Godzilla", "Marine biology textbooks"],
+          "correctAnswer": "Giant Octopus scene from King Kong vs. Godzilla"
+        },
+        {
+          "question": "Which year did newspapers in King Kong vs. Godzilla announce Godzilla's return?",
+          "options": ["1955", "1960", "1962", "1964"],
+          "correctAnswer": "1962"
+        },
+        {
+          "question": "What was the accidental effect on the Godzilla suit during the filming of Mothra vs. Godzilla?",
+          "options": ["Broken tail", "Wobbling upper lip", "Missing dorsal fin", "Torn suit"],
+          "correctAnswer": "Wobbling upper lip"
+        },
+        {
+          "question": "Which song do the fishermen sing in the Yayoi Restaurant scene in Godzilla Raids Again?",
+          "options": ["'Sōran Bushi'", "'Furusato'", "'Sakura Sakura'", "'Ue o Muite Arukō'"],
+          "correctAnswer": "'Sōran Bushi'"
+        },
+        {
+          "question": "Which film was released in Japanese and American theaters the same year as Mothra vs. Godzilla?",
+          "options": ["Godzilla", "Shin Godzilla", "Godzilla Minus One", "Godzilla vs. Mechagodzilla"],
+          "correctAnswer": "Shin Godzilla"
+        },
+        {
+          "question": "Which film was Mothra vs. Godzilla theatrically released as a double feature with in Japan?",
+          "options": ["Rodan", "The War of the Gargantuas", "Operation Anti Hell", "Frankenstein vs. Baragon"],
+          "correctAnswer": "Operation Anti Hell"
+        },
+        {
+          "question": "How did special effects director Eiji Tsuburaya handle the scene where Godzilla's head gets set on fire in Mothra vs. Godzilla?",
+          "options": ["Stopped filming", "Replaced the suit", "Kept filming as planned", "Used CGI effects"],
+          "correctAnswer": "Kept filming as planned"
+        },
+        {
+          "question": "Which companion feature was shown with Ghidorah, the Three-Headed Monster in Showcase theaters in the New York metropolitan area?",
+          "options": ["Harum Scarum", "Blue Hawaii", "Viva Las Vegas", "Love Me Tender"],
+          "correctAnswer": "Harum Scarum"
+        },
+        {
+          "question": "What date is displayed on the newspaper Shindo reads in the film?",
+          "options": ["January 18, Showa 39 (1964)", "January 18, Showa 40 (1965)", "February 10, Showa 40 (1965)", "February 10, Showa 39 (1964)"],
+          "correctAnswer": "January 18, Showa 40 (1965)"
+        },
+        {
+          "question": "What is the unique aspect of King Ghidorah's early concept design?",
+          "options": ["Purple body and rainbow-colored wings", "Three tails and blue wings", "Red body and green wings", "Four heads and silver wings"],
+          "correctAnswer": "Purple body and rainbow-colored wings"
+        },
+        {
+          "question": "Which Godzilla film first portrayed Godzilla as a hero?",
+          "options": ["Godzilla Raids Again", "Mothra vs. Godzilla", "Ghidorah, the Three-Headed Monster", "Invasion of Astro-Monster"],
+          "correctAnswer": "Ghidorah, the Three-Headed Monster"
+        },
+        {
+          "question": "Which UFO prop from another film appears in Ghidorah, the Three-Headed Monster?",
+          "options": ["War of the Worlds", "The Mysterians", "Battle in Outer Space", "The Day the Earth Stood Still"],
+          "correctAnswer": "Battle in Outer Space"
+        },
+        {
+          "question": "What name was chosen for Godzilla's son following a naming campaign?",
+          "options": ["Minilla", "Godzooky", "Baby Godzilla", "Gojira Jr."],
+          "correctAnswer": "Minilla"
+        },
+        {
+          "question": "What scene from Son of Godzilla survived only in the trailer and a workprint outtake reel?",
+          "options": ["Godzilla leaving Minilla behind on Sollgel Island", "Minilla's first roar", "Godzilla's battle with Kumonga", "The destruction of Monster Island"],
+          "correctAnswer": "Godzilla leaving Minilla behind on Sollgel Island"
+        },
+        {
+          "question": "Who was the primary suit actor for Godzilla in Son of Godzilla?",
+          "options": ["Haruo Nakajima", "Hiroshi Sekita", "Kenpachiro Satsuma", "Akira Takarada"],
+          "correctAnswer": "Hiroshi Sekita"
+        },
+        {
+          "question": "Who was the first female writer to work on a Godzilla film?",
+          "options": ["Kazue Kiba", "Yoko Tani", "Michiko Yamamoto", "Akiko Mori"],
+          "correctAnswer": "Kazue Kiba"
+        },
+        {
+          "question": "What type of rifles are used by the heroes in Son of Godzilla?",
+          "options": ["Marlin Model 336", "Winchester Model 1873", "Remington Model 700", "Henry Lever Action Rifle"],
+          "correctAnswer": "Marlin Model 336"
+        },
+        {
+          "question": "Which film was re-released as a double feature with Destroy All Monsters?",
+          "options": ["Mothra", "Rodan", "Atragon", "Varan the Unbelievable"],
+          "correctAnswer": "Atragon"
+        },
+        {
+          "question": "Which monsters were considered for inclusion in Destroy All Monsters but were not included?",
+          "options": ["Ebirah, Maguma, Sanda, and Gaira", "Hedorah, Battra, Titanosaurus, and Gabara", "Manda, Varan, Gorosaurus, and Megalon", "Anguirus, Rodan, King Caesar, and Kamacuras"],
+          "correctAnswer": "Ebirah, Maguma, Sanda, and Gaira"
+        },
+        {
+          "question": "What year do the events of Destroy All Monsters take place according to the Japanese version?",
+          "options": ["1968", "1980", "1999", "2000"],
+          "correctAnswer": "2000"
+        },
+        {
+          "question": "Which two monsters have the least amount of screen time in Destroy All Monsters?",
+          "options": ["Manda and Gorosaurus", "Varan and Baragon", "Kumonga and Minilla", "Anguirus and Rodan"],
+          "correctAnswer": "Varan and Baragon"
+        },
+        {
+          "question": "Which animated TV series paid tribute to Destroy All Monsters with a three-episode story arc called 'Monster Wars'?",
+          "options": ["The Real Ghostbusters", "Godzilla: The Series", "King Kong: The Animated Series", "Ultraman"],
+          "correctAnswer": "Godzilla: The Series"
+        },
+        {
+          "question": "What unique ability did Godzilla demonstrate for the first and only time in Godzilla vs. Hedorah?",
+          "options": ["Teleportation", "Flight using his atomic breath", "Invisibility", "Shape-shifting"],
+          "correctAnswer": "Flight using his atomic breath"
+        },
+        {
+          "question": "Who was reportedly prohibited from working on another Godzilla film by Tomoyuki Tanaka?",
+          "options": ["Eiji Tsuburaya", "Yoshimitsu Banno", "Ishiro Honda", "Jun Fukuda"],
+          "correctAnswer": "Yoshimitsu Banno"
+        },
+        {
+          "question": "What did Godzilla reference when he crossed his arms to fend off Hedorah's eye beams?",
+          "options": ["Ultraman's Spacium Ray pose", "Superman's defensive stance", "Batman's shield block", "Iron Man's repulsor blast"],
+          "correctAnswer": "Ultraman's Spacium Ray pose"
+        },
+        {
+          "question": "Which monster was the first to make Godzilla visibly bleed in a film?",
+          "options": ["King Ghidorah", "Mechagodzilla", "Hedorah", "Gigan"],
+          "correctAnswer": "Hedorah"
+        },
+        {
+          "question": "What medical emergency did Kenpachiro Satsuma experience while promoting Godzilla vs. Hedorah?",
+          "options": ["Broken arm", "Heart attack", "Acute appendicitis", "Severe dehydration"],
+          "correctAnswer": "Acute appendicitis"
+        },
+        {
+          "question": "What milestone anniversary did Godzilla vs. Mechagodzilla mark for the Godzilla series?",
+          "options": ["10th anniversary", "15th anniversary", "20th anniversary", "25th anniversary"],
+          "correctAnswer": "20th anniversary"
+        },
+        {
+          "question": "What was unique about the credits in Godzilla vs. Mechagodzilla?",
+          "options": ["First to credit the director on screen", "First to credit the monster suit actors' roles on screen", "First to credit the voice actors on screen", "First to credit the special effects team on screen"],
+          "correctAnswer": "First to credit the monster suit actors' roles on screen"
+        },
+        {
+          "question": "Who adopted Mechagodzilla's walk from the formal movements of kabuki?",
+          "options": ["Ishiro Honda", "Eiji Tsuburaya", "Jun Fukuda", "Teruyoshi Nakano"],
+          "correctAnswer": "Teruyoshi Nakano"
+        },
+        {
+          "question": "Which film's stills were used in Nami the Azumi princess's vision in Godzilla vs. Mechagodzilla?",
+          "options": ["Ghidorah, the Three-Headed Monster and Submersion of Japan", "Mothra vs. Godzilla and War of the Gargantuas", "King Kong vs. Godzilla and Rodan", "Destroy All Monsters and The Mysterians"],
+          "correctAnswer": "Ghidorah, the Three-Headed Monster and Submersion of Japan"
+        },
+        {
+          "question": "What made Godzilla vs. Mechagodzilla one of the bloodiest Godzilla films?",
+          "options": ["Graphic monster battles and visible bloodshed", "Use of realistic weapons and explosions", "Human casualties and injuries", "Detailed destruction of cities"],
+          "correctAnswer": "Graphic monster battles and visible bloodshed"
+        },
+        {
+          "question": "Which film was the last Godzilla film directed by Jun Fukuda?",
+          "options": ["Godzilla vs. Mechagodzilla", "Terror of Mechagodzilla", "Godzilla vs. Gigan", "Godzilla vs. Megalon"],
+          "correctAnswer": "Godzilla vs. Mechagodzilla"
+        },
+        {
+          "question": "What was the first Godzilla film to feature a beam lock?",
+          "options": ["Son of Godzilla", "Ebirah, Horror of the Deep", "Godzilla vs. Mechagodzilla", "The Return of Godzilla"],
+          "correctAnswer": "Godzilla vs. Mechagodzilla"
+        },
+        {
+          "question": "Who was the second woman to write a Godzilla screenplay?",
+          "options": ["Kazue Kiba", "Yukiko Takayama", "Michiko Yamamoto", "Yoko Tani"],
+          "correctAnswer": "Yukiko Takayama"
+        },
+        {
+          "question": "What was Titanosaurus's role in Yukiko Takayama's original scenario?",
+          "options": ["Two dinosaurs called Titans", "A single giant serpent", "A mutated sea monster", "A robotic kaiju"],
+          "correctAnswer": "Two dinosaurs called Titans"
+        },
+        {
+          "question": "Which was the last Godzilla film directed by Ishiro Honda before his death in 1993?",
+          "options": ["Godzilla vs. Mechagodzilla", "Terror of Mechagodzilla", "Godzilla vs. Gigan", "Godzilla vs. Megalon"],
+          "correctAnswer": "Terror of Mechagodzilla"
+        },
+        {
+          "question": "Which was the last Toho-produced Godzilla film to be released in a month other than December until Shin Godzilla in 2016?",
+          "options": ["Godzilla vs. Mechagodzilla", "Godzilla vs. Gigan", "Godzilla vs. Hedorah", "Terror of Mechagodzilla"],
+          "correctAnswer": "Terror of Mechagodzilla"
+        },
+        {
+          "question": "Who made their film debut in Terror of Mechagodzilla?",
+          "options": ["Akira Takarada", "Tomoko Ai", "Hiroshi Koizumi", "Akihiko Hirata"],
+          "correctAnswer": "Tomoko Ai"
+        },
+        {
+          "question": "What was the first Godzilla film to feature an original score by Akira Ifukube since 1968's Destroy All Monsters?",
+          "options": ["Godzilla vs. Mechagodzilla", "Godzilla vs. Gigan", "Godzilla vs. Hedorah", "Terror of Mechagodzilla"],
+          "correctAnswer": "Terror of Mechagodzilla"
+        },
+        {
+          "question": "Which Ultra Series kaiju anatomical drawings can be seen in Dr. Mafune's lab in Terror of Mechagodzilla?",
+          "options": ["Kemular, Zaragas, and Telesdon", "Gomess, Pagos, and Litra", "Bemular, Zetton, and Red King", "Jirass, Banila, and Seabozu"],
+          "correctAnswer": "Kemular, Zaragas, and Telesdon"
+        },
+        {
+          "question": "Which monster erroneously appeared on the U.S. theatrical release poster for Terror of Mechagodzilla?",
+          "options": ["King Caesar", "Mothra", "Rodan", "Anguirus"],
+          "correctAnswer": "King Caesar"
+        },
+        {
+          "question": "Who initially refused the role of director for Terror of Mechagodzilla, leading to Ishiro Honda's return?",
+          "options": ["Yoshimitsu Banno", "Jun Fukuda", "Teruyoshi Nakano", "Eiji Tsuburaya"],
+          "correctAnswer": "Jun Fukuda"
+        }
+      ]
+    },
+    {
+      "questions": [
+        {
+          "question": "Who directed the 1984 film The Return of Godzilla?",
+          "options": ["Koji Hashimoto", "Ishiro Honda", "Hideichi Nagahara", "Tomoyuki Tanaka"],
+          "correctAnswer": "Koji Hashimoto"
+        },
+        {
+          "question": "What significant milestone does The Return of Godzilla represent in the Godzilla series?",
+          "options": ["First film in the Showa series", "Last film in the Heisei series", "First film in the Heisei series", "First color film in the series"],
+          "correctAnswer": "First film in the Heisei series"
+        },
+        {
+          "question": "What does the crew of the fishing boat Yahata Maru No. 5 encounter at sea?",
+          "options": ["A giant octopus", "Godzilla", "A Soviet submarine", "An alien spaceship"],
+          "correctAnswer": "Godzilla"
+        },
+        {
+          "question": "Which special effects director worked on The Return of Godzilla?",
+          "options": ["Eiji Tsuburaya", "Teruyoshi Nakano", "Koichi Kawakita", "Akira Ifukube"],
+          "correctAnswer": "Teruyoshi Nakano"
+        },
+        {
+          "question": "What aspect ratio was The Return of Godzilla composed in?",
+          "options": ["Anamorphic 'Scope' (2.35:1)", "Flat (1.85:1)", "Academy ratio (1.37:1)", "IMAX ratio (1.43:1)"],
+          "correctAnswer": "Flat (1.85:1)"
+        },
+        {
+          "question": "Which object makes a cameo appearance in Godzilla vs. Biollante?",
+          "options": ["The Oxygen Destroyer", "A Mothra egg", "King Kong's skull", "A UFO"],
+          "correctAnswer": "The Oxygen Destroyer"
+        },
+        {
+          "question": "What event happened during the pre-production of Godzilla vs. Mothra in relation to Godzilla vs. Biollante?",
+          "options": ["The BioGoji Godzilla suit was stolen", "The script was rewritten", "A major actor was replaced", "The director was changed"],
+          "correctAnswer": "The BioGoji Godzilla suit was stolen"
+        },
+        {
+          "question": "What rating did Godzilla vs. Biollante receive from the MPAA?",
+          "options": ["G", "PG", "PG-13", "R"],
+          "correctAnswer": "PG"
+        },
+        {
+          "question": "What is the Japanese variant of the Carl Gustaf recoilless rifle used in the film?",
+          "options": ["Howa 84RR", "Type 96", "M20 Super Bazooka", "RPG-7"],
+          "correctAnswer": "Howa 84RR"
+        },
+        {
+          "question": "Who is the special effects director for Godzilla vs. Biollante?",
+          "options": ["Eiji Tsuburaya", "Koichi Kawakita", "Teruyoshi Nakano", "Shinji Higuchi"],
+          "correctAnswer": "Koichi Kawakita"
+        },
+        {
+          "question": "Who portrayed King Ghidorah in Godzilla vs. King Ghidorah?",
+          "options": ["Haruo Nakajima", "'Hurricane' Ryu Hariken", "Kenpachiro Satsuma", "Wataru Fukuda"],
+          "correctAnswer": "'Hurricane' Ryu Hariken"
+        },
+        {
+          "question": "What unusual plot point involves King Ghidorah in Godzilla vs. King Ghidorah?",
+          "options": ["King Ghidorah travels through time", "King Ghidorah becomes a hero", "King Ghidorah is controlled by aliens", "King Ghidorah is a robot"],
+          "correctAnswer": "King Ghidorah travels through time"
+        },
+        {
+          "question": "Which actor played the Prime Minister of Japan in Godzilla vs. King Ghidorah?",
+          "options": ["Akira Takarada", "Ken Tanaka", "So Yamamura", "Yasuko Sawaguchi"],
+          "correctAnswer": "So Yamamura"
+        },
+        {
+          "question": "Which monster attacked Hiroshima in Godzilla vs. King Ghidorah?",
+          "options": ["Godzilla", "King Ghidorah", "Rodan", "Mothra"],
+          "correctAnswer": "King Ghidorah"
+        },
+        {
+          "question": "Who directed the 1992 film Godzilla vs. Mothra?",
+          "options": ["Takao Okawara", "Kazuki Omori", "Koichi Kawakita", "Shusuke Kaneko"],
+          "correctAnswer": "Takao Okawara"
+        },
+        {
+          "question": "What ancient evil is reawakened alongside Godzilla in the film Godzilla vs. Mothra?",
+          "options": ["Rodan", "King Ghidorah", "Battra", "Mechagodzilla"],
+          "correctAnswer": "Battra"
+        },
+        {
+          "question": "Which character(s) appear to warn humanity of Battra's danger?",
+          "options": ["The Shobijin", "The Cosmos", "The Mysterian Twins", "The Elias"],
+          "correctAnswer": "The Cosmos"
+        },
+        {
+          "question": "Who portrays the Cosmos in this film as teachers at the Psyonics Institute?",
+          "options": ["Keiko Imamura and Sayaka Osawa", "Megumi Odaka and Shiori Yonezawa", "Satomi Kobayashi and Akiji Kobayashi", "Tetsuya Bessho and Takehiro Murata"],
+          "correctAnswer": "Keiko Imamura and Sayaka Osawa"
+        },
+        {
+          "question": "What unique portrayal method was used for Rodan in Godzilla vs. MechaGodzilla II?",
+          "options": ["Suitmation", "Props and puppets", "Stop-motion", "CGI"],
+          "correctAnswer": "Props and puppets"
+        },
+        {
+          "question": "Which advanced poster artwork for the film features an unused design of Mechagodzilla II?",
+          "options": ["Noriyoshi Ohrai", "Shinji Nishikawa", "Akira Ifukube", "Koichi Kawakita"],
+          "correctAnswer": "Noriyoshi Ohrai"
+        },
+        {
+          "question": "What spawned the mutant monster SpaceGodzilla?",
+          "options": ["G-Cells cast into space", "Alien technology", "Radiation from a black hole", "A genetic experiment"],
+          "correctAnswer": "G-Cells cast into space"
+        },
+        {
+          "question": "Which mech is introduced as the successor to Mechagodzilla in Godzilla vs. SpaceGodzilla?",
+          "options": ["MOGUERA", "Garuda", "Super X3", "Kiryu"],
+          "correctAnswer": "MOGUERA"
+        },
+        {
+          "question": "What city does SpaceGodzilla convert into his crystal fortress?",
+          "options": ["Tokyo", "Osaka", "Fukuoka", "Yokohama"],
+          "correctAnswer": "Fukuoka"
+        },
+        {
+          "question": "What was the working title of an earlier, more complex screenplay for the film?",
+          "options": ["Godzilla vs. AstroGodzilla", "Godzilla vs. MechaGodzilla", "Godzilla vs. Crystal Godzilla", "Godzilla Super Wars"],
+          "correctAnswer": "Godzilla vs. AstroGodzilla"
+        },
+        {
+          "question": "What role did Koichi Kawakita's love of The Mysterians play in the film's production?",
+          "options": ["Influenced the inclusion of MOGUERA", "Inspired the creation of SpaceGodzilla", "Led to the redesign of BabyGodzilla", "Resulted in the film's title"],
+          "correctAnswer": "Influenced the inclusion of MOGUERA"
+        },
+        {
+          "question": "What final transformation does Godzilla undergo in Godzilla vs. Destoroyah?",
+          "options": ["Super Godzilla", "Burning Godzilla", "MechaGodzilla", "SpaceGodzilla"],
+          "correctAnswer": "Burning Godzilla"
+        },
+        {
+          "question": "What causes Godzilla's transformation into Burning Godzilla?",
+          "options": ["Radiation from a black hole", "Explosion of uranium deposits", "Alien technology", "Genetic mutation"],
+          "correctAnswer": "Explosion of uranium deposits"
+        },
+        {
+          "question": "What weapon does humanity use against Godzilla and Destoroyah?",
+          "options": ["Oxygen Destroyer", "Maser Cannon", "ULT weapons", "Spiral Ray"],
+          "correctAnswer": "ULT weapons"
+        },
+        {
+          "question": "Who returned to compose the music for Godzilla vs. Destoroyah?",
+          "options": ["Akira Ifukube", "Koichi Sugiyama", "Michiru Oshima", "Riichiro Manabe"],
+          "correctAnswer": "Akira Ifukube"
+        },
+        {
+          "question": "Which character from the original 1954 Godzilla film reprises her role in Godzilla vs. Destoroyah?",
+          "options": ["Emiko Yamane", "Miki Saegusa", "Shobijin", "Akira Yuki"],
+          "correctAnswer": "Emiko Yamane"
+        },
+        {
+          "question": "What year was Godzilla vs. Destoroyah released?",
+          "options": ["1994", "1995", "1996", "1997"],
+          "correctAnswer": "1995"
+        },
+        {
+          "question": "What is the relationship between the Oxygen Destroyer and Destoroyah?",
+          "options": ["Destoroyah is created from the Oxygen Destroyer", "Destoroyah is immune to the Oxygen Destroyer", "The Oxygen Destroyer is used to defeat Destoroyah", "Destoroyah can use the Oxygen Destroyer as a weapon"],
+          "correctAnswer": "Destoroyah is created from the Oxygen Destroyer"
+        },
+        {
+          "question": "What was the final film score composed by Akira Ifukube?",
+          "options": ["Godzilla vs. Mechagodzilla II", "Godzilla vs. SpaceGodzilla", "Godzilla vs. Destoroyah", "Godzilla 2000: Millennium"],
+          "correctAnswer": "Godzilla vs. Destoroyah"
+        },
+        {
+          "question": "What significant event occurs to Godzilla at the end of Godzilla vs. Destoroyah?",
+          "options": ["Godzilla is frozen", "Godzilla is transported to another dimension", "Godzilla melts down", "Godzilla defeats Destoroyah and survives"],
+          "correctAnswer": "Godzilla melts down"
+        }
+      ]
+    },
+    {
+      "questions": [
+        {
+          "question": "Who directed the 1999 film Godzilla 2000: Millennium?",
+          "options": ["Takao Okawara", "Hiroshi Kashiwabara", "Kenji Suzuki", "Wataru Mimura"],
+          "correctAnswer": "Takao Okawara"
+        },
+        {
+          "question": "What is the name of the government organization tasked with combating Godzilla in the film?",
+          "options": ["G-Force", "Crisis Control Intelligence Agency", "M Organization", "Monster Response Team"],
+          "correctAnswer": "Crisis Control Intelligence Agency"
+        },
+        {
+          "question": "What does the UFO do when it first encounters Godzilla in Godzilla 2000?",
+          "options": ["Joins forces with him", "Defeats him in a brief encounter", "Destroys Tokyo", "Disappears into space"],
+          "correctAnswer": "Defeats him in a brief encounter"
+        },
+        {
+          "question": "What year was Godzilla 2000: Millennium released in American theaters?",
+          "options": ["1999", "2000", "2001", "2002"],
+          "correctAnswer": "2000"
+        },
+        {
+          "question": "Which studio produced an edited English-dubbed version of Godzilla 2000: Millennium?",
+          "options": ["Universal Pictures", "Warner Bros.", "TriStar Pictures", "Paramount Pictures"],
+          "correctAnswer": "TriStar Pictures"
+        },
+        {
+          "question": "What aspect ratio was Godzilla 2000: Millennium converted to at the last minute?",
+          "options": ["1.85:1", "2.35:1", "1.33:1", "1.78:1"],
+          "correctAnswer": "2.35:1"
+        },
+        {
+          "question": "What color is Godzilla's atomic breath in Godzilla 2000: Millennium?",
+          "options": ["Blue", "Red", "Orange", "Green"],
+          "correctAnswer": "Orange"
+        },
+        {
+          "question": "What song by Rob Zombie was featured in the American trailers for Godzilla 2000: Millennium?",
+          "options": ["Dragula", "Living Dead Girl", "Superbeast", "Meet the Creeper"],
+          "correctAnswer": "Superbeast"
+        },
+        {
+          "question": "Which monster does Godzilla battle in the planned but cancelled American-made sequel Godzilla Reborn?",
+          "options": ["A giant lava bat monster called Miba", "A giant sea serpent called Leviathan", "A robotic dragon called Mecha-Dragon", "An alien creature called Xenomorph"],
+          "correctAnswer": "A giant lava bat monster called Miba"
+        },
+        {
+          "question": "Who created Orga's new roars in the American version of Godzilla 2000?",
+          "options": ["John Adams", "Natalia D. Adams", "Mike Schlesinger", "Rob Zombie"],
+          "correctAnswer": "Natalia D. Adams"
+        },
+        {
+          "question": "What were the original foes considered for Godzilla in Shusuke Kaneko's early concepts for Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack?",
+          "options": ["Kamacuras or a mutated astronaut called M", "Rodan or Anguirus", "Biollante or Hedorah", "Mothra or King Ghidorah"],
+          "correctAnswer": "Kamacuras or a mutated astronaut called M"
+        },
+        {
+          "question": "Which monsters were originally part of Kaneko's script for Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack but were replaced in the final film?",
+          "options": ["Rodan and Hedorah", "Anguirus and Varan", "Biollante and Ebirah", "Mechagodzilla and King Caesar"],
+          "correctAnswer": "Anguirus and Varan"
+        },
+        {
+          "question": "Why did Toho ask Kaneko to include Mothra and King Ghidorah in Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack?",
+          "options": ["Due to the poor box office performance of Godzilla vs. Megaguirus", "Because they were popular monsters", "To introduce new monsters", "To make the film more kid-friendly"],
+          "correctAnswer": "Due to the poor box office performance of Godzilla vs. Megaguirus"
+        },
+        {
+          "question": "What notable feature does Godzilla have in Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack to emphasize his evil nature?",
+          "options": ["Red eyes", "No pupils", "Glowing green scales", "Horns on his head"],
+          "correctAnswer": "No pupils"
+        },
+        {
+          "question": "How is King Ghidorah portrayed differently in Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack compared to previous versions?",
+          "options": ["As a benevolent monster", "As a mechanical dragon", "As a sea creature", "As a hybrid creature"],
+          "correctAnswer": "As a benevolent monster"
+        },
+        {
+          "question": "What new attack does Mothra have in Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack?",
+          "options": ["Poison scales", "Hurricane wind", "Projectile stingers", "Electric shock"],
+          "correctAnswer": "Projectile stingers"
+        },
+        {
+          "question": "Who is the first-ever woman to portray a kaiju in the Godzilla series, playing Baragon in Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack?",
+          "options": ["Rie Ota", "Yumi Kameyama", "Ai Maeda", "Aki Maeda"],
+          "correctAnswer": "Rie Ota"
+        },
+        {
+          "question": "Which actor from Shusuke Kaneko's Gamera trilogy appears in Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack as a suicidal man?",
+          "options": ["Yukijiro Hotaru", "Ken Watanabe", "Kaho Minami", "Mizuho Yoshida"],
+          "correctAnswer": "Yukijiro Hotaru"
+        },
+        {
+          "question": "What notable change was made to Godzilla's atomic breath in Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack?",
+          "options": ["It is red", "It is green", "It returns to its original blue color", "It is white"],
+          "correctAnswer": "It returns to its original blue color"
+        },
+        {
+          "question": "What reference to the 1998 American Godzilla film is made in Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack?",
+          "options": ["A scene mentions a large reptilian monster attacking New York", "The inclusion of a similar monster design", "A character named Zilla", "A poster of the 1998 film"],
+          "correctAnswer": "A scene mentions a large reptilian monster attacking New York"
+        },
+        {
+          "question": "What is the codename for the anti-Godzilla weapon constructed from the bones of the first Godzilla in Godzilla Against Mechagodzilla?",
+          "options": ["Mechagodzilla", "Kiryu", "MOGUERA", "Jet Jaguar"],
+          "correctAnswer": "Kiryu"
+        },
+        {
+          "question": "In what year is Kiryu completed in Godzilla Against Mechagodzilla?",
+          "options": ["1999", "2002", "2003", "2004"],
+          "correctAnswer": "2003"
+        },
+        {
+          "question": "Who is the lead scientist working on Kiryu in Godzilla Against Mechagodzilla?",
+          "options": ["Tokumitsu Yuhara", "Daisuke Serizawa", "Hiroshi Yamane", "Kenji Ando"],
+          "correctAnswer": "Tokumitsu Yuhara"
+        },
+        {
+          "question": "Which Japanese baseball player nicknamed 'Godzilla' makes a cameo in Godzilla Against Mechagodzilla?",
+          "options": ["Hideki Matsui", "Ichiro Suzuki", "Shohei Ohtani", "Hideo Nomo"],
+          "correctAnswer": "Hideki Matsui"
+        },
+        {
+          "question": "What reference is made to the character Hamtaro in Godzilla Against Mechagodzilla?",
+          "options": ["A character dressed as Hamtaro's owner", "A giant hamster kaiju", "A Hamtaro movie poster", "A Hamtaro toy"],
+          "correctAnswer": "A character dressed as Hamtaro's owner"
+        },
+        {
+          "question": "What character did Kumi Mizuno portray after the script change in Godzilla Against Mechagodzilla?",
+          "options": ["The initial Prime Minister of Japan", "Lead scientist's assistant", "A JSDF officer", "Kiryu pilot"],
+          "correctAnswer": "The initial Prime Minister of Japan"
+        },
+        {
+          "question": "Which kaiju was originally planned to appear in Godzilla Against Mechagodzilla but was scrapped?",
+          "options": ["Anguirus", "Rodan", "Mothra", "King Ghidorah"],
+          "correctAnswer": "Anguirus"
+        },
+        {
+          "question": "Which previous Godzilla series actor makes a cameo as a convenience store clerk in Godzilla Against Mechagodzilla?",
+          "options": ["Akira Takarada", "Takehiro Murata", "Hiroshi Koizumi", "Kenpachiro Satsuma"],
+          "correctAnswer": "Takehiro Murata"
+        },
+        {
+          "question": "Which 1975 Toho film's explosion shot is reused in Godzilla Against Mechagodzilla?",
+          "options": ["Terror of Mechagodzilla", "Conflagration", "The War in Space", "The Last War"],
+          "correctAnswer": "Conflagration"
+        },
+        {
+          "question": "Who portrays Godzilla in Godzilla Against Mechagodzilla?",
+          "options": ["Tsutomu Kitagawa", "Kenpachiro Satsuma", "Mizuho Yoshida", "Hirofumi Ishigaki"],
+          "correctAnswer": "Tsutomu Kitagawa"
+        },
+        {
+          "question": "What year does the movie Godzilla: Tokyo SOS take place?",
+          "options": ["2002", "2003", "2004", "2005"],
+          "correctAnswer": "2004"
+        },
+        {
+          "question": "Which monster's bones are requested to be returned to the ocean by the Shobijin in Godzilla: Tokyo SOS?",
+          "options": ["Mechagodzilla", "Godzilla", "Mothra", "Anguirus"],
+          "correctAnswer": "Godzilla"
+        },
+        {
+          "question": "Which kaiju arrives to intercept Godzilla in Godzilla: Tokyo SOS?",
+          "options": ["Rodan", "Mothra", "King Ghidorah", "Baragon"],
+          "correctAnswer": "Mothra"
+        },
+        {
+          "question": "What is the relationship between the twin Mothra larvae in Godzilla: Tokyo SOS?",
+          "options": ["Identical twins", "Non-identical twins (one male, one female)", "Siblings from different generations", "Clones"],
+          "correctAnswer": "Non-identical twins (one male, one female)"
+        },
+        {
+          "question": "Which monster was originally intended to wash up dead on the shore in Godzilla: Tokyo SOS but was replaced by Kamoebas?",
+          "options": ["Anguirus", "Rodan", "Liopleurodon", "Ebirah"],
+          "correctAnswer": "Liopleurodon"
+        },
+        {
+          "question": "What are the names given to the twin Mothra larvae during filming of Godzilla: Tokyo SOS?",
+          "options": ["Taro and Hanako", "Mothra and Battra", "Goro and Miko", "Ken and Kyo"],
+          "correctAnswer": "Taro and Hanako"
+        },
+        {
+          "question": "Which actor from the original Mothra film reprises his role as Shinichi Chujo in Godzilla: Tokyo SOS?",
+          "options": ["Hiroshi Koizumi", "Akira Takarada", "Kenji Sahara", "Takashi Shimura"],
+          "correctAnswer": "Hiroshi Koizumi"
+        },
+        {
+          "question": "What notable feature does the new Godzilla suit have in Godzilla: Tokyo SOS compared to its predecessor?",
+          "options": ["Longer tail", "Larger dorsal fins", "A large vertical scar in its chest region", "Glowing red eyes"],
+          "correctAnswer": "A large vertical scar in its chest region"
+        },
+        {
+          "question": "Who makes a brief cameo in Godzilla: Tokyo SOS as a political commentator on a TV talk show?",
+          "options": ["Toru Minegishi", "Takehiro Murata", "Kumi Mizuno", "Akira Nakao"],
+          "correctAnswer": "Toru Minegishi"
+        },
+        {
+          "question": "Which manga artist known for Black Cat appears as an extra in Godzilla: Tokyo SOS?",
+          "options": ["Masashi Kishimoto", "Eiichiro Oda", "Kentaro Yabuki", "Akira Toriyama"],
+          "correctAnswer": "Kentaro Yabuki"
+        },
+        {
+          "question": "Who directed Godzilla Final Wars?",
+          "options": ["Ryuhei Kitamura", "Shusuke Kaneko", "Takao Okawara", "Kazuki Omori"],
+          "correctAnswer": "Ryuhei Kitamura"
+        },
+        {
+          "question": "In what year was Godzilla Final Wars released in Japanese theaters?",
+          "options": ["2003", "2004", "2005", "2006"],
+          "correctAnswer": "2004"
+        },
+        {
+          "question": "What alien force claims to have come to save the human race in Godzilla Final Wars?",
+          "options": ["Xiliens", "Kilaaks", "Black Hole Aliens", "Mysterians"],
+          "correctAnswer": "Xiliens"
+        },
+        {
+          "question": "What is the name of the warship used to free Godzilla from his prison in Antarctica in Godzilla Final Wars?",
+          "options": ["Gotengo", "Super X", "Atragon", "Mechagodzilla"],
+          "correctAnswer": "Gotengo"
+        },
+        {
+          "question": "Which kaiju attacks New York City in Godzilla Final Wars?",
+          "options": ["Rodan", "Anguirus", "Zilla", "King Caesar"],
+          "correctAnswer": "Rodan"
+        },
+        {
+          "question": "What does the alien race Xiliens use to control the mutants in Godzilla Final Wars?",
+          "options": ["M Base", "G Cells", "Nano Metal", "Oxygen Destroyer"],
+          "correctAnswer": "M Base"
+        },
+        {
+          "question": "Which kaiju does Godzilla first battle after being released from Area G in Godzilla Final Wars?",
+          "options": ["Gigan", "Kumonga", "Zilla", "King Caesar"],
+          "correctAnswer": "Gigan"
+        },
+        {
+          "question": "What is the final form of Monster X in Godzilla Final Wars?",
+          "options": ["Keizer Ghidorah", "King Ghidorah", "Mecha-King Ghidorah", "Destoroyah"],
+          "correctAnswer": "Keizer Ghidorah"
+        },
+        {
+          "question": "Which character in Godzilla Final Wars reveals that he and Ozaki are Keizers?",
+          "options": ["The Controller", "Captain Gordon", "Shinichi Ozaki", "Doctor Miyuki Otanashi"],
+          "correctAnswer": "The Controller"
+        },
+        {
+          "question": "Who calms Godzilla down at the end of Godzilla Final Wars, convincing him to leave and forgive mankind?",
+          "options": ["Minilla", "Mothra", "Rodan", "Anguirus"],
+          "correctAnswer": "Minilla"
+        },
+        {
+          "question": "Which monster is decapitated by Godzilla during their battle in Godzilla Final Wars?",
+          "options": ["Gigan", "Zilla", "Kumonga", "Hedorah"],
+          "correctAnswer": "Gigan"
+        },
+        {
+          "question": "What rating did Godzilla Final Wars receive from the MPAA?",
+          "options": ["PG", "PG-13", "R", "G"],
+          "correctAnswer": "PG-13"
+        },
+        {
+          "question": "Which Godzilla film shares the longest runtime with Godzilla Final Wars at 125 minutes?",
+          "options": ["Godzilla Minus One", "Godzilla vs. Megaguirus", "Godzilla 2000", "Shin Godzilla"],
+          "correctAnswer": "Godzilla Minus One"
+        },
+        {
+          "question": "Who composed most of the music for Godzilla Final Wars?",
+          "options": ["Keith Emerson", "Akira Ifukube", "Michiru Oshima", "Kow Otani"],
+          "correctAnswer": "Keith Emerson"
+        },
+        {
+          "question": "Which kaiju is the only one not to have a new design in Godzilla Final Wars?",
+          "options": ["Mothra", "Anguirus", "Rodan", "Kumonga"],
+          "correctAnswer": "Mothra"
+        },
+        {
+          "question": "What is the last Godzilla film to utilize suitmation before CGI and motion capture took over?",
+          "options": ["Godzilla Final Wars", "Shin Godzilla", "Godzilla 2000", "Godzilla: Tokyo SOS"],
+          "correctAnswer": "Godzilla Final Wars"
+        },
+        {
+          "question": "What monster does the Canadian child throw into the fireplace with the cry 'You loser!' in Godzilla Final Wars?",
+          "options": ["Gamera", "Gorosaurus", "King Caesar", "Giant Octopus"],
+          "correctAnswer": "Gamera"
+        },
+        {
+          "question": "What notable feature appears in the opening of Godzilla Final Wars?",
+          "options": ["Stock footage from various other Toho kaiju films", "A new kaiju introduction", "A montage of Godzilla battles", "Godzilla's origin story"],
+          "correctAnswer": "Stock footage from various other Toho kaiju films"
+        },
+        {
+          "question": "Which actor from previous Godzilla films makes an appearance as Hachiro Jinguji in Godzilla Final Wars?",
+          "options": ["Kenji Sahara", "Akira Takarada", "Hiroshi Koizumi", "Masahiro Matsuoka"],
+          "correctAnswer": "Kenji Sahara"
+        },
+        {
+          "question": "What is the first Japanese Godzilla film to not be canon to the 1954 original?",
+          "options": ["Godzilla Final Wars", "Godzilla vs. Megaguirus", "Godzilla 2000", "Godzilla: Tokyo SOS"],
+          "correctAnswer": "Godzilla Final Wars"
+        }
+      ]
+    }
+  ]
+}
