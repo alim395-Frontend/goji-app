@@ -131,7 +131,7 @@ function updateLastUpdateTimestamp() {
 export async function fetchAllGodzillaMovies(force: boolean = false) {
     const godzillaSearchTerms = ['ゴジラ', 'Godzilla 1998'];
     const godzillaCollectionIds = ['374509', '374511', '374512', '535313', '535790'];
-    const godzillaExplicitMovieIds: number[] = [940721];
+    const godzillaExplicitMovieIds: number[] = [940721,315011];
     const godzillaFilePath = path.join(process.cwd(), 'public', 'data', 'movies.json');
 
     for (const searchTerm of godzillaSearchTerms) {
