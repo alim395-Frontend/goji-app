@@ -2,10 +2,10 @@
   {
     "title": "Godzilla",
     "releaseDate": "1954-11-03",
-    "posterUrl": "https://image.tmdb.org/t/p/original/ixfHV61iRM4Jkgw0uI5ICtNwfmX.jpg",
+    "posterUrl": "https://image.tmdb.org/t/p/original/p0Tk9k6uJ5SeHm1jziD21lThrNT.jpg",
     "description": "Japan is thrown into a panic after several ships are sunk near Odo Island. An expedition to the island led by Dr. Yemani soon discover something far more devastating than imagined in the form of a 50 meter tall monster whom the natives call Gojira. Now the monster begins a rampage that threatens to destroy not only Japan, but the rest of the world as well.",
     "era": "Showa",
-    "rating": 7.602,
+    "rating": 7.6,
     "genres": [
       "Thriller",
       "Horror",
@@ -508,6 +508,23 @@
     "runtime": 123
   },
   {
+    "title": "Shin Godzilla",
+    "releaseDate": "2016-07-29",
+    "posterUrl": "https://image.tmdb.org/t/p/original/jPNShaWZMpVF0iQ7j1dvTuZLD20.jpg",
+    "description": "When a massive, gilled monster emerges from the deep and tears through the city, the government scrambles to save its citizens.  A rag-tag team of volunteers cuts through a web of red tape to uncover the monster's weakness and its mysterious ties to a foreign superpower.  But time is not on their side - the greatest catastrophe to ever befall the world is about to evolve right before their very eyes.",
+    "era": "Reiwa",
+    "rating": 7.177,
+    "genres": [
+      "Action",
+      "Science Fiction",
+      "Horror"
+    ],
+    "runtime": 120,
+    "alternateNames": [
+      "シン・ゴジラ"
+    ]
+  },
+  {
     "title": "Godzilla: Planet of the Monsters",
     "releaseDate": "2017-11-17",
     "posterUrl": "https://image.tmdb.org/t/p/original/hAuZ7g6TqDLv5fOqXIPgYRguOkm.jpg",
@@ -564,7 +581,7 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/fQ40gmFM4p03tXwMxQQKh2cCBW4.jpg",
     "description": "Follows the heroic efforts of the crypto-zoological agency Monarch as its members face off against a battery of god-sized monsters, including the mighty Godzilla, who collides with Mothra, Rodan, and his ultimate nemesis, the three-headed King Ghidorah. When these ancient super-species, thought to be mere myths, rise again, they all vie for supremacy, leaving humanity's very existence hanging in the balance.",
     "era": "MonsterVerse",
-    "rating": 6.702,
+    "rating": 6.701,
     "genres": [
       "Science Fiction",
       "Action"
@@ -591,7 +608,7 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/hkxxMIGaiCTmrEArK7J56JTKUlB.jpg",
     "description": "In postwar Japan, Godzilla brings new devastation to an already scorched landscape. With no military intervention or government help in sight, the survivors must join together in the face of despair and fight back against an unrelenting horror.",
     "era": "Reiwa",
-    "rating": 7.652,
+    "rating": 7.657,
     "genres": [
       "Science Fiction",
       "Horror",

@@ -11,6 +11,13 @@ const BASE_URL = 'https://api.themoviedb.org/3';
 const LAST_UPDATE_FILE = path.join(process.cwd(), 'public', 'data', 'lastUpdate.json');
 const UPDATE_INTERVAL = 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
 
+const LOG_DIR = path.join(process.cwd(), 'logs');
+if (!fs.existsSync(LOG_DIR)) {
+    fs.mkdirSync(LOG_DIR);
+}
+
+const LOG_FILE_PATH = path.join(process.cwd(), 'logs', 'debug.log');
+
 async function fetchMoviesBySearchTerm(searchTerm: string): Promise<Movie[]> {
     const response = await axios.get(`${BASE_URL}/search/movie`, {
         params: { api_key: API_KEY, query: searchTerm, language: 'en-US' },
@@ -166,9 +173,58 @@ export async function fetchChallengeMovies(force: boolean = false) {
     await fetchAndSaveMovies(challengeSearchTerm, challengeCollectionIds, challengeExplicitMovieIds, challengeFilePath, force);
 }
 
+function determineEra(releaseDate: string, originalLanguage: string, title: string): string {
+    const year = parseInt(releaseDate.split('-')[0], 10);
+
+    // Check for Rebirth of Mothra trilogy
+    const isMothraMovie = title.toLowerCase().includes('mothra');
+    if (isMothraMovie && year >= 1996 && year <= 1998) {
+        logToFile(`Mothra movie detected: ${title} (${year}) - Era: Heisei`);
+        return 'Heisei';
+    }
+
+    // Check for Gamera trilogy
+    const isGameraMovie = title.toLowerCase().includes('gamera');
+    if (isGameraMovie && year >= 1995 && year <= 1999) {
+        logToFile(`Gamera movie detected: ${title} (${year}) - Era: Heisei`);
+        return 'Heisei';
+    }
+
+    if (year < 1984 && originalLanguage === 'ja') {
+        logToFile(`Showa era movie detected: ${title} (${year})`);
+        return 'Showa';
+    }
+    if (year >= 1984 && year <= 1995 && originalLanguage === 'ja') {
+        logToFile(`Heisei era movie detected: ${title} (${year})`);
+        return 'Heisei';
+    }
+    if (year === 1998 && originalLanguage === 'en') {
+        logToFile(`Tristar era movie detected: ${title} (${year})`);
+        return 'Tristar';
+    }
+    if (year >= 1999 && year <= 2006 && originalLanguage === 'ja') {
+        logToFile(`Millennium era movie detected: ${title} (${year})`);
+        return 'Millennium';
+    }
+    if (year >= 2014 && originalLanguage === 'en') {
+        logToFile(`MonsterVerse era movie detected: ${title} (${year})`);
+        return 'MonsterVerse';
+    }
+    if (year >= 2016 && originalLanguage === 'ja') {
+        logToFile(`Reiwa era movie detected: ${title} (${year})`);
+        return 'Reiwa';
+    }
+
+    logToFile(`No era detected for: ${title} (${year})`);
+    return '';
+}
+
 function mapMovieData(movie: any, details: any): Movie | null {
     const era = determineEra(movie.release_date, movie.original_language, movie.title);
-    if (!era) return null;
+    if (!era) {
+        logToFile(`Skipping movie due to undetermined era: ${movie.title}`);
+        return null;
+    }
 
     const alternateNames = movie.original_language === 'ja' && movie.original_title !== movie.title
         ? [movie.original_title]
@@ -187,24 +243,10 @@ function mapMovieData(movie: any, details: any): Movie | null {
     };
 }
 
-function determineEra(releaseDate: string, originalLanguage: string, title: string): string {
-    const year = parseInt(releaseDate.split('-')[0], 10);
-
-    // Check for Rebirth of Mothra trilogy
-    const isMothraMovie = title.toLowerCase().includes('mothra');
-    if (isMothraMovie && year >= 1996 && year <= 1998) return 'Heisei';
-
-    // Check for Gamera trilogy
-    const isGameraMovie = title.toLowerCase().includes('gamera');
-    if (isGameraMovie && year >= 1995 && year <= 1999) return 'Heisei';
-
-    if (year < 1984 && originalLanguage === 'ja') return 'Showa';
-    if (year >= 1984 && year <= 1995 && originalLanguage === 'ja') return 'Heisei';
-    if (year === 1998 && originalLanguage === 'en') return 'Tristar';
-    if (year >= 1999 && year <= 2006 && originalLanguage === 'ja') return 'Millennium';
-    if (year >= 2014 && originalLanguage === 'en') return 'MonsterVerse';
-    if (year >= 2016 && originalLanguage === 'ja') return 'Reiwa';
-    return '';
+function logToFile(message: string) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    fs.appendFileSync(LOG_FILE_PATH, logMessage, 'utf-8');
 }
 
 function sortMoviesByReleaseDate(movies: Movie[]): Movie[] {
