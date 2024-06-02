@@ -34,6 +34,7 @@ const QuizPage: React.FC = () => {
     const [backgroundStyle, setBackgroundStyle] = useState<React.CSSProperties>({ backgroundImage: 'url(/images/background-start.jpg)' });
     const [showNextButton, setShowNextButton] = useState(false); // State to control the visibility of the next button
     const [showHint, setShowHint] = useState(false); // State to control the visibility of the hint
+    const [isMusicEnabled, setIsMusicEnabled] = useState(true); // Default to true
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const router = useRouter(); // Initialize the router
 
@@ -54,7 +55,7 @@ const QuizPage: React.FC = () => {
     };
 
     useEffect(() => {
-        if (quizStarted && audioRef.current) {
+        if (quizStarted && audioRef.current && isMusicEnabled) {
             audioRef.current.src = audioSrc; // Set the audio source
             audioRef.current.volume = 1;
             audioRef.current.muted = false; // Ensure the audio is not muted
@@ -63,8 +64,10 @@ const QuizPage: React.FC = () => {
             }).catch(error => {
                 console.error('Error playing audio:', error);
             });
+        } else if (audioRef.current) {
+            audioRef.current.pause();
         }
-    }, [quizStarted, audioSrc]);
+    }, [quizStarted, audioSrc, isMusicEnabled]);
 
     useEffect(() => {
         if (quizStarted) {
@@ -81,6 +84,13 @@ const QuizPage: React.FC = () => {
             }
         }
     }, [currentSetIndex, quizStarted]);
+
+    useEffect(() => {
+        // Check if the user is on a mobile device and set the music state accordingly
+        if (isMobileDevice()) {
+            setIsMusicEnabled(false);
+        }
+    }, []);
 
     const startQuiz = () => {
         setStartScreenTransitioning(true);
@@ -199,6 +209,10 @@ const QuizPage: React.FC = () => {
         return score - totalQuestionsInPreviousSets;
     };
 
+    const toggleMusic = () => {
+        setIsMusicEnabled(prevState => !prevState);
+    };
+
     return (
         <div className="quiz-container">
             <div className={`background-container ${backgroundTransitioning ? 'fade-out' : ''}`} style={backgroundStyle}></div> {/* Background container */}
@@ -231,9 +245,16 @@ const QuizPage: React.FC = () => {
                     handleReturnToMain={handleReturnToMain}
                 />
             )}
+            <button onClick={toggleMusic} className="music-toggle-button">
+                {isMusicEnabled ? 'Disable Music' : 'Enable Music'}
+            </button>
             <audio ref={audioRef} loop />
         </div>
     );
+};
+
+const isMobileDevice = () => {
+    return /Mobi|Android/i.test(navigator.userAgent);
 };
 
 export default QuizPage;

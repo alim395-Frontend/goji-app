@@ -1,5 +1,13 @@
 /* app/challenge/challenge.css */
 
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Background Container */
 .background-container {
     position: fixed;
     top: 0;
@@ -12,17 +20,11 @@
     opacity: 1; /* Initial opacity */
 }
 
-/* Media query for mobile devices */
-@media (max-width: 767px) {
-    .background-container {
-        background-size: cover; /* Cover the entire screen */
-    }
-}
-
 .background-container.fade-out {
     opacity: 0; /* Fade out effect */
 }
 
+/* Quiz Container */
 .quiz-container {
     display: flex;
     flex-direction: column;
@@ -37,11 +39,27 @@
     margin-bottom: 20px;
 }
 
+/* Question Container */
 .question-container {
     text-align: center;
     margin-bottom: 20px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
 
+.question-container p {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+.question-container.fade-out {
+    opacity: 0;
+}
+
+.question-container.fade-in {
+    opacity: 1;
+}
+
+/* Options Grid */
 .options-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -49,6 +67,7 @@
     justify-items: center;
 }
 
+/* Option Button */
 .option-button {
     padding: 15px 30px; /* Increased padding for larger buttons */
     font-size: 1.2em; /* Increased font size */
@@ -75,11 +94,13 @@
     color: white;
 }
 
+/* Feedback Container */
 .feedback-container {
     margin-top: 20px;
     text-align: center;
 }
 
+/* Next Button */
 .next-button {
     padding: 15px 30px; /* Increased padding for larger button */
     font-size: 1.2em; /* Increased font size */
@@ -97,10 +118,12 @@
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
+/* Result Container */
 .result-container {
     text-align: center;
 }
 
+/* Start Screen */
 .start-screen {
     display: flex;
     flex-direction: column;
@@ -172,19 +195,7 @@
     transform: scale(1.05);
 }
 
-.question-container {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.question-container.fade-out {
-    opacity: 0;
-}
-
-.question-container.fade-in {
-    opacity: 1;
-}
-
+/* Restart Button */
 .restart-button {
     padding: 15px 30px; /* Similar padding to other buttons */
     font-size: 1.2em; /* Similar font size to other buttons */
@@ -202,6 +213,7 @@
     transform: scale(1.05); /* Same hover effect as other buttons */
 }
 
+/* Quiz Content Container */
 .quiz-content-container {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     padding: 20px;
@@ -212,6 +224,7 @@
     margin: 0 auto;
 }
 
+/* Hint Container */
 .hint-container {
     display: flex;
     flex-direction: column;
@@ -246,6 +259,7 @@
     color: #ffffff;
 }
 
+/* Passphrase Container */
 .passphrase-container {
     display: flex;
     flex-direction: column;
@@ -264,6 +278,7 @@
     background-color: white; /* Ensure the background color is white */
 }
 
+/* Submit Button */
 .submit-button {
     padding: 10px 20px;
     border: none;
@@ -276,4 +291,42 @@
 
 .submit-button:hover {
     background-color: #0056b3;
+}
+
+/* Music Toggle Button */
+.music-toggle-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.music-toggle-button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+    .background-container {
+        background-size: cover; /* Cover the entire screen */
+    }
+
+    .options-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 10px; /* Adjust gap for better spacing */
+    }
+
+    .option-button,
+    .next-button,
+    .restart-button,
+    .submit-button {
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
 }
