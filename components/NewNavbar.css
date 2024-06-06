@@ -1,0 +1,88 @@
+/* components/NewNavbar.css */
+
+.navbar {
+    background-color: #333; /* Dark background color */
+    padding: 10px 20px;
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure the navbar list takes full width */
+}
+
+.navbar-item {
+    margin: 0 10px; /* Add horizontal margin to space out items */
+    flex-grow: 1; /* Allow items to grow and fill the available space */
+    position: relative; /* Required for dropdown positioning */
+}
+
+.navbar-link {
+    display: block; /* Ensure the link takes full height and width of the item */
+    color: #fff; /* White text color */
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 15px 20px; /* Increased padding for better touch interaction */
+    transition: background-color 0.3s, color 0.3s, transform 0.1s;
+    border-radius: 5px; /* Rounded corners for better aesthetics */
+    background-color: #444; /* Slightly lighter background for distinction */
+    text-align: center; /* Center the text within the link */
+    width: 100%; /* Ensure the link takes full width of the item */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.navbar-link:hover,
+.navbar-link:focus {
+    background-color: #555; /* Slightly lighter background on hover */
+    color: #ff0; /* Yellow text color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover for better feedback */
+}
+
+.navbar-link:active {
+    background-color: #666; /* Even lighter background on active */
+    transform: scale(0.95); /* Slightly shrink on active for touch feedback */
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    width: 100%; /* Ensure the dropdown toggle takes full width of the item */
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444; /* Match the navbar link background */
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 100%; /* Ensure the dropdown menu takes full width of the item */
+}
+
+.dropdown-item {
+    margin: 0;
+    width: 100%; /* Ensure the dropdown item takes full width of the menu */
+}
+
+.dropdown-item .navbar-link {
+    padding: 10px 15px; /* Adjust padding for dropdown items */
+    text-align: left; /* Align text to the left */
+    width: 100%; /* Ensure the link takes full width of the item */
+}
+
+.dropdown-item .navbar-link:hover,
+.dropdown-item .navbar-link:focus {
+    background-color: #555; /* Slightly lighter background on hover */
+    color: #ff0; /* Yellow text color on hover */
+}
+
+/* Media query for smaller font size on mobile */
+@media (max-width: 640px) {
+    .navbar-link {
+        font-size: 1em; /* Smaller font size for mobile */
+        padding: 10px 15px; /* Adjust padding for better fit on mobile */
+    }
+}

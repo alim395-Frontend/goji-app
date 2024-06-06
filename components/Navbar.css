@@ -1,0 +1,62 @@
+/* components/Navbar.css */
+
+.nav {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px; /* Add some space between filter elements */
+}
+
+@media (max-width: 640px) {
+    .nav {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .nav-content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-content.hidden {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .filters {
+        flex-direction: column;
+        gap: 5px; /* Adjust gap for mobile */
+    }
+}

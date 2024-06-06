@@ -7,6 +7,7 @@ import './challenge.css'; // Import the CSS file
 import StartScreen from './StartScreen';
 import Question from './Question';
 import Result from './Result';
+import { ScoreManagerProvider, useScoreManager } from './ScoreManager';
 
 interface Question {
     question: string;
@@ -23,7 +24,6 @@ const QuizPage: React.FC = () => {
     const [currentSetIndex, setCurrentSetIndex] = useState(0);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
-    const [score, setScore] = useState(0);
     const [showFeedback, setShowFeedback] = useState(false);
     const [quizStarted, setQuizStarted] = useState(false);
     const [quizEnded, setQuizEnded] = useState(false);
@@ -33,10 +33,10 @@ const QuizPage: React.FC = () => {
     const [backgroundTransitioning, setBackgroundTransitioning] = useState(false);
     const [backgroundStyle, setBackgroundStyle] = useState<React.CSSProperties>({ backgroundImage: 'url(/images/background-start.jpg)' });
     const [showNextButton, setShowNextButton] = useState(false); // State to control the visibility of the next button
-    const [showHint, setShowHint] = useState(false); // State to control the visibility of the hint
     const [isMusicEnabled, setIsMusicEnabled] = useState(true); // Default to true
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const router = useRouter(); // Initialize the router
+    const { scores, updateScore, resetSectionScore, resetAllScores, getTotalScore } = useScoreManager();
 
     useEffect(() => {
         fetch('/data/questions.json')
@@ -131,7 +131,7 @@ const QuizPage: React.FC = () => {
         setShowFeedback(true);
 
         if (answer === currentQuestion.correctAnswer) {
-            setScore(prevScore => prevScore + 1); // Use functional update to ensure correct score accumulation
+            updateScore(currentSetIndex, scores[currentSetIndex] + 1); // Update the score for the current section
         }
 
         // Delay the appearance of the next button
@@ -156,6 +156,7 @@ const QuizPage: React.FC = () => {
         setSelectedAnswer(null);
         setShowFeedback(false);
         setTransitioning(false);
+        resetSectionScore(currentSetIndex); // Reset the score for the current section
     };
 
     const handleNextSet = () => {
@@ -165,7 +166,6 @@ const QuizPage: React.FC = () => {
         setShowFeedback(false);
         setTransitioning(false);
         setShowNextButton(false); // Hide the next button immediately
-        setShowHint(false); // Hide the hint for the next set
     };
 
     const handleRestartQuiz = () => {
@@ -174,7 +174,7 @@ const QuizPage: React.FC = () => {
         setCurrentSetIndex(0);
         setCurrentQuestionIndex(0);
         setSelectedAnswer(null);
-        setScore(0); // Reset score when restarting the quiz
+        resetAllScores(); // Reset scores for all sections
         setShowFeedback(false);
         setTransitioning(false);
         setBackgroundStyle({ backgroundImage: 'url(/images/background-start.jpg)' }); // Reset to start background image
@@ -184,34 +184,17 @@ const QuizPage: React.FC = () => {
         router.push('/'); // Navigate to the main page
     };
 
+    const toggleMusic = () => {
+        setIsMusicEnabled(prevState => !prevState);
+    };
+
     useEffect(() => {
         if (currentQuestionIndex >= currentQuestionSet?.questions.length && quizStarted) {
             fadeOutAudio();
             setQuizEnded(true);
             setBackgroundStyle({ backgroundImage: 'url(/images/background-end.jpg)' }); // Change to end background image
-            setShowHint(true); // Show the hint at the end of the set
         }
     }, [currentQuestionIndex, currentQuestionSet?.questions.length, quizStarted]);
-
-    const getThreshold = () => {
-        if (currentSetIndex === 0) return 0.6;
-        if (currentSetIndex === 1) return 0.7;
-        return 1; // No threshold for the last set
-    };
-
-    const canProceedToNextSet = () => {
-        const threshold = getThreshold();
-        return score / currentQuestionSet.questions.length >= threshold;
-    };
-
-    const getCurrentSetScore = () => {
-        const totalQuestionsInPreviousSets = questionSets.slice(0, currentSetIndex).reduce((acc, set) => acc + set.questions.length, 0);
-        return score - totalQuestionsInPreviousSets;
-    };
-
-    const toggleMusic = () => {
-        setIsMusicEnabled(prevState => !prevState);
-    };
 
     return (
         <div className="quiz-container">
@@ -235,19 +218,22 @@ const QuizPage: React.FC = () => {
                 <Result
                     currentSetIndex={currentSetIndex}
                     questionSets={questionSets}
-                    score={score}
-                    getCurrentSetScore={getCurrentSetScore}
-                    canProceedToNextSet={canProceedToNextSet}
-                    showHint={showHint}
+                    score={getTotalScore()}
+                    getCurrentSetScore={() => scores[currentSetIndex]}
                     handleNextSet={handleNextSet}
                     handleRestartSet={handleRestartSet}
                     handleRestartQuiz={handleRestartQuiz}
                     handleReturnToMain={handleReturnToMain}
                 />
             )}
-            <button onClick={toggleMusic} className="music-toggle-button">
-                {isMusicEnabled ? 'Disable Music' : 'Enable Music'}
-            </button>
+            <div className="button-container">
+                <button onClick={handleReturnToMain} className="exit-button">
+                    Exit to Home
+                </button>
+                <button onClick={toggleMusic} className="music-toggle-button">
+                    {isMusicEnabled ? 'Disable Music' : 'Enable Music'}
+                </button>
+            </div>
             <audio ref={audioRef} loop />
         </div>
     );
@@ -257,4 +243,10 @@ const isMobileDevice = () => {
     return /Mobi|Android/i.test(navigator.userAgent);
 };
 
-export default QuizPage;
+const QuizPageWithScoreManager: React.FC = () => (
+    <ScoreManagerProvider numberOfSections={3}>
+        <QuizPage />
+    </ScoreManagerProvider>
+);
+
+export default QuizPageWithScoreManager;

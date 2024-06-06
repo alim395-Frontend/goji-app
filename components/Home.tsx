@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Banner from './Banner';
 import MovieList from './MovieList';
 import useMovies from '@/hooks/useMovies';
+import NewNavbar from "@/components/NewNavbar";
 
 interface HomeProps {
     apiEndpoint: string;
@@ -33,6 +34,7 @@ const Home: React.FC<HomeProps> = ({ apiEndpoint, bannerFile }) => {
     return (
         <div>
             <Banner bannerFile={bannerFile} />
+            <NewNavbar/>
             <Navbar
                 onFilterChange={setFilter}
                 onSortChange={setSort}

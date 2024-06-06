@@ -26,10 +26,12 @@ body {
 
 /* Quiz Container */
 .quiz-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    padding-bottom: 80px; /* Add padding to the bottom to accommodate the button container */
 }
 
 .quiz-header {
@@ -121,6 +123,37 @@ body {
 /* Result Container */
 .result-container {
     text-align: center;
+}
+
+/* Result Button Container */
+.result-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px; /* Space above the button container */
+}
+
+/* Result Buttons */
+.result-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.result-button:active {
+    background-color: #004494;
+    transform: scale(0.95);
 }
 
 /* Start Screen */
@@ -293,22 +326,49 @@ body {
     background-color: #0056b3;
 }
 
-/* Music Toggle Button */
-.music-toggle-button {
+.button-container {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px; /* Adjust padding for better spacing */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.music-toggle-button,
+.exit-button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    font-size: 1em;
+    background-color: #444;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    z-index: 1000;
+    transition: background-color 0.3s, transform 0.1s;
+    box-sizing: border-box; /* Ensure padding is included in the button size */
 }
 
-.music-toggle-button:hover {
-    background-color: #0056b3;
+.exit-button {
+    left: 10px; /* Position 10px from the left */
+}
+
+.music-toggle-button {
+    right: 10px; /* Position 10px from the right */
+}
+
+.music-toggle-button:hover,
+.exit-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.music-toggle-button:active,
+.exit-button:active {
+    background-color: #666;
+    transform: scale(0.95);
 }
 
 /* Media Queries */
@@ -328,5 +388,28 @@ body {
     .submit-button {
         padding: 10px 20px; /* Adjust padding for smaller screens */
         font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    .start-screen {
+        justify-content: flex-start; /* Align items to the top */
+        height: auto; /* Allow the height to adjust based on content */
+        padding-top: 20px; /* Add some padding to the top */
+    }
+
+    .start-screen h1 {
+        font-size: 2em; /* Smaller font size for mobile */
+    }
+
+    .start-screen p {
+        font-size: 1.2em; /* Smaller font size for mobile */
+    }
+
+    .start-button {
+        font-size: 1.2em; /* Smaller font size for mobile */
+        padding: 15px 30px; /* Adjust padding for smaller screens */
+    }
+
+    .quiz-container {
+        padding-bottom: 100px; /* Add more padding to the bottom for mobile */
     }
 }
