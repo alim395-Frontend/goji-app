@@ -1,7 +1,5 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
-import { useRouter, usePathname} from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useMediaQuery } from 'react-responsive';
 import { Movie } from "@/public/data/movies";
 import StarRating from './StarRating';
@@ -24,18 +22,18 @@ const Title = styled.h2`
   font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
-  cursor: pointer; /* Add cursor pointer to indicate clickability */
-  padding: 10px; /* Increase padding to make the clickable area larger */
-  touch-action: manipulation; /* Improve touch responsiveness */
-  user-select: none; /* Prevent text selection on double-tap */
+  cursor: pointer;
+  padding: 10px;
+  touch-action: manipulation;
+  user-select: none;
 
   @media (max-width: 768px) {
-    font-size: 1.5rem; /* Adjust font size for mobile devices */
-    padding: 15px; /* Increase padding for mobile devices */
+    font-size: 1.5rem;
+    padding: 15px;
   }
 
   &:hover {
-    color: #555; /* Add a hover effect for better visual feedback */
+    color: #555;
   }
 `;
 
@@ -57,6 +55,7 @@ const ReleaseDate = styled.p`
 
 const Description = styled.p`
   color: #333;
+  margin-top: 20px; // Add margin-top to create space above the description
 `;
 
 const Genres = styled.p`
@@ -67,6 +66,18 @@ const Runtime = styled.p`
   color: #333;
 `;
 
+const Director = styled.p`
+  color: #333;
+`;
+
+const Budget = styled.p`
+  color: #333;
+`;
+
+const BoxOffice = styled.p`
+  color: #333;
+`;
+
 const Divider = styled.hr`
   border: 0;
   height: 1px;
@@ -74,10 +85,32 @@ const Divider = styled.hr`
   margin: 20px 0;
 `;
 
+const RoarButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+`;
+
 const formatRuntime = (minutes: number): string => {
   const hours = Math.floor(minutes / 60);
   const remainingMinutes = minutes % 60;
   return `${hours} hr ${remainingMinutes} min`;
+};
+
+const formatCurrency = (amount: number): string => {
+  return amount.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+};
+
+const formatLargeNumber = (amount: number): string => {
+  if (amount >= 1_000_000_000) {
+    return (amount / 1_000_000_000).toFixed(1) + 'B';
+  } else if (amount >= 1_000_000) {
+    return (amount / 1_000_000).toFixed(1) + 'M';
+  } else if (amount >= 1_000) {
+    return (amount / 1_000).toFixed(1) + 'K';
+  } else {
+    return amount.toString();
+  }
 };
 
 const Modal: React.FC<{
@@ -223,6 +256,11 @@ const Modal: React.FC<{
             <ReleaseDate>
               <strong>Release Date:</strong> {new Date(movie.releaseDate).toLocaleDateString()}
             </ReleaseDate>
+            {movie.director && (
+                <Director>
+                  <strong>Director:</strong> {movie.director}
+                </Director>
+            )}
             {movie.genres && movie.genres.length > 0 && (
                 <Genres>
                   <strong>Genres:</strong> {movie.genres.join(", ")}
@@ -233,9 +271,21 @@ const Modal: React.FC<{
                   <strong>Runtime:</strong> {formatRuntime(movie.runtime)}
                 </Runtime>
             )}
+            {movie.budget !== undefined && movie.budget !== 0 && movie.boxOffice !== undefined && movie.boxOffice !== 0 && (
+                <>
+                  <Budget>
+                    <strong>Budget:</strong> {formatLargeNumber(movie.budget)}
+                  </Budget>
+                  <BoxOffice>
+                    <strong>Box Office:</strong> {formatLargeNumber(movie.boxOffice)}
+                  </BoxOffice>
+                </>
+            )}
             <Description>{movie.description}</Description>
             {roarAvailable && (
-                <RoarButton onClick={playRoar} aria-label="Play Godzilla roar" isPlaying={isPlaying} icon={roarIcon} />
+                <RoarButtonContainer>
+                  <RoarButton onClick={playRoar} aria-label="Play Godzilla roar" isPlaying={isPlaying} icon={roarIcon} />
+                </RoarButtonContainer>
             )}
             {hasAudioFiles && (
                 <>

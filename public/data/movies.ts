@@ -8,6 +8,9 @@ export interface Movie {
   era: string;
   alternateNames?: string[];
   rating?: number;
-  genres?: string[]; // Add genres
-  runtime?: number; // Add runtime
+  genres?: string[];
+  runtime?: number;
+  director?: string; // Add director
+  budget?: number; // Add budget
+  boxOffice?: number; // Add box office
 }

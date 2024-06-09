@@ -49,10 +49,24 @@ async function fetchMoviesFromCollection(collectionId: string): Promise<Movie[]>
 }
 
 async function fetchMovieDetails(tmdbId: number) {
-    const response = await axios.get(`${BASE_URL}/movie/${tmdbId}`, {
-        params: { api_key: API_KEY, language: 'en-US' },
-    });
-    return response.data;
+    const [movieResponse, creditsResponse] = await Promise.all([
+        axios.get(`${BASE_URL}/movie/${tmdbId}`, {
+            params: { api_key: API_KEY, language: 'en-US' },
+        }),
+        axios.get(`${BASE_URL}/movie/${tmdbId}/credits`, {
+            params: { api_key: API_KEY, language: 'en-US' },
+        }),
+    ]);
+
+    const movieData = movieResponse.data;
+    const creditsData = creditsResponse.data;
+
+    const director = creditsData.crew.find((member: any) => member.job === 'Director')?.name;
+
+    return {
+        ...movieData,
+        director,
+    };
 }
 
 async function fetchMovieById(tmdbId: number): Promise<Movie | null> {
@@ -239,6 +253,9 @@ function mapMovieData(movie: any, details: any): Movie | null {
         rating: movie.vote_average,
         genres: details.genres.map((genre: { name: string }) => genre.name),
         runtime: details.runtime,
+        director: details.director,
+        budget: details.budget,
+        boxOffice: details.revenue,
         ...(alternateNames && { alternateNames }),
     };
 }

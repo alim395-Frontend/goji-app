@@ -12,6 +12,9 @@
       "Science Fiction"
     ],
     "runtime": 79,
+    "director": "Noriaki Yuasa",
+    "budget": 360000,
+    "boxOffice": 0,
     "alternateNames": [
       "大怪獣ガメラ"
     ]
@@ -29,6 +32,9 @@
       "Science Fiction"
     ],
     "runtime": 106,
+    "director": "Shigeo Tanaka",
+    "budget": 0,
+    "boxOffice": 0,
     "alternateNames": [
       "大怪獣決闘 ガメラ対バルゴン"
     ]
@@ -47,6 +53,9 @@
       "Science Fiction"
     ],
     "runtime": 86,
+    "director": "Noriaki Yuasa",
+    "budget": 525000,
+    "boxOffice": 0,
     "alternateNames": [
       "大怪獣空中戦 ガメラ対ギャオス"
     ]
@@ -65,6 +74,9 @@
       "Family"
     ],
     "runtime": 81,
+    "director": "Noriaki Yuasa",
+    "budget": 56000,
+    "boxOffice": 0,
     "alternateNames": [
       "ガメラ対宇宙怪獣バイラス"
     ]
@@ -83,6 +95,9 @@
       "Family"
     ],
     "runtime": 82,
+    "director": "Noriaki Yuasa",
+    "budget": 0,
+    "boxOffice": 0,
     "alternateNames": [
       "ガメラ対大悪獣ギロン"
     ]
@@ -102,6 +117,9 @@
       "Fantasy"
     ],
     "runtime": 83,
+    "director": "Noriaki Yuasa",
+    "budget": 0,
+    "boxOffice": 0,
     "alternateNames": [
       "ガメラ対大魔獣ジャイガー"
     ]
@@ -120,6 +138,9 @@
       "Family"
     ],
     "runtime": 87,
+    "director": "Noriaki Yuasa",
+    "budget": 0,
+    "boxOffice": 0,
     "alternateNames": [
       "ガメラ対深海怪獣ジグラ"
     ]
@@ -137,6 +158,9 @@
       "Action"
     ],
     "runtime": 92,
+    "director": "Noriaki Yuasa",
+    "budget": 0,
+    "boxOffice": 0,
     "alternateNames": [
       "宇宙怪獣ガメラ"
     ]
@@ -147,7 +171,7 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/iZ8yFxavjqsZXfZhkfPqrc4NauY.jpg",
     "description": "A ship runs aground on a mysterious atoll leading to an investigation by insurance representative Kusanagi, who discovers an ancient bead that he gives to his daughter Asagi. Meanwhile, ornithologist Nagamine investigates reports of a new species of large bird named Gyaos. As the Gyaos begin to attack, an ancient guardian with a bond to Asagi emerges.",
     "era": "Heisei",
-    "rating": 7.446,
+    "rating": 7.461,
     "genres": [
       "Fantasy",
       "Science Fiction",
@@ -155,6 +179,9 @@
       "Action"
     ],
     "runtime": 96,
+    "director": "Shusuke Kaneko",
+    "budget": 4500000,
+    "boxOffice": 16000000,
     "alternateNames": [
       "ガメラ 大怪獣空中決戦"
     ]
@@ -172,6 +199,9 @@
       "Horror"
     ],
     "runtime": 99,
+    "director": "Shusuke Kaneko",
+    "budget": 0,
+    "boxOffice": 14000000,
     "alternateNames": [
       "ガメラ2 レギオン襲来"
     ]
@@ -182,13 +212,16 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/yeUzjv04YdWS3Er5m1gPJJS1D10.jpg",
     "description": "With the Gyaos re-emerging, Gamera's ties to humanity have been severed with his bond to Asagi broken. Nagamine and Asagi investigate while an orphaned girl named Ayana discovers a new creature she names Iris. Nagamine and Asagi must reach Ayana before she takes her revenge on Gamera, who she blames for the death of her family.",
     "era": "Heisei",
-    "rating": 7.399,
+    "rating": 7.404,
     "genres": [
       "Fantasy",
       "Science Fiction",
       "Horror"
     ],
     "runtime": 108,
+    "director": "Shusuke Kaneko",
+    "budget": 6000000,
+    "boxOffice": 15000000,
     "alternateNames": [
       "ガメラ3 邪神＜イリス＞覚醒"
     ]
@@ -208,6 +241,9 @@
       "Family"
     ],
     "runtime": 96,
+    "director": "Ryuta Tasaki",
+    "budget": 0,
+    "boxOffice": 4000000,
     "alternateNames": [
       "小さき勇者たち ～ガメラ～"
     ]

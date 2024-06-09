@@ -5,13 +5,16 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/p0Tk9k6uJ5SeHm1jziD21lThrNT.jpg",
     "description": "Japan is thrown into a panic after several ships are sunk near Odo Island. An expedition to the island led by Dr. Yemani soon discover something far more devastating than imagined in the form of a 50 meter tall monster whom the natives call Gojira. Now the monster begins a rampage that threatens to destroy not only Japan, but the rest of the world as well.",
     "era": "Showa",
-    "rating": 7.6,
+    "rating": 7.608,
     "genres": [
       "Thriller",
       "Horror",
       "Science Fiction"
     ],
     "runtime": 96,
+    "director": "Ishirō Honda",
+    "budget": 900000,
+    "boxOffice": 2250000,
     "alternateNames": [
       "ゴジラ"
     ]
@@ -19,7 +22,7 @@
   {
     "title": "Godzilla Raids Again",
     "releaseDate": "1955-04-24",
-    "posterUrl": "https://image.tmdb.org/t/p/original/bBYdh9tDCyLaArBOzE38QCA7C3y.jpg",
+    "posterUrl": "https://image.tmdb.org/t/p/original/ipU1exHwS04FhdonFXsliOKrr2a.jpg",
     "description": "Two fishing scout pilots make a horrifying discovery when they encounter a second Godzilla alongside a new monster named Anguirus. Without the weapon that killed the original, authorities attempt to lure Godzilla away from the mainland. But Anguirus soon arrives and the two monsters make their way towards Osaka as Japan braces for tragedy.",
     "era": "Showa",
     "rating": 6,
@@ -28,6 +31,9 @@
       "Horror"
     ],
     "runtime": 82,
+    "director": "Motoyoshi Oda",
+    "budget": 800000,
+    "boxOffice": 1952653,
     "alternateNames": [
       "ゴジラの逆襲"
     ]
@@ -38,7 +44,7 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/dmCfyzUl0Ylk8Rpi6dYyWuBrnNr.jpg",
     "description": "The advertising director of Pacific Pharmaceuticals, frustrated with the low ratings of their sponsored TV program, seeks a more sensationalist approach. He orders his staff to Faro Island to capture King Kong for exploitation. As Godzilla re-emerges, a media frenzy generates with Pacific looking to capitalize off of the ultimate battle.",
     "era": "Showa",
-    "rating": 6.8,
+    "rating": 6.829,
     "genres": [
       "Science Fiction",
       "Comedy",
@@ -46,6 +52,9 @@
       "Fantasy"
     ],
     "runtime": 97,
+    "director": "Ishirō Honda",
+    "budget": 0,
+    "boxOffice": 12550000,
     "alternateNames": [
       "キングコング対ゴジラ"
     ]
@@ -56,13 +65,16 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/y49vvM03gpuyhpyMc1f55VrNkP3.jpg",
     "description": "Journalists Ichiro Sakai and Junko cover the wreckage of a typhoon when an enormous egg is found and claimed by greedy entrepreneurs. Mothra's fairies arrive and are aided by the journalists in a plea for its return. As their requests are denied, Godzilla arises near Nagoya and the people of Infant Island must decide if they are willing to answer Japan's own pleas for help.",
     "era": "Showa",
-    "rating": 7.038,
+    "rating": 7,
     "genres": [
       "Drama",
       "Action",
       "Science Fiction"
     ],
     "runtime": 89,
+    "director": "Ishirō Honda",
+    "budget": 0,
+    "boxOffice": 10000000,
     "alternateNames": [
       "モスラ対ゴジラ"
     ]
@@ -70,15 +82,18 @@
   {
     "title": "Ghidorah, the Three-Headed Monster",
     "releaseDate": "1964-12-20",
-    "posterUrl": "https://image.tmdb.org/t/p/original/qkI5nhvxx3233gQmoQvv0W3MB7A.jpg",
+    "posterUrl": "https://image.tmdb.org/t/p/original/7n1ghCQepTIbNKoEuw9knLNNfPI.jpg",
     "description": "After a meteorite unleashes a three-headed beast upon Tokyo, Mothra tries to unite with Godzilla and Rodan to battle the extraterrestrial threat.",
     "era": "Showa",
-    "rating": 7.037,
+    "rating": 7,
     "genres": [
       "Science Fiction",
       "Action"
     ],
     "runtime": 92,
+    "director": "Ishirō Honda",
+    "budget": 0,
+    "boxOffice": 3237880,
     "alternateNames": [
       "三大怪獣　地球最大の決戦"
     ]
@@ -95,6 +110,9 @@
       "Action"
     ],
     "runtime": 96,
+    "director": "Ishirō Honda",
+    "budget": 0,
+    "boxOffice": 3000000,
     "alternateNames": [
       "怪獣大戦争"
     ]
@@ -112,6 +130,9 @@
       "Fantasy"
     ],
     "runtime": 87,
+    "director": "Jun Fukuda",
+    "budget": 0,
+    "boxOffice": 3000000,
     "alternateNames": [
       "ゴジラ・エビラ・モスラ　南海の大決闘"
     ]
@@ -129,6 +150,9 @@
       "Science Fiction"
     ],
     "runtime": 86,
+    "director": "Jun Fukuda",
+    "budget": 0,
+    "boxOffice": 2399280,
     "alternateNames": [
       "怪獣島の決戦 ゴジラの息子"
     ]
@@ -145,6 +169,9 @@
       "Action"
     ],
     "runtime": 89,
+    "director": "Ishirō Honda",
+    "budget": 0,
+    "boxOffice": 1568760,
     "alternateNames": [
       "怪獣総進撃"
     ]
@@ -162,6 +189,9 @@
       "Family"
     ],
     "runtime": 70,
+    "director": "Ishirō Honda",
+    "budget": 0,
+    "boxOffice": 2399280,
     "alternateNames": [
       "ゴジラ・ミニラ・ガバラ オール怪獣大進撃"
     ]
@@ -180,6 +210,9 @@
       "Family"
     ],
     "runtime": 85,
+    "director": "Yoshimitsu Banno",
+    "budget": 250000,
+    "boxOffice": 2768400,
     "alternateNames": [
       "ゴジラ対ヘドラ"
     ]
@@ -198,6 +231,9 @@
       "Science Fiction"
     ],
     "runtime": 89,
+    "director": "Jun Fukuda",
+    "budget": 0,
+    "boxOffice": 1780000,
     "alternateNames": [
       "地球攻撃命令 ゴジラ対ガイガン"
     ]
@@ -217,6 +253,9 @@
       "Fantasy"
     ],
     "runtime": 82,
+    "director": "Jun Fukuda",
+    "budget": 760000,
+    "boxOffice": 980000,
     "alternateNames": [
       "ゴジラ対メガロ"
     ]
@@ -234,6 +273,9 @@
       "Science Fiction"
     ],
     "runtime": 84,
+    "director": "Jun Fukuda",
+    "budget": 0,
+    "boxOffice": 1330000,
     "alternateNames": [
       "ゴジラ対メカゴジラ"
     ]
@@ -250,6 +292,9 @@
       "Action"
     ],
     "runtime": 83,
+    "director": "Ishirō Honda",
+    "budget": 0,
+    "boxOffice": 970000,
     "alternateNames": [
       "メカゴジラの逆襲"
     ]
@@ -268,6 +313,9 @@
       "Horror"
     ],
     "runtime": 103,
+    "director": "Koji Hashimoto",
+    "budget": 6000000,
+    "boxOffice": 11000000,
     "alternateNames": [
       "ゴジラ"
     ]
@@ -278,13 +326,16 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/tHchmbNaJNxp9vRGExvYg3dwMab.jpg",
     "description": "After the previous Godzilla attack, a miniature arms race ensues to collect his cells. Concerned over Godzilla's possible return, the Japanese government uses the cells to create a new bio-weapon, ANEB (Anti-Nuclear Energy Bacteria). They seeks the aid of geneticist Genshiro Shiragami, who's experiments result in a new mutation.",
     "era": "Heisei",
-    "rating": 7.315,
+    "rating": 7.325,
     "genres": [
       "Action",
       "Horror",
       "Fantasy"
     ],
     "runtime": 105,
+    "director": "Kazuki Ōmori",
+    "budget": 5000000,
+    "boxOffice": 7000000,
     "alternateNames": [
       "ゴジラvsビオランテ"
     ]
@@ -302,6 +353,9 @@
       "Science Fiction"
     ],
     "runtime": 103,
+    "director": "Kazuki Ōmori",
+    "budget": 12000000,
+    "boxOffice": 11000000,
     "alternateNames": [
       "ゴジラvsキングギドラ"
     ]
@@ -320,6 +374,9 @@
       "Science Fiction"
     ],
     "runtime": 102,
+    "director": "Takao Okawara",
+    "budget": 0,
+    "boxOffice": 20000000,
     "alternateNames": [
       "ゴジラvsモスラ"
     ]
@@ -338,6 +395,9 @@
       "Science Fiction"
     ],
     "runtime": 108,
+    "director": "Takao Okawara",
+    "budget": 9500000,
+    "boxOffice": 18000000,
     "alternateNames": [
       "ゴジラvsメカゴジラ"
     ]
@@ -355,6 +415,9 @@
       "Science Fiction"
     ],
     "runtime": 108,
+    "director": "Kensho Yamashita",
+    "budget": 10300000,
+    "boxOffice": 20000000,
     "alternateNames": [
       "ゴジラvsスペースゴジラ"
     ]
@@ -365,13 +428,16 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/csebMf1IWokaWOughl5s3uX8p44.jpg",
     "description": "A burning Godzilla, on the verge of meltdown, emerges to lay siege to Hong Kong. At the same time horrifying new organisms are discovered in Japan. These crustacean-like beings are seemingly born of the Oxygen Destroyer, the weapon that killed the original Godzilla.",
     "era": "Heisei",
-    "rating": 7.813,
+    "rating": 7.8,
     "genres": [
       "Action",
       "Science Fiction",
       "Horror"
     ],
     "runtime": 103,
+    "director": "Takao Okawara",
+    "budget": 10000000,
+    "boxOffice": 18000000,
     "alternateNames": [
       "ゴジラvsデストロイア"
     ]
@@ -388,7 +454,10 @@
       "Action",
       "Thriller"
     ],
-    "runtime": 138
+    "runtime": 138,
+    "director": "Roland Emmerich",
+    "budget": 130000000,
+    "boxOffice": 379000000
   },
   {
     "title": "Godzilla 2000: Millennium",
@@ -403,6 +472,9 @@
       "Science Fiction"
     ],
     "runtime": 107,
+    "director": "Takao Okawara",
+    "budget": 8300000,
+    "boxOffice": 25000000,
     "alternateNames": [
       "ゴジラ2000 ミレニアム"
     ]
@@ -413,13 +485,16 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/8H78ZTr9SVoYYAQzMiFz8CO3TKd.jpg",
     "description": "In an alternate timeline the original Godzilla is never defeated and repeatedly reemerges to feed on Japan's energy sources. A new inter-dimensional weapon called the Dimension Tide is created with the intent of eliminating Godzilla. However, the new weapon might also serve as a gateway to something far more sinister.",
     "era": "Millennium",
-    "rating": 6.577,
+    "rating": 6.597,
     "genres": [
       "Action",
       "Science Fiction",
       "Horror"
     ],
     "runtime": 105,
+    "director": "Masaaki Tezuka",
+    "budget": 8300000,
+    "boxOffice": 11068800,
     "alternateNames": [
       "ゴジラ×メガギラス G消滅作戦"
     ]
@@ -430,13 +505,16 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/d3lMCQJfjCBlGFy5sWpsEaBnEPl.jpg",
     "description": "Godzilla has become a distant memory for Japan when the destruction of a US submarine raises alarms for Admiral Tachibana. His estranged daughter Yuri investigates the legend of the guardian monsters, who must rise to protect Japan against the vengeful spirits within Godzilla that seek to destroy both the nation and its people for the suffering they inflicted in the Pacific conflict.",
     "era": "Millennium",
-    "rating": 7.4,
+    "rating": 7.448,
     "genres": [
       "Action",
       "Science Fiction",
       "Horror"
     ],
     "runtime": 105,
+    "director": "Shusuke Kaneko",
+    "budget": 9400000,
+    "boxOffice": 20000000,
     "alternateNames": [
       "ゴジラ・モスラ・キングギドラ大怪獣総進撃"
     ]
@@ -453,6 +531,9 @@
       "Science Fiction"
     ],
     "runtime": 88,
+    "director": "Masaaki Tezuka",
+    "budget": 8500000,
+    "boxOffice": 16000000,
     "alternateNames": [
       "ゴジラ×メカゴジラ"
     ]
@@ -463,13 +544,16 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/iwRJNFY9yvtPdu0DsTXOJ8sAap3.jpg",
     "description": "Mothra and her fairies return to Japan to warn mankind that they must return Kiryu to the sea, for the dead must not be disturbed. However Godzilla has survived to menace Japan leaving Kiryu as the nation's only defense.",
     "era": "Millennium",
-    "rating": 7.013,
+    "rating": 7.006,
     "genres": [
       "Action",
       "Science Fiction",
       "Fantasy"
     ],
     "runtime": 91,
+    "director": "Masaaki Tezuka",
+    "budget": 0,
+    "boxOffice": 12000000,
     "alternateNames": [
       "ゴジラ×モスラ×メカゴジラ／東京SOS"
     ]
@@ -480,7 +564,7 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/zpw7tJnN7yQfL4DO9HvuvnrAGRZ.jpg",
     "description": "Humanity finally rids themselves of Godzilla, imprisoning him in an icy tomb in the South Pole. All is peaceful until various monsters emerge to lay waste to Earth's cities. Overwhelmed, humanity is seemingly saved by a race of benevolent aliens known as Xiliens. But not all is what it seems with these bizarre visitors. If humanity wishes to survive, they must reluctantly resurrect their most hated enemy, Godzilla.",
     "era": "Millennium",
-    "rating": 7,
+    "rating": 6.975,
     "genres": [
       "Action",
       "Adventure",
@@ -489,6 +573,9 @@
       "Thriller"
     ],
     "runtime": 125,
+    "director": "Ryûhei Kitamura",
+    "budget": 19500000,
+    "boxOffice": 12000000,
     "alternateNames": [
       "ゴジラ ファイナルウォーズ"
     ]
@@ -499,13 +586,16 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/zokD6uxR2iWfYM3Y84yGJvnNTK7.jpg",
     "description": "Ford Brody, a Navy bomb expert, has just reunited with his family in San Francisco when he is forced to go to Japan to help his estranged father, Joe. Soon, both men are swept up in an escalating crisis when an ancient alpha predator arises from the sea to combat malevolent adversaries that threaten the survival of humanity. The creatures leave colossal destruction in their wake, as they make their way toward their final battleground: San Francisco.",
     "era": "MonsterVerse",
-    "rating": 6.333,
+    "rating": 6.334,
     "genres": [
       "Action",
       "Drama",
       "Science Fiction"
     ],
-    "runtime": 123
+    "runtime": 123,
+    "director": "Gareth Edwards",
+    "budget": 160000000,
+    "boxOffice": 529100000
   },
   {
     "title": "Shin Godzilla",
@@ -513,13 +603,16 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/jPNShaWZMpVF0iQ7j1dvTuZLD20.jpg",
     "description": "When a massive, gilled monster emerges from the deep and tears through the city, the government scrambles to save its citizens.  A rag-tag team of volunteers cuts through a web of red tape to uncover the monster's weakness and its mysterious ties to a foreign superpower.  But time is not on their side - the greatest catastrophe to ever befall the world is about to evolve right before their very eyes.",
     "era": "Reiwa",
-    "rating": 7.177,
+    "rating": 7.175,
     "genres": [
       "Action",
       "Science Fiction",
       "Horror"
     ],
     "runtime": 120,
+    "director": "Hideaki Anno",
+    "budget": 15000000,
+    "boxOffice": 78053145,
     "alternateNames": [
       "シン・ゴジラ"
     ]
@@ -537,6 +630,9 @@
       "Science Fiction"
     ],
     "runtime": 89,
+    "director": "Hiroyuki Seshita",
+    "budget": 0,
+    "boxOffice": 0,
     "alternateNames": [
       "GODZILLA 怪獣惑星"
     ]
@@ -547,12 +643,15 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/8y1YhD6niL3aMfeEPhStHMWdPxH.jpg",
     "description": "Humanity's desperate battle to reclaim the Earth from Godzilla continues. The key to defeating the King of the Monsters may be Mechagodzilla, a robotic weapon thought to have been lost nearly 20,000 years ago.",
     "era": "Reiwa",
-    "rating": 6.5,
+    "rating": 6.489,
     "genres": [
       "Animation",
       "Science Fiction"
     ],
     "runtime": 101,
+    "director": "Hiroyuki Seshita",
+    "budget": 0,
+    "boxOffice": 0,
     "alternateNames": [
       "GODZILLA 決戦機動増殖都市"
     ]
@@ -571,6 +670,9 @@
       "Adventure"
     ],
     "runtime": 91,
+    "director": "Hiroyuki Seshita",
+    "budget": 0,
+    "boxOffice": 0,
     "alternateNames": [
       "GODZILLA 星を喰う者"
     ]
@@ -581,12 +683,15 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/fQ40gmFM4p03tXwMxQQKh2cCBW4.jpg",
     "description": "Follows the heroic efforts of the crypto-zoological agency Monarch as its members face off against a battery of god-sized monsters, including the mighty Godzilla, who collides with Mothra, Rodan, and his ultimate nemesis, the three-headed King Ghidorah. When these ancient super-species, thought to be mere myths, rise again, they all vie for supremacy, leaving humanity's very existence hanging in the balance.",
     "era": "MonsterVerse",
-    "rating": 6.701,
+    "rating": 6.703,
     "genres": [
       "Science Fiction",
       "Action"
     ],
-    "runtime": 132
+    "runtime": 132,
+    "director": "Michael Dougherty",
+    "budget": 170000000,
+    "boxOffice": 386600138
   },
   {
     "title": "Godzilla vs. Kong",
@@ -594,13 +699,16 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
     "description": "In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages.",
     "era": "MonsterVerse",
-    "rating": 7.618,
+    "rating": 7.617,
     "genres": [
       "Action",
       "Science Fiction",
       "Adventure"
     ],
-    "runtime": 114
+    "runtime": 114,
+    "director": "Adam Wingard",
+    "budget": 200000000,
+    "boxOffice": 470116094
   },
   {
     "title": "Godzilla Minus One",
@@ -608,13 +716,16 @@
     "posterUrl": "https://image.tmdb.org/t/p/original/hkxxMIGaiCTmrEArK7J56JTKUlB.jpg",
     "description": "In postwar Japan, Godzilla brings new devastation to an already scorched landscape. With no military intervention or government help in sight, the survivors must join together in the face of despair and fight back against an unrelenting horror.",
     "era": "Reiwa",
-    "rating": 7.657,
+    "rating": 7.647,
     "genres": [
       "Science Fiction",
       "Horror",
       "Action"
     ],
     "runtime": 125,
+    "director": "Takashi Yamazaki",
+    "budget": 15000000,
+    "boxOffice": 115857413,
     "alternateNames": [
       "ゴジラ-1.0"
     ]
