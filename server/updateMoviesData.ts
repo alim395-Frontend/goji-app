@@ -178,15 +178,6 @@ export async function fetchAllGameraMovies(force: boolean = false) {
     await fetchAndSaveMovies(gameraSearchTerm, gameraCollectionIds, gameraExplicitMovieIds, gameraFilePath, force);
 }
 
-export async function fetchChallengeMovies(force: boolean = false) {
-    const challengeSearchTerm = null;
-    const challengeCollectionIds = null;
-    const challengeExplicitMovieIds = [1678, 1679, 19742, 39410, 3115];
-    const challengeFilePath = path.join(process.cwd(), 'public', 'data', 'challenge.json');
-
-    await fetchAndSaveMovies(challengeSearchTerm, challengeCollectionIds, challengeExplicitMovieIds, challengeFilePath, force);
-}
-
 function determineEra(releaseDate: string, originalLanguage: string, title: string): string {
     const year = parseInt(releaseDate.split('-')[0], 10);
 
